@@ -10,7 +10,7 @@ export default function Home() {
 			<header className='text-center my-12'>
 				<h1 className='text-4xl md:text-6xl font-bold leading-tight'>Turing Award Speaker Series</h1>
 				<p className='mt-4 text-lg md:text-xl leading-relaxed'>
-					Join us in exploring insights from some of the world's most distinguished computer scientists, recipients of the prestigious Turing Award.
+					Join us in exploring insights from some of the world&apos;s most distinguished computer scientists, recipients of the prestigious Turing Award.
 				</p>
 			</header>
 
@@ -18,7 +18,7 @@ export default function Home() {
 			<section className='my-8'>
 				<h2 className='text-2xl md:text-3xl font-semibold'>What is the Turing Award?</h2>
 				<p className='mt-2 leading-relaxed'>
-					The Turing Award, often referred to as the "Nobel Prize of Computing," is an annual award given by the Association for Computing Machinery (ACM) to individuals for their
+					The Turing Award, often referred to as the &apos;Nobel Prize of Computing,&apos; is an annual award given by the Association for Computing Machinery (ACM) to individuals for their
 					contributions of lasting and major technical importance to the computing field.
 				</p>
 			</section>
@@ -34,7 +34,7 @@ export default function Home() {
 						contributions in logic and computation.
 					</p>
 					<a href='https://example.com/rsvp-moshe-vardi' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Vardi's Talk
+						RSVP to Dr. Vardi&apos;s Talk
 					</a>
 				</div>
 
@@ -44,7 +44,7 @@ export default function Home() {
 					<p className='mt-2'>Date & Time: January 24th, 12pm EST.</p>
 					<p className='mt-2'>Dr. Leslie Lamport, a Turing Award recipient, is renowned for his pioneering work in distributed systems and as the creator of LaTeX.</p>
 					<a href='https://example.com/rsvp-leslie-lamport' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Lamport's Talk
+						RSVP to Dr. Lamport&apos;s Talk
 					</a>
 				</div>
 
@@ -57,7 +57,7 @@ export default function Home() {
 						account management.
 					</p>
 					<a href='https://example.com/rsvp-noel-capon' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Capon's Talk
+						RSVP to Dr. Capon&apos;s Talk
 					</a>
 				</div>
 
@@ -70,7 +70,7 @@ export default function Home() {
 						polymorphism, and distributed computing.
 					</p>
 					<a href='https://example.com/rsvp-barbara-liskov' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Liskov's Talk
+						RSVP to Dr. Liskov&apos;s Talk
 					</a>
 				</div>
 
@@ -82,7 +82,7 @@ export default function Home() {
 						Dr. Nir Shavit is a Professor at MIT, a member of the Computer Science and Artificial Intelligence Laboratory, known for his work in multi-core computation.
 					</p>
 					<a href='https://example.com/rsvp-nir-shavit' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Shavit's Talk
+						RSVP to Dr. Shavit&apos;s Talk
 					</a>
 				</div>
 
@@ -94,7 +94,7 @@ export default function Home() {
 						Dr. Assaf Schuster is a Professor at the Technion - Israel Institute of Technology, specializing in distributed and database systems, data streams, and cloud computing.
 					</p>
 					<a href='https://example.com/rsvp-assaf-schuster' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Schuster's Talk
+						RSVP to Dr. Schuster&apos;s Talk
 					</a>
 				</div>
 
@@ -107,7 +107,7 @@ export default function Home() {
 						advanced-computer architectures.
 					</p>
 					<a href='https://example.com/rsvp-jack-dongarra' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Dongarra's Talk
+						RSVP to Dr. Dongarra&apos;s Talk
 					</a>
 				</div>
 
@@ -120,7 +120,7 @@ export default function Home() {
 						formal language theory.
 					</p>
 					<a href='https://example.com/rsvp-jeffrey-ullman' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Ullman's Talk
+						RSVP to Dr. Ullman&apos;s Talk
 					</a>
 				</div>
 
@@ -129,10 +129,10 @@ export default function Home() {
 					<h3 className='text-2xl font-semibold'>Dr. Edward Feigenbaum</h3>
 					<p className='mt-2'>Date & Time: TBD.</p>
 					<p className='mt-2'>
-						Dr. Edward Feigenbaum is a pioneer in artificial intelligence, known as the "father of expert systems," and a joint winner of the 1994 ACM Turing Award.
+						Dr. Edward Feigenbaum is a pioneer in artificial intelligence, known as the &apos;father of expert systems,&apos; and a joint winner of the 1994 ACM Turing Award.
 					</p>
 					<a href='https://example.com/rsvp-edward-feigenbaum' className='mt-4 text-blue-600 hover:text-blue-800'>
-						RSVP to Dr. Feigenbaum's Talk
+						RSVP to Dr. Feigenbaum&apos;s Talk
 					</a>
 				</div>
 			</section>
@@ -141,7 +141,7 @@ export default function Home() {
 			<section className='my-12'>
 				<h2 className='text-3xl font-semibold'>Contact Information</h2>
 				<div className='mt-4'>
-					<p>If you have any inquiries or need further information, please don't hesitate to contact us:</p>
+					<p>If you have any inquiries or need further information, please don&apos;t hesitate to contact us:</p>
 					<ul className='list-disc pl-6 mt-2'>
 						<li>
 							Zack Axel (Event Coordinator) -{' '}
