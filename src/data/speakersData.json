@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Prof. Jeffrey D. Ullman",
+        "dateTime": "January 11th, 12pm EST",
+        "description": "Prof. Jeffrey David 'Jeff' Ullman is an esteemed computer scientist known for his substantial contributions to database theory, data mining, and software engineering. He is a Turing Award laureate, co-authoring foundational textbooks in computer science.",
+        "rsvpLink": "[Your RSVP Link Here]"
+    },
+    {
+        "name": "Dr. Moshe Vardi",
+        "dateTime": "January 17th, 12pm EST",
+        "description": "Dr. Moshe Y. Vardi is a University Professor and the George Distinguished Service Professor in Computational Engineering at Rice University, known for his significant contributions in logic and computation.",
+        "rsvpLink": "https://example.com/rsvp-moshe-vardi"
+    },
+    {
+        "name": "Dr. Leslie Lamport",
+        "dateTime": "January 24th, 12pm EST",
+        "description": "Dr. Leslie Lamport, a Turing Award recipient, is renowned for his pioneering work in distributed systems and as the creator of LaTeX.",
+        "rsvpLink": "https://example.com/rsvp-leslie-lamport"
+    },
+    {
+        "name": "Dr. Noel Capon",
+        "dateTime": "January 31st, 9am EST",
+        "description": "Dr. Noel Capon is the R.C. Kopf Professor of International Marketing at Columbia Business School, known for his extensive work in marketing, sales, and strategic account management.",
+        "rsvpLink": "https://example.com/rsvp-noel-capon"
+    },
+    {
+        "name": "Dr. Barbara Liskov",
+        "dateTime": "February 7th, 1pm EST",
+        "description": "Dr. Barbara Liskov is an Institute Professor at MIT, known for her work in programming languages and systems, including data abstraction, polymorphism, and distributed computing.",
+        "rsvpLink": "https://example.com/rsvp-barbara-liskov"
+    },
+    {
+        "name": "Dr. Nir Shavit",
+        "dateTime": "February 14th, 9am EST",
+        "description": "Dr. Nir Shavit is a Professor at MIT, a member of the Computer Science and Artificial Intelligence Laboratory, known for his work in multi-core computation.",
+        "rsvpLink": "https://example.com/rsvp-nir-shavit"
+    },
+    {
+        "name": "Dr. Assaf Schuster",
+        "dateTime": "February 28th, 9am EST",
+        "description": "Dr. Assaf Schuster is a Professor at the Technion - Israel Institute of Technology, specializing in distributed and database systems, data streams, and cloud computing.",
+        "rsvpLink": "https://example.com/rsvp-assaf-schuster"
+    },
+    {
+        "name": "Dr. Jack Dongarra",
+        "dateTime": "March 13th, 12pm EST",
+        "description": "Dr. Jack Dongarra is a Distinguished Professor at the University of Tennessee, known for his expertise in numerical algorithms, parallel computing, and advanced-computer architectures.",
+        "rsvpLink": "https://example.com/rsvp-jack-dongarra"
+    },
+    {
+        "name": "Dr. Edward Feigenbaum",
+        "dateTime": "TBD",
+        "description": "Dr. Edward Feigenbaum is a pioneer in artificial intelligence, known as the 'father of expert systems,' and a joint winner of the 1994 ACM Turing Award.",
+        "rsvpLink": "https://example.com/rsvp-edward-feigenbaum"
+    }
+]
