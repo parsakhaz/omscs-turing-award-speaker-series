@@ -2,7 +2,7 @@ import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
 import speakersData from '../data/speakersData.json';
 import React from 'react';
-import ScrollToTop from "react-scroll-to-top";
+import ScrollToTop from 'react-scroll-to-top';
 
 export default function Home() {
 	return (
@@ -15,7 +15,7 @@ export default function Home() {
 				</Head>
 
 				{/* Turing Award Speaker Series Header */}
-				<div className='bg-zinc-100 md:bg-[#668cab1f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
+				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
 					<div className='h-[100vh] flex flex-col justify-center items-center pb-16'>
 						{/* Turing Award Speaker Series Header */}
 						<header className='flex flex-col text-center max-w-4xl  drop-shadow-[0_0.2px_0.8px_#a4925a]'>
@@ -59,49 +59,54 @@ export default function Home() {
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Frequently Asked Questions</h2>
 					<div className='mt-4 space-y-6'>
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono'>Where will the event take place?</p>
+							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Where will the event take place?</p>
 							<p className='ibm-plex-mono'>The event will be held online via Teams.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono'>Is this a recurring event?</p>
+							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Is this a recurring event?</p>
 							<p className='ibm-plex-mono'>For now, this is a one time event. If we have enough interest, we may be able to make this recurring.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono'>How much does it cost to attend?</p>
+							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>How much does it cost to attend?</p>
 							<p className='ibm-plex-mono'>The event is free to attend.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono'>Do I need to RSVP?</p>
+							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Do I need to RSVP?</p>
 							<p className='ibm-plex-mono'>Yes, you need to RSVP in order to receive the Teams link.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono'>How do I RSVP?</p>
-							<p className='ibm-plex-mono'>You can RSVP by clicking the RSVP buttons for each individual event. Or through our lu.ma calendar <a className="text-blue-800" href="https://lu.ma/omscs/">here</a>.</p>
+							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>How do I RSVP?</p>
+							<p className='ibm-plex-mono'>
+								You can RSVP by clicking the RSVP buttons for each individual event. Or through our lu.ma calendar{' '}
+								<a className='text-blue-800' target='_blank' rel='noreferrer' href='https://lu.ma/omscs/'>
+									here
+								</a>
+								.
+							</p>
 						</div>
-
-						</div>
+					</div>
 				</section>
 
 				{/* Contact Information Section */}
 				<section id='contact' className='my-12'>
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Contact Information</h2>
-					<div className='mt-4'>
+					<div className='mt-4 ibm-plex-mono'>
 						<p>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
-						<ul className='list-disc space-x-4'>
+
+						<div className='flex flex-col max-w'>
 							<a href='mailto:zaxel3@gatech.edu' className='btn bg-[#013057] mt-4 text-white hover:text-blue-600 p-4 text-center text-[0.7rem]'>
-								Zack Axel (Speaker Series Administrator)
+								Zack Axel (OMSCS Student and Speaker Series Administrator)
 							</a>
 
 							<a href='mailto:pkhazaeepoul3@gatech.edu' className='btn bg-[#013057] mt-4 text-white hover:text-blue-600 p-4 text-center text-[0.7rem]'>
-								Parsa Khazaeepoul (Website and Events Page Administrator)
+								Parsa Khazaeepoul (OMSCS Student and Website and Events Page Administrator)
 							</a>
-
-							{/* Add more officers if necessary */}
-						</ul>
+						</div>
+						{/* Add more officers if necessary */}
 					</div>
 				</section>
 
@@ -110,7 +115,7 @@ export default function Home() {
 					<p>© 2023 Georgia Tech OMSCS. All rights reserved.</p>
 				</footer> */}
 			</div>
-			<ScrollToTop smooth />
+			<ScrollToTop smooth id='scrollToTop' />
 		</>
 	);
 }
