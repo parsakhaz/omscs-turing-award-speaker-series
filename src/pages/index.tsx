@@ -5,29 +5,28 @@ import speakersData from '../data/speakersData.json';
 export default function Home() {
 	return (
 		<>
-			<img src='/gatech-banner.png' alt='Georgia Tech Banner' />
-			<div className='container mx-auto px-4 pt-6 md:px-16 xl:px-32'>
+			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
+			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
 				<Head>
 					<title>Turing Award Speaker Series</title>
 				</Head>
-
-				<div className='bg-gray-100 px-5 rounded-sm'>
-					<div className='flex flex-col'>
-						<header className='text-start my-6'>
-							<h1 className='text-[#a4925a] text-4xl md:text-6xl font-bold leading-tight'>Turing Award Speaker Series</h1>
-							<p className='mt-4 text-lg md:text-xl leading-relaxed'>
+				<div className='bg-gray-100 px-5 rounded-sm h-[90vh]'>
+					<div className='h-[100vh] flex flex-col justify-center items-center'>
+						{/* Turing Award Speaker Series Header */}
+						<header className='text-center my- max-w-4xl'>
+							<h1 className='gradient-text text-4xl md:text-6xl font-bold outline-[#a4925a] outline'>Turing Award Speaker Series</h1>
+							<p className='mt-4 text-lg md:text-xl'>
 								Join us in exploring insights from some of the world&apos;s most distinguished computer scientists, recipients of the prestigious Turing Award.
 							</p>
 						</header>
 
-						{/* Turing Award Introduction */}
-						<section className='my-4'>
-							<h2 className='text-[#a4925a] text-2xl md:text-3xl font-semibold'>What is the Turing Award?</h2>
-							<p className='mt-2 leading-relaxed'>
-								The Turing Award, often referred to as the &apos;Nobel Prize of Computing,&apos; is an annual award given by the Association for Computing Machinery (ACM) to
-								individuals for their contributions of lasting and major technical importance to the computing field.
-							</p>
-						</section>
+						{/* Turing Award Introduction
+        <section className='text-start max-w-3xl'>
+            <h2 className='text-[#a4925a] text-xl md:text-2xl font-semibold'>What is the Turing Award?</h2>
+            <p className='text-sm md:text-base leading-relaxed'>
+                The Turing Award, often referred to as the &apos;Nobel Prize of Computing,&apos; is an annual award given by the Association for Computing Machinery (ACM) to individuals for their contributions of lasting and major technical importance to the computing field.
+            </p>
+        </section> */}
 					</div>
 				</div>
 
