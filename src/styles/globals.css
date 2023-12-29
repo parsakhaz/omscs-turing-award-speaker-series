@@ -2,17 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 
 html, body, label {
   font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  scroll-behavior: smooth;
+}
+
+.ibm-plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.gradient-text {
+  /* Fallback for browsers that do not support gradient text */
+  color: #a4925a;
+
+  background: linear-gradient(to right, #a4925a, #d3b07d);
+
+  /* Ensure compatibility with non-webkit browsers */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* Hide the gradient text from browsers that don't support it */
+  -webkit-text-fill-color: transparent;
+
+  /* Cross-browser visibility fix using pseudo-element */
+  position: relative;
+  z-index: 1;
 }
 
 
-
-.gradient-text {
-  background: linear-gradient(to right, #a4925a, #d3b07d);
-  -webkit-background-clip: text;
+.animated-gradient-text {
+  background: radial-gradient(
+    circle at 100%,
+    #a39364,
+    #a78758 50%,
+    #b99053 75%,
+    #ab8957 25%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 3s linear infinite;
+}
+
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
 }
 
 
