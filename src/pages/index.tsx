@@ -59,27 +59,27 @@ export default function Home() {
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Frequently Asked Questions</h2>
 					<div className='mt-4 space-y-6'>
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Where will the event take place?</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Where will the event take place?</p>
 							<p className='ibm-plex-mono'>The event will be held online via Teams.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Is this a recurring event?</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Is this a recurring event?</p>
 							<p className='ibm-plex-mono'>For now, this is a one time event. If we have enough interest, we may be able to make this recurring.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>How much does it cost to attend?</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How much does it cost to attend?</p>
 							<p className='ibm-plex-mono'>The event is free to attend.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>Do I need to RSVP?</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Do I need to RSVP?</p>
 							<p className='ibm-plex-mono'>Yes, you need to RSVP in order to receive the Teams link.</p>
 						</div>
 
 						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono bg-slate-100 py-2 px-2'>How do I RSVP?</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How do I RSVP?</p>
 							<p className='ibm-plex-mono'>
 								You can RSVP by clicking the RSVP buttons for each individual event. Or through our lu.ma calendar{' '}
 								<a className='text-blue-800' target='_blank' rel='noreferrer' href='https://lu.ma/omscs/'>
