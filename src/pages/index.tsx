@@ -2,6 +2,7 @@ import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
 import speakersData from '../data/speakersData.json';
 import React from 'react';
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Home() {
 	return (
@@ -33,7 +34,7 @@ export default function Home() {
 								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic underline'>
 									RSVP NOW
 								</a>
-								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic'>
+								<a href='#faq' className='outline-[#a4925a] outline px-3 py-3 italic'>
 									FAQ
 								</a>
 								<a href='#contact' className='outline-[#a4925a] outline px-3 py-3 italic'>
@@ -54,7 +55,7 @@ export default function Home() {
 				</section>
 
 				{/* FAQ Section */}
-				<section id='FAQ' className='my-12'>
+				<section id='faq' className='my-12'>
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Frequently Asked Questions</h2>
 					<div className='mt-4 space-y-6'>
 						<div className='space-y-2'>
@@ -109,6 +110,7 @@ export default function Home() {
 					<p>© 2023 Georgia Tech OMSCS. All rights reserved.</p>
 				</footer> */}
 			</div>
+			<ScrollToTop smooth />
 		</>
 	);
 }
