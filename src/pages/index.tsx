@@ -48,7 +48,10 @@ export default function Home() {
 					</div>
 				</div>
 
-				<section id='speakerCards' className='my-12 grid grid-cols-1 md:grid-cols-2 gap-4'>
+				<p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
+									*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
+								</p>
+				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{speakersData.map((speaker, index) => (
 						<SpeakerCards key={index} {...speaker} />
 					))}
@@ -88,7 +91,31 @@ export default function Home() {
 								.
 							</p>
 						</div>
-					</div>
+
+						<div className='space-y-2'>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Do I need to be a Georgia Tech student to attend?</p>
+							<p className='ibm-plex-mono'>No, the event is open to the public.</p>
+						</div>
+
+						<div className='space-y-2'>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Will the event be recorded?</p>
+							<p className='ibm-plex-mono'>Partially, speakers who are okay with it will be recorded and posted on our website.</p>
+						</div>
+
+						
+
+						<div className='space-y-2'>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How long will the event last?</p>
+							<p className='ibm-plex-mono'>Each talk will last about an hour.</p>
+						</div>
+
+						<div className='space-y-2'>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How do I get in contact with the organizers?</p>
+							<p className='ibm-plex-mono'>You can contact us through our email addresses below.</p>
+						</div>
+
+						{/* Add more questions if necessary */}
+						</div>
 				</section>
 
 				{/* Contact Information Section */}
