@@ -48,9 +48,9 @@ export default function Home() {
 					</div>
 				</div>
 
-				<p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
-									*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
-								</p>
+				{/* <p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
+					*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
+				</p> */}
 				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{speakersData.map((speaker, index) => (
 						<SpeakerCards key={index} {...speaker} />
@@ -102,8 +102,6 @@ export default function Home() {
 							<p className='ibm-plex-mono'>Partially, speakers who are okay with it will be recorded and posted on our website.</p>
 						</div>
 
-						
-
 						<div className='space-y-2'>
 							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How long will the event last?</p>
 							<p className='ibm-plex-mono'>Each talk will last about an hour.</p>
@@ -115,7 +113,7 @@ export default function Home() {
 						</div>
 
 						{/* Add more questions if necessary */}
-						</div>
+					</div>
 				</section>
 
 				{/* Contact Information Section */}
