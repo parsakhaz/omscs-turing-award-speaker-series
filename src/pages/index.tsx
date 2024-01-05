@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
+import AdvisorCards from '../components/AdvisorCards';
 import speakersData from '../data/speakersData.json';
+import advisorsData from '../data/advisorsData.json';
 import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 
@@ -116,19 +118,31 @@ export default function Home() {
 					</div>
 				</section>
 
+				{/* Program Advisors */}
+				<h2 className='text-[#a4925a] text-3xl font-semibold'>Speaker Series Advisors</h2>
+				<p className='ibm-plex-mono mt-4'> These are the people who helped make this event possible.</p>
+				<section id='programAdvisors' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+					{advisorsData.map((advisor, index) => (
+						<AdvisorCards key={index} {...advisor} />
+					))}
+				</section>
+
 				{/* Contact Information Section */}
 				<section id='contact' className='my-12'>
-					<h2 className='text-[#a4925a] text-3xl font-semibold'>Contact Information</h2>
+					<h2 className='text-[#a4925a] text-3xl font-semibold'>Who are we?</h2>
 					<div className='mt-4 ibm-plex-mono'>
 						<p>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
 
-						<div className='flex flex-col max-w'>
-							<a href='mailto:zaxel3@gatech.edu' className='btn bg-[#013057] mt-4 text-white hover:text-blue-600 p-4 text-center text-[0.7rem]'>
-								Zack Axel (OMSCS Student and Speaker Series Administrator)
-							</a>
+						<div className='flex flex-col max-w md:grid md:grid-cols-2 gap-8'>
+							<div>
+							<a href='mailto:zaxel3@gatech.edu' className='btn outline outline-[#013057] mt-4 text-black hover:text-blue-600 p-4 text-center text-[0.9rem]'>
+								Zack Axel (OMSCS Student, Outreach and Speaker Series Administrator)
 
-							<a href='mailto:pkhazaeepoul3@gatech.edu' className='btn bg-[#013057] mt-4 text-white hover:text-blue-600 p-4 text-center text-[0.7rem]'>
-								Parsa Khazaeepoul (OMSCS Student and Website and Events Page Administrator)
+							</a>
+							</div>
+							<a href='mailto:pkhazaeepoul3@gatech.edu' className='btn outline outline-[#013057] mt-4 text-black hover:text-blue-600 p-4 text-center text-[0.9rem]'>
+								Parsa Khazaeepoul (OMSCS Student, Website and Events Page Administrator)
+
 							</a>
 						</div>
 						{/* Add more officers if necessary */}
