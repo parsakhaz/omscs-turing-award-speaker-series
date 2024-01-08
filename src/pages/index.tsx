@@ -132,8 +132,10 @@ export default function Home() {
 				<section id='contact' className='my-12'>
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Who are we?</h2>
 					<div className='mt-4 ibm-plex-mono'>
-						<p className='pb-6'>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
-
+						<p className='pb-1'>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
+						<div className='py-2'>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[32rem]'>Connect with our LinkedIn accounts below</p>
+						</div>
 						<div className='flex flex-col sm:flex-row gap-8'>
 							{/* Card for Zack Axel */}
 							<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
@@ -141,13 +143,13 @@ export default function Home() {
 									<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' />
 								</div>
 								<div className='text-center py-1'>
-									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='font-bold underline text-lg mb-2 hover:text-blue-600'>
-										Zack Axel
+									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
+										Zack Axel <Image src='/linkedin.svg' className="pl-1" width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
-									<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
-									zaxel3@gatech.edu
-									</a>
+										<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
+											zaxel3@gatech.edu
+										</a>
 									</p>
 								</div>
 							</div>
@@ -158,13 +160,13 @@ export default function Home() {
 									<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' />
 								</div>
 								<div className='text-center py-1'>
-									<a href='https://www.linkedin.com/in/parsas/' target="_blank" className='font-bold underline text-lg mb-2 hover:text-blue-600'>
-										Parsa Khazaeepoul
+									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
+										Parsa Khazaeepoul <Image src='/linkedin.svg' className="pl-1" width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
-									<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
-									pkhazaeepoul3@gatech.edu
-									</a>
+										<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
+											pkhazaeepoul3@gatech.edu
+										</a>
 									</p>
 								</div>
 							</div>
