@@ -5,9 +5,9 @@ import speakersData from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData.json';
 import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
+import Image from 'next/image';
 
 export default function Home() {
-	
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
@@ -132,20 +132,44 @@ export default function Home() {
 				<section id='contact' className='my-12'>
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Who are we?</h2>
 					<div className='mt-4 ibm-plex-mono'>
-						<p>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
+						<p className='pb-6'>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
 
-						<div className='flex flex-col max-w md:grid md:grid-cols-2 gap-8'>
-							<div>
-							<a href='mailto:zaxel3@gatech.edu' className='btn outline outline-[#013057] mt-4 text-black hover:text-blue-600 p-4 text-center text-[0.9rem]'>
-								Zack Axel (OMSCS Student, Outreach and Speaker Series Administrator)
-
-							</a>
+						<div className='flex flex-col sm:flex-row gap-8'>
+							{/* Card for Zack Axel */}
+							<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
+								<div className='w-full h-64 relative'>
+									<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' />
+								</div>
+								<div className='text-center py-1'>
+									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='font-bold underline text-lg mb-2 hover:text-blue-600'>
+										Zack Axel
+									</a>
+									<p className='text-lg mb-2 hover:text-blue-600'>
+									<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
+									zaxel3@gatech.edu
+									</a>
+									</p>
+								</div>
 							</div>
-							<a href='mailto:pkhazaeepoul3@gatech.edu' className='btn outline outline-[#013057] mt-4 text-black hover:text-blue-600 p-4 text-center text-[0.9rem]'>
-								Parsa Khazaeepoul (OMSCS Student, Website and Events Page Administrator)
- 
-							</a>
+
+							{/* Card for Parsa Khazaeepoul */}
+							<div className='bg-white rounded overflow-hidden shadow-lg w-[15rem] h-[20rem]'>
+								<div className='w-full h-64 relative'>
+									<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' />
+								</div>
+								<div className='text-center py-1'>
+									<a href='https://www.linkedin.com/in/parsas/' target="_blank" className='font-bold underline text-lg mb-2 hover:text-blue-600'>
+										Parsa Khazaeepoul
+									</a>
+									<p className='text-lg mb-2 hover:text-blue-600'>
+									<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
+									pkhazaeepoul3@gatech.edu
+									</a>
+									</p>
+								</div>
+							</div>
 						</div>
+
 						{/* Add more officers if necessary */}
 					</div>
 				</section>
