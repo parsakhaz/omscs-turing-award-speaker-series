@@ -144,7 +144,7 @@ export default function Home() {
 								</div>
 								<div className='text-center py-1'>
 									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
-										Zack Axel <Image src='/linkedin.svg' className="pl-1" width={20} height={20} alt='LinkedIn' />
+										Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
 										<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
@@ -161,7 +161,7 @@ export default function Home() {
 								</div>
 								<div className='text-center py-1'>
 									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
-										Parsa Khazaeepoul <Image src='/linkedin.svg' className="pl-1" width={20} height={20} alt='LinkedIn' />
+										Parsa Khazaeepoul <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
 										<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>

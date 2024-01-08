@@ -1,108 +1,107 @@
 [
-    {
-        "name": "Dr. Moshe Vardi",
-        "dateTime": "January 17th, 12pm EST",
-        "isoDate": "2024-01-17T12:00:00-05:00",
-        "description": "Dr. Moshe Y. Vardi is a University Professor and the George Distinguished Service Professor in Computational Engineering at Rice University, known for his significant contributions in logic and computation.",
-        "rsvpLink": "https://lu.ma/nd8qsgat",
-        "turingAwardWinner": false,
-        "speakerPhoto": "/speaker-photos/moshe.jpg",
-        "talkTitle": "How to Be an Ethical Technologist"
-    },
-    {
-        "name": "Dr. Leslie Lamport",
-        "dateTime": "January 24th, 12pm EST",
-        "isoDate": "2024-01-24T12:00:00-05:00",
-        "description": "Dr. Leslie Lamport, a Turing Award recipient, is renowned for his pioneering work in distributed systems and as the creator of LaTeX.",
-        "rsvpLink": "https://lu.ma/a3e31gh2",
-        "turingAwardWinner": true,
-        "speakerPhoto": "/speaker-photos/leslie.jpg",
-        "turingLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
-        "talkTitle": "How to Write a 21st Century Proof"
-    },
-    {
-        "name": "Dr. Noel Capon",
-        "dateTime": "January 31st, 9am EST",
-        "isoDate": "2024-01-31T09:00:00-05:00",
-        "description": "Dr. Noel Capon is the R.C. Kopf Professor of International Marketing at Columbia Business School, known for his extensive work in marketing, sales, and strategic account management.",
-        "rsvpLink": "https://lu.ma/074jbwyd",
-        "turingAwardWinner": false,
-        "speakerPhoto": "/speaker-photos/noel.jpeg",
-        "talkTitle": "Managing Technology Marketing in the 21st Century"
-    },
-    {
-        "name": "Dr. Barbara Liskov",
-        "dateTime": "February 7th, 1pm EST",
-        "isoDate": "2024-02-07T13:00:00-05:00",
-        "description": "Dr. Barbara Liskov is an Institute Professor at MIT, known for her work in programming languages and systems, including data abstraction, polymorphism, and distributed computing.",
-        "rsvpLink": "https://lu.ma/mwaimm13",
-        "turingAwardWinner": true,
-        "speakerPhoto": "/speaker-photos/barbara.jpg",
-        "turingLink": "https://amturing.acm.org/award_winners/liskov_1108679.cfm",
-        "talkTitle": "How Data Abstraction Changed Computing Forever"
-    },
-    {
-        "name": "Dr. Nir Shavit",
-        "dateTime": "February 16th, 12pm EST",
-        "isoDate": "2024-02-16T12:00:00-05:00",
-        "description": "Dr. Nir Shavit is a Professor at MIT, a member of the Computer Science and Artificial Intelligence Laboratory, known for his work in multi-core computation.",
-        "rsvpLink": "https://lu.ma/l8s766uj",
-        "turingAwardWinner": false,
-        "speakerPhoto": "/speaker-photos/nir.jpg",
-        "talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software"
-    },
-    {
-        "name": "Prof. Jeffrey D. Ullman",
-        "dateTime": "February 21st, 12pm EST",
-        "isoDate": "2024-02-21T12:00:00-05:00",
-        "description": "Prof. Jeffrey David 'Jeff' Ullman is an esteemed computer scientist known for his substantial contributions to database theory, data mining, and software engineering. He is a Turing Award laureate, co-authoring foundational textbooks in computer science.",
-        "rsvpLink": "https://lu.ma/i2xg093m",
-        "turingAwardWinner": true,
-        "speakerPhoto": "/speaker-photos/jeffrey.jpg",
-        "turingLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
-        "talkTitle": "Data Science: Is it Real?"
-    },
-    {
-        "name": "Dr. Assaf Schuster",
-        "dateTime": "February 28th, 9am EST",
-        "isoDate": "2024-02-28T09:00:00-05:00",
-        "description": "Dr. Assaf Schuster is a Professor at the Technion - Israel Institute of Technology, specializing in distributed and database systems, data streams, and cloud computing.",
-        "rsvpLink": "https://lu.ma/32iyk91a",
-        "turingAwardWinner": false,
-        "speakerPhoto": "/speaker-photos/assaf.jpg",
-        "talkTitle": "TBD"
-    },
-    {
-        "name": "Dr. Jack Dongarra",
-        "dateTime": "March 13th, 12pm EST",
-        "isoDate": "2024-03-13T12:00:00-05:00",
-        "description": "Dr. Jack Dongarra is a Distinguished Professor at the University of Tennessee, known for his expertise in numerical algorithms, parallel computing, and advanced-computer architectures.",
-        "rsvpLink": "https://lu.ma/rfdhm7w0",
-        "turingAwardWinner": true,
-        "speakerPhoto": "/speaker-photos/jack.jpg",
-        "turingLink": "https://amturing.acm.org/award_winners/dongarra_3406337.cfm",
-        "talkTitle": "A Not so Simple Matter of Software"
-    },
-    {
-        "name": "Dr. Edward Feigenbaum",
-        "dateTime": "March 20th, 1:30pm EST",
-        "isoDate": "2024-03-20T13:30:00-05:00",
-        "description": "Dr. Edward Feigenbaum is a pioneer in artificial intelligence, known as the 'father of expert systems,' and a joint winner of the 1994 ACM Turing Award.",
-        "rsvpLink": "https://lu.ma/30c9e3mh",
-        "turingAwardWinner": true,
-        "speakerPhoto": "/speaker-photos/edward.jpg",
-        "turingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
-        "talkTitle": "Shorter AMA Style Interview with Dr. Edward Feigenbaum"
-    },
-    {
-        "name": "Dr. Nachum Dershowitz",
-        "dateTime": "March 27th, 12pm EST",
-        "isoDate": "2024-03-27T12:00:00-05:00",
-        "description": "Further details to be confirmed",
-        "rsvpLink": "https://lu.ma/z4jil1wq",
-        "turingAwardWinner": false,
-        "speakerPhoto": "/speaker-photos/nachum.jpg",
-        "talkTitle": "TBD"
-    }
-    
+	{
+		"name": "Dr. Moshe Vardi",
+		"dateTime": "January 17th, 12pm EST",
+		"isoDate": "2024-01-17T12:00:00-05:00",
+		"description": "Dr. Moshe Y. Vardi is a University Professor and the George Distinguished Service Professor in Computational Engineering at Rice University, known for his significant contributions in logic and computation.",
+		"rsvpLink": "https://lu.ma/nd8qsgat",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/moshe.jpg",
+		"talkTitle": "How to Be an Ethical Technologist"
+	},
+	{
+		"name": "Dr. Leslie Lamport",
+		"dateTime": "January 24th, 12pm EST",
+		"isoDate": "2024-01-24T12:00:00-05:00",
+		"description": "Dr. Leslie Lamport, a Turing Award recipient, is renowned for his pioneering work in distributed systems and as the creator of LaTeX.",
+		"rsvpLink": "https://lu.ma/a3e31gh2",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/leslie.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
+		"talkTitle": "How to Write a 21st Century Proof"
+	},
+	{
+		"name": "Dr. Noel Capon",
+		"dateTime": "January 31st, 9am EST",
+		"isoDate": "2024-01-31T09:00:00-05:00",
+		"description": "Dr. Noel Capon is the R.C. Kopf Professor of International Marketing at Columbia Business School, known for his extensive work in marketing, sales, and strategic account management.",
+		"rsvpLink": "https://lu.ma/074jbwyd",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/noel.jpeg",
+		"talkTitle": "Managing Technology Marketing in the 21st Century"
+	},
+	{
+		"name": "Dr. Barbara Liskov",
+		"dateTime": "February 7th, 1pm EST",
+		"isoDate": "2024-02-07T13:00:00-05:00",
+		"description": "Dr. Barbara Liskov is an Institute Professor at MIT, known for her work in programming languages and systems, including data abstraction, polymorphism, and distributed computing.",
+		"rsvpLink": "https://lu.ma/mwaimm13",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/barbara.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/liskov_1108679.cfm",
+		"talkTitle": "How Data Abstraction Changed Computing Forever"
+	},
+	{
+		"name": "Dr. Nir Shavit",
+		"dateTime": "February 16th, 12pm EST",
+		"isoDate": "2024-02-16T12:00:00-05:00",
+		"description": "Dr. Nir Shavit is a Professor at MIT, a member of the Computer Science and Artificial Intelligence Laboratory, known for his work in multi-core computation.",
+		"rsvpLink": "https://lu.ma/l8s766uj",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/nir.jpg",
+		"talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software"
+	},
+	{
+		"name": "Prof. Jeffrey D. Ullman",
+		"dateTime": "February 21st, 12pm EST",
+		"isoDate": "2024-02-21T12:00:00-05:00",
+		"description": "Prof. Jeffrey David 'Jeff' Ullman is an esteemed computer scientist known for his substantial contributions to database theory, data mining, and software engineering. He is a Turing Award laureate, co-authoring foundational textbooks in computer science.",
+		"rsvpLink": "https://lu.ma/i2xg093m",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/jeffrey.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
+		"talkTitle": "Data Science: Is it Real?"
+	},
+	{
+		"name": "Dr. Assaf Schuster",
+		"dateTime": "February 28th, 9am EST",
+		"isoDate": "2024-02-28T09:00:00-05:00",
+		"description": "Dr. Assaf Schuster is a Professor at the Technion - Israel Institute of Technology, specializing in distributed and database systems, data streams, and cloud computing.",
+		"rsvpLink": "https://lu.ma/32iyk91a",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/assaf.jpg",
+		"talkTitle": "TBD"
+	},
+	{
+		"name": "Dr. Jack Dongarra",
+		"dateTime": "March 13th, 12pm EST",
+		"isoDate": "2024-03-13T12:00:00-05:00",
+		"description": "Dr. Jack Dongarra is a Distinguished Professor at the University of Tennessee, known for his expertise in numerical algorithms, parallel computing, and advanced-computer architectures.",
+		"rsvpLink": "https://lu.ma/rfdhm7w0",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/jack.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/dongarra_3406337.cfm",
+		"talkTitle": "A Not so Simple Matter of Software"
+	},
+	{
+		"name": "Dr. Edward Feigenbaum",
+		"dateTime": "March 20th, 1:30pm EST",
+		"isoDate": "2024-03-20T13:30:00-05:00",
+		"description": "Dr. Edward Feigenbaum is a pioneer in artificial intelligence, known as the 'father of expert systems,' and a joint winner of the 1994 ACM Turing Award.",
+		"rsvpLink": "https://lu.ma/30c9e3mh",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/edward.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
+		"talkTitle": "Shorter AMA Style Interview with Dr. Edward Feigenbaum"
+	},
+	{
+		"name": "Dr. Nachum Dershowitz",
+		"dateTime": "March 27th, 12pm EST",
+		"isoDate": "2024-03-27T12:00:00-05:00",
+		"description": "Further details to be confirmed",
+		"rsvpLink": "https://lu.ma/z4jil1wq",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/nachum.jpg",
+		"talkTitle": "TBD"
+	}
 ]
