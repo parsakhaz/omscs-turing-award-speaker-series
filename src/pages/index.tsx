@@ -7,6 +7,7 @@ import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 
 export default function Home() {
+	
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
@@ -142,7 +143,7 @@ export default function Home() {
 							</div>
 							<a href='mailto:pkhazaeepoul3@gatech.edu' className='btn outline outline-[#013057] mt-4 text-black hover:text-blue-600 p-4 text-center text-[0.9rem]'>
 								Parsa Khazaeepoul (OMSCS Student, Website and Events Page Administrator)
-
+ 
 							</a>
 						</div>
 						{/* Add more officers if necessary */}

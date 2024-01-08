@@ -1,17 +1,17 @@
 [
     {
+        "name": "Zvi Galil",
+        "distinction": "Founder of OMSCS. Former Dean of Computing at Georgia Tech",
+        "description": "Zvi Galil is noted for his research in algorithms, complexity, and cryptography. Former Dean of Computing at Georgia Tech, he has written over 200 scientific papers and is recognized for his contributions to computer science education.",
+        "speakerPhoto": "/advisor-photos/zvi.jpg",
+        "biographyLink": "https://www.scs.gatech.edu/people/zvi-galil"
+    },
+    {
         "name": "Bjarne Stroustrup",
         "distinction": "Creator of C++, Professor at Columbia University",
         "description": "Bjarne Stroustrup, renowned for creating C++, has made significant contributions to computer science and software development. A professor at Columbia University, he's a recipient of numerous prestigious awards including the Charles Stark Draper Prize.",
         "speakerPhoto": "/advisor-photos/bjarne.jpg",
         "biographyLink": "https://www.stroustrup.com"
-    },
-    {
-        "name": "Zvi Galil",
-        "distinction": "Former Dean of Computing at Georgia Tech",
-        "description": "Zvi Galil is noted for his research in algorithms, complexity, and cryptography. Former Dean of Computing at Georgia Tech, he has written over 200 scientific papers and is recognized for his contributions to computer science education.",
-        "speakerPhoto": "/advisor-photos/zvi.jpg",
-        "biographyLink": "https://www.scs.gatech.edu/people/zvi-galil"
     },
     {
         "name": "Andi Gutmans",

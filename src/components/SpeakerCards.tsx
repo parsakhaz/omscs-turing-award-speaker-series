@@ -8,7 +8,9 @@ interface SpeakerBioProps {
 	rsvpLink: string;
 	turingAwardWinner: boolean;
 	speakerPhoto: string;
-	turingLink?: string; // Allow string
+	turingLink?: string; 
+	talkTitle?: string; 
+	isoDate: string;
 	// include other props as needed
   }
 
@@ -19,8 +21,21 @@ interface SpeakerBioProps {
 	rsvpLink, 
 	turingAwardWinner, 
 	speakerPhoto, 
-	turingLink
+	turingLink,
+	talkTitle,
+	isoDate,
   }: SpeakerBioProps) => {
+
+
+	const today = new Date();
+	function daysUntilTalk(isoDate: string) {
+		const talkDate = new Date(isoDate);
+		const timeDiff = talkDate.getTime() - today.getTime();
+		const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+		return daysDiff;
+	}
+	
+	
 	if (turingAwardWinner) {
 		return (
 			<div className='card drop-shadow-md rounded-sm bg-base-100 shadow-xl flex flex-col outline outline-[#a4925a]'>
@@ -41,10 +56,11 @@ interface SpeakerBioProps {
 							</p>
 						</div>
 					</div>
+					<p className='mt-2 text-[1rem] italic'>&apos;{talkTitle}&apos;<span className='font-bold text-blue-500'> starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span></span> </p>
 					<p className='mt-2 text-[0.8rem]'>{description}</p>
 				</div>
 
-				<a target='_blank' rel='noreferrer' href={rsvpLink} className=' bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
+				<a target='_blank' rel='noreferrer' href={rsvpLink} className='floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
 					RSVP NOW
 				</a>
 			</div>
@@ -64,10 +80,11 @@ interface SpeakerBioProps {
 						<p className='mt-2'>{dateTime}</p>
 					</div>
 				</div>
+				<p className='mt-2 text-[1rem] italic'>&apos;{talkTitle}&apos;<span className='font-bold text-blue-500'> starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span></span> </p>
 				<p className='mt-2 text-[0.8rem]'>{description}</p>
 			</div>
 
-			<a target='_blank' rel='noreferrer' href={rsvpLink} className=' bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
+			<a target='_blank' rel='noreferrer' href={rsvpLink} className='floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
 				RSVP NOW
 			</a>
 		</div>
