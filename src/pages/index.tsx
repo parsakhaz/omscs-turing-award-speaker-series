@@ -134,7 +134,7 @@ export default function Home() {
 					<div className='mt-4 ibm-plex-mono'>
 						<p className='pb-1'>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
 						<div className='py-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[32rem]'>Connect with our LinkedIn accounts below</p>
+							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[100%]'>Connect with our LinkedIn accounts below</p>
 						</div>
 						<div className='flex flex-col sm:flex-row gap-8'>
 							{/* Card for Zack Axel */}
