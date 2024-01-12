@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
-
+			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>We are at 1000+ RSVPs and counting! RSVP asap to secure your spot.</p>
 			<div className='container mx-auto px-4 pt-6 md:px-16 xl:px-32'>
 				<Head>
 					<title>Turing Award Speaker Series</title>
@@ -20,6 +20,7 @@ export default function Home() {
 				{/* Turing Award Speaker Series Header */}
 				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
 					<div className='h-[100vh] flex flex-col justify-center items-center pb-12'>
+					
 						{/* Turing Award Speaker Series Header */}
 						<header className='flex flex-col text-center max-w-4xl  drop-shadow-[0_0.2px_0.8px_#a4925a]'>
 							<div className='flex justify-center py-4 text-4xl md:text-6xl font-bold'>
