@@ -19,7 +19,7 @@ export default function Home() {
 
 				{/* Turing Award Speaker Series Header */}
 				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
-					<div className='h-[100vh] flex flex-col justify-center items-center pb-16'>
+					<div className='h-[100vh] flex flex-col justify-center items-center pb-12'>
 						{/* Turing Award Speaker Series Header */}
 						<header className='flex flex-col text-center max-w-4xl  drop-shadow-[0_0.2px_0.8px_#a4925a]'>
 							<div className='flex justify-center py-4 text-4xl md:text-6xl font-bold'>
@@ -34,7 +34,7 @@ export default function Home() {
 								</p>
 							</div>
 							<div className='flex justify-center py-8 space-x-5'>
-								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic underline'>
+								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic'>
 									RSVP NOW
 								</a>
 								<a href='#faq' className='outline-[#a4925a] outline px-3 py-3 italic'>
@@ -43,6 +43,11 @@ export default function Home() {
 								<a href='#contact' className='outline-[#a4925a] outline px-3 py-3 italic'>
 									CONTACT
 								</a>
+							</div>
+							<div>
+								<p className='ibm-plex-mono flex underline justify-center text-sm md:text-base italic max-w-3xl'>
+									<a href="https://www.ai2incubator.com/" className="outline-[#a4925a] outline px-3 py-1 text-[0.8rem]" target='_blank'>sponsored by ai2 incubator</a>
+								</p>
 							</div>
 							{/* <p className='text-sm md:text-base italic max-w-2xl'>
 								Georgia Tech OMSCS is proud to host a series of talks by Turing Award winners. The talks will be open to the public and will be held online via Zoom.
