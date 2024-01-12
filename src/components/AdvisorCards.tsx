@@ -36,7 +36,7 @@ const SpeakerBio = ({
 						</p>
 					</div>
 				</div>
-				<p className='mt-2 text-[0.8rem]'>{description}</p>
+				<p className='mt-2 text-[0.95rem]'>{description}</p>
 			</div>
 		</div>
 	);

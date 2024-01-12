@@ -43,14 +43,14 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 							</p>
 						</div>
 					</div>
-					<p className='mt-2 text-[1rem] italic'>
+					<p className='mt-2 text-[1.1rem] italic'>
 						&apos;{talkTitle}&apos;
 						<span className='font-bold text-blue-500'>
 							{' '}
 							starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span>
 						</span>{' '}
 					</p>
-					<p className='mt-2 text-[0.8rem]'>{description}</p>
+					<p className='mt-2 text-[1rem]'>{description}</p>
 				</div>
 
 				<a target='_blank' rel='noreferrer' href={rsvpLink} className='floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
@@ -73,14 +73,14 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 						<p className='mt-2'>{dateTime}</p>
 					</div>
 				</div>
-				<p className='mt-2 text-[1rem] italic'>
+				<p className='mt-2 text-[1.1rem] italic'>
 					&apos;{talkTitle}&apos;
 					<span className='font-bold text-blue-500'>
 						{' '}
 						starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span>
 					</span>{' '}
 				</p>
-				<p className='mt-2 text-[0.8rem]'>{description}</p>
+				<p className='mt-2 text-[1rem]'>{description}</p>
 			</div>
 
 			<a target='_blank' rel='noreferrer' href={rsvpLink} className='floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'>
