@@ -11,8 +11,15 @@ export default function Home() {
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
-			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>We are at 1000+ RSVPs and counting! RSVP asap to secure your spot.</p>
-			<div className='container mx-auto px-4 pt-6 md:px-16 xl:px-32'>
+			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>We are at 1000+ RSVPs and counting! RSVP to secure a spot.</p>
+
+			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]  floating-text'>
+				<a href='https://linktr.ee/omscs' className=' ' target='_blank'>
+					Virtual meeting link released. <span className='font-bold underline'>Click me</span> to join!
+				</a>
+			</p>
+
+			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
 				<Head>
 					<title>Turing Award Speaker Series</title>
 				</Head>
@@ -20,7 +27,6 @@ export default function Home() {
 				{/* Turing Award Speaker Series Header */}
 				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
 					<div className='h-[100vh] flex flex-col justify-center items-center pb-12'>
-					
 						{/* Turing Award Speaker Series Header */}
 						<header className='flex flex-col text-center max-w-4xl  drop-shadow-[0_0.2px_0.8px_#a4925a]'>
 							<div className='flex justify-center py-4 text-4xl md:text-6xl font-bold'>
@@ -47,7 +53,9 @@ export default function Home() {
 							</div>
 							<div>
 								<p className='ibm-plex-mono flex underline justify-center text-sm md:text-base italic max-w-3xl'>
-									<a href="https://www.ai2incubator.com/" className="outline-[#a4925a] outline px-3 py-1 text-[0.8rem]" target='_blank'>sponsored by ai2 incubator</a>
+									<a href='https://www.ai2incubator.com/' className='outline-[#a4925a] outline px-3 py-1 text-[0.8rem]' target='_blank'>
+										sponsored by ai2 incubator
+									</a>
 								</p>
 							</div>
 							{/* <p className='text-sm md:text-base italic max-w-2xl'>
