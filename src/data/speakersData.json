@@ -7,7 +7,8 @@
 		"rsvpLink": "https://lu.ma/nd8qsgat",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/moshe.jpg",
-		"talkTitle": "How to Be an Ethical Technologist"
+		"talkTitle": "How to Be an Ethical Technologist",
+		"recordingLink": "https://www.youtube.com/watch?v=ZjKQTgxAOkU"
 	},
 	{
 		"name": "Dr. Leslie Lamport",
@@ -18,7 +19,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/leslie.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
-		"talkTitle": "AMA on 'How to Write a 21st Century Proof.' MUST WATCH BEFORE AMA: https://www.youtube.com/watch?v=uBiJpip9NVc (20 min)"
+		"talkTitle": "AMA on 'How to Write a 21st Century Proof.' MUST WATCH BEFORE AMA: https://www.youtube.com/watch?v=uBiJpip9NVc (20 min)",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Noel Capon",
@@ -28,7 +30,8 @@
 		"rsvpLink": "https://lu.ma/074jbwyd",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/noel.jpeg",
-		"talkTitle": "Managing Technology Marketing in the 21st Century"
+		"talkTitle": "Managing Technology Marketing in the 21st Century",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Barbara Liskov",
@@ -39,7 +42,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/barbara.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/liskov_1108679.cfm",
-		"talkTitle": "How Data Abstraction Changed Computing Forever"
+		"talkTitle": "How Data Abstraction Changed Computing Forever",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Nir Shavit",
@@ -49,7 +53,8 @@
 		"rsvpLink": "https://lu.ma/l8s766uj",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nir.jpg",
-		"talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software"
+		"talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software",
+		"recordingLink": ""
 	},
 	{
 		"name": "Prof. Jeffrey D. Ullman",
@@ -60,7 +65,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/jeffrey.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
-		"talkTitle": "Data Science: Is it Real?"
+		"talkTitle": "Data Science: Is it Real?",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Assaf Schuster",
@@ -70,7 +76,8 @@
 		"rsvpLink": "https://lu.ma/32iyk91a",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/assaf.jpg",
-		"talkTitle": "TBD"
+		"talkTitle": "TBD",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Jack Dongarra",
@@ -81,7 +88,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/jack.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/dongarra_3406337.cfm",
-		"talkTitle": "A Not so Simple Matter of Software"
+		"talkTitle": "A Not so Simple Matter of Software",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Edward Feigenbaum",
@@ -92,7 +100,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/edward.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
-		"talkTitle": "Shorter AMA Style Interview with Dr. Edward Feigenbaum"
+		"talkTitle": "Shorter AMA Style Interview with Dr. Edward Feigenbaum",
+		"recordingLink": ""
 	},
 	{
 		"name": "Dr. Nachum Dershowitz",
@@ -102,6 +111,7 @@
 		"rsvpLink": "https://lu.ma/z4jil1wq",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nachum.jpg",
-		"talkTitle": "TBD"
+		"talkTitle": "TBD",
+		"recordingLink": ""
 	}
 ]
