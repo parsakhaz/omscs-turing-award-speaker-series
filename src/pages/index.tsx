@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
 import AdvisorCards from '../components/AdvisorCards';
@@ -21,8 +22,57 @@ export default function Home() {
 
 			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
 				<Head>
+					{/* Google Tag Manager */}
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `
+							(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+							new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+							j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+							'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+							})(window,document,'script','dataLayer','GTM-WJ9G6M53');
+              `,
+						}}
+					/>
+					{/* End Google Tag Manager */}
+
 					<title>Turing Award Speaker Series</title>
+					<meta name='description' content='Turing Award Speaker Series' />
+					<link rel='icon' href='/favicon.ico' />
+
+					{/* Open Graph */}
+					<meta property='og:type' content='website' />
+					<meta property='og:url' content='https://www.turing.rsvp/' />
+					<meta property='og:title' content='Turing Award Speaker Series' />
+					<meta
+						property='og:description'
+						content="First of its kind virtual speaker series for 5 Turing Award winners and more distinguished speakers. Featuring Turing Award winners: Dr. Leslie Lamport, Dr. Barbara Liskov, Prof. Jeffrey D. Ullman, Dr. Jack Dongarra, and Dr. Edward Feigenbaum. The Turing Award, often referred to as the 'Nobel Prize of Computing,' is an annual award given by the Association for Computing Machinery (ACM) to
+										individuals for their contributions of lasting and major technical importance to the computing field. Created with support from Zvi Galil, creator of the Online Master's in Computer Science program at Georgia Tech. Sponsored by the AI2 Incubator, a leading AI incubator based out of Seattle Washington."
+					/>
+					<meta property='og:image' content='/og/og-banner.png' />
+
+					{/* Twitter */}
+					<meta property='twitter:card' content='summary_large_image' />
+					<meta property='twitter:url' content='https://www.turing.rsvp/' />
+					<meta property='twitter:title' content='Turing Award Speaker Series' />
+					<meta
+						property='twitter:description'
+						content="First of its kind virtual speaker series for 5 Turing Award winners and more distinguished speakers. Featuring Turing Award winners: Dr. Leslie Lamport, Dr. Barbara Liskov, Prof. Jeffrey D. Ullman, Dr. Jack Dongarra, and Dr. Edward Feigenbaum. The Turing Award, often referred to as the 'Nobel Prize of Computing,' is an annual award given by the Association for Computing Machinery (ACM) to
+										individuals for their contributions of lasting and major technical importance to the computing field. Created with support from Zvi Galil, creator of the Online Master's in Computer Science program at Georgia Tech. Sponsored by the AI2 Incubator, a leading AI incubator based out of Seattle Washington."
+					/>
+					<meta property='twitter:image' content='/og/og-banner.png' />
+
+					{/* LinkedIn */}
+					<meta property='linkedin:card' content='summary_large_image' />
+					<meta property='linkedin:url' content='https://www.turing.rsvp/' />
+					<meta property='linkedin:title' content='Turing Award Speaker Series' />
 				</Head>
+
+				{/* <!-- Google Tag Manager (noscript) --> */}
+				<noscript>
+					<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-WJ9G6M53' height='0' width='0' className='hidden'></iframe>
+				</noscript>
+				{/* <!-- End Google Tag Manager (noscript) --> */}
 
 				{/* Turing Award Speaker Series Header */}
 				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
