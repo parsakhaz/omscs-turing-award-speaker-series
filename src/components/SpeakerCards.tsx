@@ -47,7 +47,7 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 						&apos;{talkTitle}&apos;
 						<span className='font-bold text-blue-500'>
 							{' '}
-							starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span>
+							{daysUntilTalk(isoDate) < 0 ? 'has concluded.' : 'starts in' + ' ' + daysUntilTalk(isoDate) + ' days.'}
 						</span>{' '}
 					</p>
 					<p className='mt-2 text-[1rem]'>{description}</p>
@@ -77,7 +77,7 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 					&apos;{talkTitle}&apos;
 					<span className='font-bold text-blue-500'>
 						{' '}
-						starts in <span className='underline'>{daysUntilTalk(isoDate)} days</span>
+						{daysUntilTalk(isoDate) < 0 ? 'has concluded.' : 'starts in' + ' ' + daysUntilTalk(isoDate) + ' days.'}
 					</span>{' '}
 				</p>
 				<p className='mt-2 text-[1rem]'>{description}</p>
