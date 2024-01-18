@@ -36,6 +36,7 @@ export default function Home() {
 					/>
 					{/* End Google Tag Manager */}
 
+
 					<title>Turing Award Speaker Series</title>
 					<meta name='description' content='Turing Award Speaker Series' />
 					<link rel='icon' href='/favicon.ico' />

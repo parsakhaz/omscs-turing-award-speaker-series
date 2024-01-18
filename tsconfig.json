@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/ui/background-beams.tsx", "src/lib/utils/cn.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/ui/background-beams.tsx", "src/lib/utils/cn.ts", "src/pages/_app.tsx"],
   "exclude": ["node_modules"]
 }
