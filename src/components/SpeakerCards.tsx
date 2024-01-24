@@ -52,13 +52,17 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 				</div>
 
 				<a
-					target='_blank'
-					rel='noreferrer'
-					href={daysUntilTalk(isoDate) > 0 ? rsvpLink : recordingLink}
-					className='floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'
-				>
-					{daysUntilTalk(isoDate) > 0 ? 'RSVP NOW' : 'WATCH NOW'}
-				</a>
+				target='_blank'
+				rel='noreferrer'
+				href={daysUntilTalk(isoDate) > 0 ? rsvpLink : recordingLink}
+				className={
+					daysUntilTalk(isoDate) > 0
+						? 'floating-text bg-[#013057] mt-4 font-bold text-white  hover:text-slate-500 p-4 text-center text-[1.2rem]'
+						: 'floating-text bg-[#7b9cb71f] mt-4 font-bold text-[#013057]  hover:text-slate-500 p-4 text-center text-[1.2rem]'
+				}
+			>
+				{daysUntilTalk(isoDate) > 0 && !recordingLink.startsWith('https') ? 'RSVP NOW' : 'WATCH NOW'}
+			</a>
 			</div>
 		);
 	}

@@ -8,7 +8,7 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/moshe.jpg",
 		"talkTitle": "How to Be an Ethical Technologist",
-		"recordingLink": "https://www.youtube.com/watch?v=ZjKQTgxAOkU"
+		"recordingLink": "https://youtu.be/ZjKQTgxAOkU"
 	},
 	{
 		"name": "Dr. Leslie Lamport",
@@ -19,8 +19,8 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/leslie.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
-		"talkTitle": "AMA on 'How to Write a 21st Century Proof.' MUST WATCH BEFORE AMA: https://www.youtube.com/watch?v=uBiJpip9NVc (20 min)",
-		"recordingLink": ""
+		"talkTitle": "How to Write a 21st Century Proof (AMA)",
+		"recordingLink": "https://youtu.be/-DG6AfJeWKA"
 	},
 	{
 		"name": "Dr. Noel Capon",

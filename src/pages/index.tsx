@@ -9,6 +9,32 @@ import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/image';
 
 export default function Home() {
+	const rawSpeakersData = speakersData;
+	// Function to sort by ISO date
+	const sortSpeakersByDate = (a: { isoDate: string }, b: { isoDate: string }) => {
+		const dateA = new Date(a.isoDate);
+		const dateB = new Date(b.isoDate);
+		const now = new Date();
+
+		// Check if either date is in the past
+		const isPastA = dateA < now;
+		const isPastB = dateB < now;
+
+		// If both dates are either in the past or in the future, sort them normally
+		if ((isPastA && isPastB) || (!isPastA && !isPastB)) {
+			return dateA.getTime() - dateB.getTime();
+		}
+
+		// If one of them is in the past, sort it to appear last
+		if (isPastA) return 1;
+		if (isPastB) return -1;
+
+		// In case both dates are equal (unlikely, but good to handle)
+		return 0;
+	};
+
+	const sortedSpeakersData = rawSpeakersData.sort(sortSpeakersByDate);
+
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
@@ -35,7 +61,6 @@ export default function Home() {
 						}}
 					/>
 					{/* End Google Tag Manager */}
-
 
 					<title>Turing Award Speaker Series</title>
 					<meta name='description' content='Turing Award Speaker Series' />
@@ -119,8 +144,14 @@ export default function Home() {
 				{/* <p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
 					*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
 				</p> */}
-				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+				{/* <section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{speakersData.map((speaker, index) => (
+						<SpeakerCards key={index} {...speaker} />
+					))}
+				</section> */}
+
+				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+					{sortedSpeakersData.map((speaker, index) => (
 						<SpeakerCards key={index} {...speaker} />
 					))}
 				</section>
