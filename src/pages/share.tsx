@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import JSConfetti from 'js-confetti';
 
-const jsConfetti = new JSConfetti();
-
-jsConfetti.addConfetti();
-
 export default function SharePage() {
+	const [confetti, setConfetti] = useState<JSConfetti | null>(null);
 	const [shareSuccessful, setShareSuccessful] = useState(false);
+
+	useEffect(() => {
+		import('js-confetti').then((module) => {
+			const JSConfetti = module.default;
+			setConfetti(new JSConfetti());
+		});
+	}, []);
 
 	const handleShare = async () => {
 		if (navigator.share) {
@@ -16,7 +20,7 @@ export default function SharePage() {
 					url: 'https://www.turing.rsvp/',
 				});
 				console.log('Content shared successfully');
-				jsConfetti.addConfetti();
+				confetti && confetti.addConfetti();
 				setShareSuccessful(true);
 				setTimeout(() => setShareSuccessful(false), 3000); // Reset after 3 seconds
 			} catch (error) {
