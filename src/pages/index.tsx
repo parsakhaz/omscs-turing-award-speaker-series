@@ -144,12 +144,8 @@ export default function Home() {
 				{/* <p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
 					*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
 				</p> */}
-				{/* <section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-					{speakersData.map((speaker, index) => (
-						<SpeakerCards key={index} {...speaker} />
-					))}
-				</section> */}
-
+				
+				{/* Speaker Cards */}
 				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
 						<SpeakerCards key={index} {...speaker} />
