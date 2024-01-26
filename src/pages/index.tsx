@@ -38,11 +38,16 @@ export default function Home() {
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
-			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>We are at 1000+ RSVPs and counting! RSVP to secure a spot.</p>
+			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>
+			<a href='https://linktr.ee/omscs' className=' ' target='_blank'>
+					Virtual meeting link releases 10 minutes before each talk. <span className='font-bold underline'>Click me</span> to join!
+				</a>
+				
+			</p>
 
 			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]  floating-text'>
-				<a href='https://linktr.ee/omscs' className=' ' target='_blank'>
-					Virtual meeting link released. <span className='font-bold underline'>Click me</span> to join!
+			<a href='/share'>
+					4 upcoming Turing Award speakers and 1 Noble Laureate! <span className='font-bold'>Click me</span> to share with a friend.
 				</a>
 			</p>
 
@@ -144,7 +149,7 @@ export default function Home() {
 				{/* <p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
 					*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
 				</p> */}
-				
+
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
@@ -224,7 +229,7 @@ export default function Home() {
 				<section id='contact' className='my-12'>
 					<h2 className='text-[#a4925a] text-3xl font-semibold'>Who are we?</h2>
 					<div className='mt-4 ibm-plex-mono'>
-						<p className='pb-1'>If you have any inquiries or need further information, please don&apos;t hesitate to contact us</p>
+						<p className='pb-1'>We are two Online Master&apos;s in Computer Science student&apos;s at Georgia Tech. If you have any inquiries or need further information, please don&apos;t hesitate to contact us!</p>
 						<div className='py-2'>
 							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[100%]'>Connect with our LinkedIn accounts below</p>
 						</div>
@@ -269,9 +274,11 @@ export default function Home() {
 				</section>
 
 				{/* Footer */}
-				{/* <footer className='my-12 text-center text-sm'>
-					<p>© 2023 Georgia Tech OMSCS. All rights reserved.</p>
-				</footer> */}
+				<footer className='my-12 text-center text-sm'>
+					<p className='ibm-plex-mono'>
+						© 2024 Turing Award Speaker Series. All rights reserved. Launched in partnership with the Association for Computing Machinery at Georgia Tech. Website built by Parsa Khazaeepoul.
+					</p>
+				</footer>
 			</div>
 			<ScrollToTop smooth id='scrollToTop' />
 		</>
