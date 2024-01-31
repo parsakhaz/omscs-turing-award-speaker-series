@@ -76,7 +76,7 @@
 		"rsvpLink": "https://lu.ma/32iyk91a",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/assaf.jpg",
-		"talkTitle": "TBD",
+		"talkTitle": "AMA Style Interview with Dr. Assaf Schuster",
 		"recordingLink": ""
 	},
 	{
@@ -100,7 +100,7 @@
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/edward.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
-		"talkTitle": "Shorter AMA Style Interview with Dr. Edward Feigenbaum",
+		"talkTitle": "AMA Style Interview with Dr. Edward Feigenbaum",
 		"recordingLink": ""
 	},
 	{
@@ -111,7 +111,7 @@
 		"rsvpLink": "https://lu.ma/z4jil1wq",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nachum.jpg",
-		"talkTitle": "TBD",
+		"talkTitle": "AMA Style Interview with Dr. Nachum Dershowitz",
 		"recordingLink": ""
 	}
 ]
