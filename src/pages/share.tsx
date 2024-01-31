@@ -34,7 +34,7 @@ export default function SharePage() {
 	return (
 		<>
 			{shareSuccessful && <p className='text-white top-10 left-10 absolute text-xl mt-4 ibm-plex-mono py-2 px-2 bg-black'>Thank you for sharing!</p>}
-			<div className='flex flex-col justify-center items-center h-screen bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-700'>
+			<div className='flex flex-col justify-center items-center h-screen bg-gradient-to-r bg-slate-800 via-slate-500 to-slate-700'>
 				<div className='text-center py-4 px-4'>
 					<button
 						onClick={handleShare}
