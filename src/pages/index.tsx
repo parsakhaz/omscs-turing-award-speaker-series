@@ -7,6 +7,7 @@ import advisorsData from '../data/advisorsData.json';
 import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
 	const rawSpeakersData = speakersData;
@@ -46,9 +47,9 @@ export default function Home() {
 			</p>
 
 			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]  floating-text'>
-			<a href='/share'>
+			<Link href='/share'>
 					4 upcoming Turing Award speakers and 1 Noble Laureate! <span className='font-bold'>Click me</span> to share with a friend.
-				</a>
+				</Link>
 			</p>
 
 			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
