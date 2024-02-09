@@ -31,7 +31,7 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/noel.jpeg",
 		"talkTitle": "Managing Technology Marketing in the 21st Century",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/Rkgpyf9gvgI"
 	},
 	{
 		"name": "Dr. Barbara Liskov",
@@ -43,7 +43,7 @@
 		"speakerPhoto": "/speaker-photos/barbara.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/liskov_1108679.cfm",
 		"talkTitle": "How Data Abstraction Changed Computing Forever",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/M4YIDz2WTCI"
 	},
 	{
 		"name": "Dr. Nir Shavit",
