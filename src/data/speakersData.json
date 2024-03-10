@@ -107,11 +107,24 @@
 		"name": "Dr. Nachum Dershowitz",
 		"dateTime": "March 27th, 12pm EST",
 		"isoDate": "2024-03-27T12:00:00-05:00",
-		"description": "Further details to be confirmed",
+		"description": "Dr. Nachum Dershowitz is a prominent figure in computer science and mathematics, renowned for his groundbreaking advancements in computational linguistics and automated reasoning.",
 		"rsvpLink": "https://lu.ma/z4jil1wq",
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nachum.jpg",
 		"talkTitle": "AMA Style Interview with Dr. Nachum Dershowitz",
 		"recordingLink": ""
+	},
+	{
+		"name": "Tony Leggett",
+		"dateTime": "April 3rd, 12pm EST",
+		"isoDate": "2024-04-03T12:00:00-04:00",
+		"description": "Dr.  Leggett, a Nobel laureate in physics, is celebrated for his seminal contributions to the understanding of quantum liquids and superconductors, profoundly influencing the field of condensed matter physics.",
+		"rsvpLink": "https://lu.ma/iiawbtv5",
+		"turingAwardWinner": false,
+		"speakerPhoto": "/speaker-photos/tony.jpg",
+		"talkTitle": "Quantum Liquids",
+		"recordingLink": ""
 	}
+	
+
 ]
