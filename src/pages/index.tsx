@@ -39,18 +39,20 @@ export default function Home() {
 	return (
 		<>
 			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
+			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]'>
+			<Link href='/share'>
+					We hosted 5 Turing Laureates and 1 Nobel Laureate! <span className='font-bold floating-text'>Click me</span> to share recordings with a friend.
+				</Link>
+			</p>
+
 			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>
-			<a href='https://linktr.ee/omscs' className=' ' target='_blank'>
-					Virtual meeting link releases 10 minutes before each talk. <span className='font-bold underline'>Click me</span> to join!
-				</a>
+			
+					The 2024 OMSCS Turing Award Series, hosted by <a href='https://www.linkedin.com/in/parsas/' className='italic underline' target='_blank'>Parsa Khazaeepoul</a> and <a href='https://www.linkedin.com/in/zackaxel/' className='italic underline' target='_blank'>Zach Axel</a>, has <span className='font-bold'>concluded.</span>
+				
 				
 			</p>
 
-			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]  floating-text'>
-			<Link href='/share'>
-					4 upcoming Turing Award speakers and 1 Noble Laureate! <span className='font-bold'>Click me</span> to share with a friend.
-				</Link>
-			</p>
+		
 
 			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
 				<Head>
@@ -124,7 +126,7 @@ export default function Home() {
 							</div>
 							<div className='flex justify-center py-8 space-x-5'>
 								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic'>
-									RSVP NOW
+									WATCH NOW
 								</a>
 								<a href='#faq' className='outline-[#a4925a] outline px-3 py-3 italic'>
 									FAQ
@@ -164,12 +166,12 @@ export default function Home() {
 					<div className='mt-4 space-y-6'>
 						<div className='space-y-2'>
 							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Where will the event take place?</p>
-							<p className='ibm-plex-mono'>The event will be held online via Teams.</p>
+							<p className='ibm-plex-mono'>The event was held online via Teams.</p>
 						</div>
 
 						<div className='space-y-2'>
 							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Is this a recurring event?</p>
-							<p className='ibm-plex-mono'>For now, this is a one time event. If we have enough interest, we may be able to make this recurring.</p>
+							<p className='ibm-plex-mono'>For now, this is a one time event. If we have enough <a href='https://www.linkedin.com/in/parsas/' className='font-bold'>interest</a>, we may be able to make this recurring.</p>
 						</div>
 
 						<div className='space-y-2'>
