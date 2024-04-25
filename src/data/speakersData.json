@@ -54,7 +54,7 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nir.jpg",
 		"talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/4iEvYx9cAnk"
 	},
 	{
 		"name": "Prof. Jeffrey D. Ullman",
@@ -66,7 +66,7 @@
 		"speakerPhoto": "/speaker-photos/jeffrey.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
 		"talkTitle": "Data Science: Is it Real?",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/09hvsK4fsoE"
 	},
 	{
 		"name": "Dr. Assaf Schuster",
@@ -77,7 +77,7 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/assaf.jpg",
 		"talkTitle": "AMA Style Interview with Dr. Assaf Schuster",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/5c2l5UnWugo"
 	},
 	{
 		"name": "Dr. Jack Dongarra",
@@ -89,7 +89,7 @@
 		"speakerPhoto": "/speaker-photos/jack.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/dongarra_3406337.cfm",
 		"talkTitle": "A Not so Simple Matter of Software",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/KiY_eaR-aqI"
 	},
 	{
 		"name": "Dr. Edward Feigenbaum",
@@ -101,7 +101,7 @@
 		"speakerPhoto": "/speaker-photos/edward.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
 		"talkTitle": "AMA Style Interview with Dr. Edward Feigenbaum",
-		"recordingLink": ""
+		"recordingLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm"
 	},
 	{
 		"name": "Dr. Nachum Dershowitz",
@@ -112,10 +112,10 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/nachum.jpg",
 		"talkTitle": "AMA Style Interview with Dr. Nachum Dershowitz",
-		"recordingLink": ""
+		"recordingLink": "https://lu.ma/z4jil1wq"
 	},
 	{
-		"name": "Dr. Tony Leggett",
+		"name": "Dr. Anthony Leggett",
 		"dateTime": "April 3rd, 12pm EST",
 		"isoDate": "2024-04-03T12:00:00-04:00",
 		"description": "Dr.  Leggett, a Nobel laureate in physics, is celebrated for his seminal contributions to the understanding of quantum liquids and superconductors, profoundly influencing the field of condensed matter physics.",
@@ -123,8 +123,6 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/tony.jpg",
 		"talkTitle": "Quantum Liquids",
-		"recordingLink": ""
+		"recordingLink": "https://youtu.be/xKQFUnWHZTo"
 	}
-	
-
 ]
