@@ -109,8 +109,8 @@ export default function Home() {
 							<a href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								CONTACT US
 							</a>
-							<a href='#about' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
-								ABOUT
+							<a href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+								FAQ
 							</a>
 						</div>
 					</motion.div>
