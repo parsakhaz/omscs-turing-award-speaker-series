@@ -8,6 +8,7 @@ import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Home() {
 	const rawSpeakersData = speakersData;
@@ -36,254 +37,197 @@ export default function Home() {
 
 	const sortedSpeakersData = rawSpeakersData.sort(sortSpeakersByDate);
 
+	const { scrollYProgress } = useScroll();
+	const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+
 	return (
-		<>
-			{/* <img src='/gatech-banner.png' alt='Georgia Tech Banner' /> */}
-			<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]'>
-			<Link href='/share'>
-					We hosted 5 Turing Laureates and 1 Nobel Laureate! <span className='font-bold floating-text'>Click me</span> to share recordings with a friend.
-				</Link>
-			</p>
+		<div className='relative overflow-hidden'>
+			{/* Geometric background */}
+			<motion.div
+				className='absolute inset-0 z-0 opacity-10'
+				style={{
+					backgroundImage: "url('/geometric-pattern.svg')",
+					y: backgroundY,
+				}}
+			/>
 
-			<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>
-			
-					The 2024 OMSCS Turing Award Series, hosted by <a href='https://www.linkedin.com/in/parsas/' className='italic underline' target='_blank'>Parsa Khazaeepoul</a> and <a href='https://www.linkedin.com/in/zackaxel/' className='italic underline' target='_blank'>Zach Axel</a>, has <span className='font-bold'>concluded.</span>
-				
-				
-			</p>
+			<div className='relative z-10'>
+				{/* Banners from 2023 version */}
+				{/* <div className="absolute top-0 left-0 z-20 w-full">
+					<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]'>
+						<Link href='/share'>
+							We hosted 5 Turing Laureates and 1 Nobel Laureate! <span className='font-bold floating-text'>Click me</span> to share recordings with a friend.
+						</Link>
+					</p>
 
-		
+					<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>
+						The 2024 OMSCS Turing Award Series, hosted by <a href='https://www.linkedin.com/in/parsas/' className='italic underline' target='_blank'>Parsa Khazaeepoul</a> and <a href='https://www.linkedin.com/in/zackaxel/' className='italic underline' target='_blank'>Zach Axel</a>, has <span className='font-bold'>concluded.</span>
+					</p>
+				</div> */}
 
-			<div className='container mx-auto px-4 pt-4 md:px-16 xl:px-32'>
-				<Head>
-					{/* Google Tag Manager */}
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
-							(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-							new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-							j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-							'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-							})(window,document,'script','dataLayer','G-Y1G13WPJKZ');
-              `,
-						}}
-					/>
-					{/* End Google Tag Manager */}
-
-					<title>Turing Award Speaker Series</title>
-					<meta name='description' content='Turing Award Speaker Series' />
-					<link rel='icon' href='/favicon.ico' />
-
-					{/* Open Graph */}
-					<meta property='og:type' content='website' />
-					<meta property='og:url' content='https://www.turing.rsvp/' />
-					<meta property='og:title' content='Turing Award Speaker Series' />
-					<meta
-						property='og:description'
-						content="First of its kind virtual speaker series for 5 Turing Award winners and more distinguished speakers. Featuring Turing Award winners: Dr. Leslie Lamport, Dr. Barbara Liskov, Prof. Jeffrey D. Ullman, Dr. Jack Dongarra, and Dr. Edward Feigenbaum. The Turing Award, often referred to as the 'Nobel Prize of Computing,' is an annual award given by the Association for Computing Machinery (ACM) to
-										individuals for their contributions of lasting and major technical importance to the computing field. Created with support from Zvi Galil, creator of the Online Master's in Computer Science program at Georgia Tech. Sponsored by the AI2 Incubator, a leading AI incubator based out of Seattle Washington."
-					/>
-					<meta property='og:image' content='/og/og-banner.png' />
-
-					{/* Twitter */}
-					<meta property='twitter:card' content='summary_large_image' />
-					<meta property='twitter:url' content='https://www.turing.rsvp/' />
-					<meta property='twitter:title' content='Turing Award Speaker Series' />
-					<meta
-						property='twitter:description'
-						content="First of its kind virtual speaker series for 5 Turing Award winners and more distinguished speakers. Featuring Turing Award winners: Dr. Leslie Lamport, Dr. Barbara Liskov, Prof. Jeffrey D. Ullman, Dr. Jack Dongarra, and Dr. Edward Feigenbaum. The Turing Award, often referred to as the 'Nobel Prize of Computing,' is an annual award given by the Association for Computing Machinery (ACM) to
-										individuals for their contributions of lasting and major technical importance to the computing field. Created with support from Zvi Galil, creator of the Online Master's in Computer Science program at Georgia Tech. Sponsored by the AI2 Incubator, a leading AI incubator based out of Seattle Washington."
-					/>
-					<meta property='twitter:image' content='/og/og-banner.png' />
-
-					{/* LinkedIn */}
-					<meta property='linkedin:card' content='summary_large_image' />
-					<meta property='linkedin:url' content='https://www.turing.rsvp/' />
-					<meta property='linkedin:title' content='Turing Award Speaker Series' />
-				</Head>
-
-				{/* <!-- Google Tag Manager (noscript) --> */}
-				<noscript>
-					<iframe src='https://www.googletagmanager.com/ns.html?id=G-Y1G13WPJKZ' height='0' width='0' className='hidden'></iframe>
-				</noscript>
-				{/* <!-- End Google Tag Manager (noscript) --> */}
-
-				{/* Turing Award Speaker Series Header */}
-				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>
-					<div className='h-[100vh] flex flex-col justify-center items-center pb-12'>
-						{/* Turing Award Speaker Series Header */}
-						<header className='flex flex-col text-center max-w-4xl  drop-shadow-[0_0.2px_0.8px_#a4925a]'>
-							<div className='flex justify-center py-4 text-4xl md:text-6xl font-bold'>
-								<h1 className='animated-gradient-text'>
-									Turing Award<div className='pb-3 gradient-text'> Speaker Series</div>
-								</h1>
-							</div>
-							<div>
-								<p className='ibm-plex-mono flex justify-center text-sm md:text-base italic max-w-3xl'>
-									The Turing Award, often referred to as the &apos;Nobel Prize of Computing,&apos; is an annual award given by the Association for Computing Machinery (ACM) to
-									individuals for their contributions of lasting and major technical importance to the computing field.
-								</p>
-							</div>
-							<div className='flex justify-center py-8 space-x-5'>
-								<a href='#speakerCards' className='outline-[#a4925a] outline px-3 py-3 italic'>
-									WATCH NOW
-								</a>
-								<a href='#faq' className='outline-[#a4925a] outline px-3 py-3 italic'>
-									FAQ
-								</a>
-								<a href='#contact' className='outline-[#a4925a] outline px-3 py-3 italic'>
-									CONTACT
-								</a>
-							</div>
-							<div>
-								<p className='ibm-plex-mono flex underline justify-center text-sm md:text-base italic max-w-3xl'>
-									<a href='https://www.ai2incubator.com/' className='outline-[#a4925a] outline px-3 py-1 text-[0.8rem]' target='_blank'>
-										sponsored by ai2 incubator
-									</a>
-								</p>
-							</div>
-							{/* <p className='text-sm md:text-base italic max-w-2xl'>
-								Georgia Tech OMSCS is proud to host a series of talks by Turing Award winners. The talks will be open to the public and will be held online via Zoom.
-							</p> */}
-						</header>
+				{/* Updated header with 3D elements */}
+				<header className='h-screen flex flex-col relative pt-64'>
+					<div className='text-center mb-16'>
+						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-lg font-light mb-2 text-gray-600'>
+							ACM A.M.
+						</motion.div>
+						<motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className='text-6xl font-bold mb-4 relative'>
+							<span className='relative z-10'>Turing Award Speaker Series</span>
+							<motion.span className='absolute -left-2 -top-2 text-[#a4925a] opacity-50' animate={{ x: [0, 5, 0], y: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 5 }}>
+								Turing Award Speaker Series
+							</motion.span>
+						</motion.h1>
+						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-2xl font-light text-gray-600'>
+							Fall, 2024
+						</motion.div>
 					</div>
-				</div>
 
-				{/* <p className='pt-8 ibm-plex-mono text-sm md:text-base italic '>
-					*Turing Award Winners are marked with a <span className='text-[#a4925a] font-bold'>gold</span> border.
-				</p> */}
+					<motion.div
+						initial={{ opacity: 0, y: 50 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.7, duration: 0.8 }}
+						className='w-full max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-8 absolute bottom-16'
+					>
+						<h2 className='text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>About the Turing Award Speaker Series</h2>
+
+						<p className='ibm-plex-mono mb-8'>
+							The Turing Award Speaker Series is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
+							science, this series features talks from Turing Award winners, sharing their groundbreaking research and insights into the future of technology.
+						</p>
+						{/* Navigation buttons */}
+						<div className='flex space-x-5'>
+							<a href='#speakerCards' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300'>
+								RSVP NOW
+							</a>
+							<a href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300'>
+								CONTACT US
+							</a>
+							<a href='#about' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300'>
+								ABOUT
+							</a>
+						</div>
+					</motion.div>
+				</header>
 
 				{/* Speaker Cards */}
-				<section id='speakerCards' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
 						<SpeakerCards key={index} {...speaker} />
 					))}
 				</section>
 
-				{/* FAQ Section */}
-				<section id='faq' className='my-12'>
-					<h2 className='text-[#a4925a] text-3xl font-semibold'>Frequently Asked Questions</h2>
-					<div className='mt-4 space-y-6'>
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Where will the event take place?</p>
-							<p className='ibm-plex-mono'>The event was held online via Teams.</p>
+				{/* Updated FAQ with glassmorphism */}
+				<section id='faq' className='my-24 px-4'>
+					<div className='max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-8'>
+						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Frequently Asked Questions</h2>
+						<div className='space-y-6'>
+							<div>
+								<h3 className='text-xl font-semibold mb-2 text-gray-900'>What is the Turing Award?</h3>
+								<p className='ibm-plex-mono text-gray-800'>
+									The Turing Award is often referred to as the &quot;Nobel Prize of Computing.&quot; It is an annual award given by the Association for Computing Machinery (ACM) to
+									an individual for contributions of lasting and major technical importance to the computer field.
+								</p>
+							</div>
+							<div>
+								<h3 className='text-xl font-semibold mb-2 text-gray-900'>How can I attend the speaker series?</h3>
+								<p className='ibm-plex-mono text-gray-800'>By RSVPing on our website when we release the event RSVPs.</p>
+							</div>
+							<div>
+								<h3 className='text-xl font-semibold mb-2 text-gray-900'>Are the talks recorded?</h3>
+								<p className='ibm-plex-mono text-gray-800'>
+									At the speakers discretion, some talks are recorded and will be made available on our website after the event. However, we encourage live attendance for the
+									opportunity to participate in Q&A sessions.
+								</p>
+							</div>
+							<div>
+								<h3 className='text-xl font-semibold mb-2 text-gray-900'>Is there a cost to attend?</h3>
+								<p className='ibm-plex-mono text-gray-800'>The event is free for all.</p>
+							</div>
+							<div>
+								<h3 className='text-xl font-semibold mb-2 text-gray-900'>How can I suggest a speaker for future series?</h3>
+								<p className='ibm-plex-mono text-gray-800'>
+									We welcome suggestions for future speakers. Please send your recommendations to our hosts whos&apos; emails can be found below.
+								</p>
+							</div>
 						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Is this a recurring event?</p>
-							<p className='ibm-plex-mono'>For now, this is a one time event. If we have enough <a href='https://www.linkedin.com/in/parsas/' className='font-bold'>interest</a>, we may be able to make this recurring.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How much does it cost to attend?</p>
-							<p className='ibm-plex-mono'>The event is free to attend.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Do I need to RSVP?</p>
-							<p className='ibm-plex-mono'>Yes, you need to RSVP in order to receive the Teams link.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How do I RSVP?</p>
-							<p className='ibm-plex-mono'>
-								You can RSVP by clicking the RSVP buttons for each individual event. Or through our lu.ma calendar{' '}
-								<a className='text-blue-800' target='_blank' rel='noreferrer' href='https://lu.ma/omscs/'>
-									here
-								</a>
-								.
-							</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Do I need to be a Georgia Tech student to attend?</p>
-							<p className='ibm-plex-mono'>No, the event is open to the public.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>Will the event be recorded?</p>
-							<p className='ibm-plex-mono'>Partially, speakers who are okay with it will be recorded and posted on our website.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How long will the event last?</p>
-							<p className='ibm-plex-mono'>Each talk will last about an hour.</p>
-						</div>
-
-						<div className='space-y-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2'>How do I get in contact with the organizers?</p>
-							<p className='ibm-plex-mono'>You can contact us through our email addresses below.</p>
-						</div>
-
-						{/* Add more questions if necessary */}
 					</div>
 				</section>
 
 				{/* Program Advisors */}
-				<h2 className='text-[#a4925a] text-3xl font-semibold'>Speaker Series Advisors</h2>
-				<p className='ibm-plex-mono mt-4'> These are the people who helped make this event possible.</p>
-				<section id='programAdvisors' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
-					{advisorsData.map((advisor, index) => (
-						<AdvisorCards key={index} {...advisor} />
-					))}
+				<section className='my-24 px-8'>
+					<div className='max-w-6xl mx-auto'>
+						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Speaker Series Advisors</h2>
+						<p className='ibm-plex-mono mt-4 text-gray-800'> These are the people who helped make this event possible.</p>
+						<div id='programAdvisors' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+							{advisorsData.map((advisor, index) => (
+								<motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+									<AdvisorCards {...advisor} />
+								</motion.div>
+							))}
+						</div>
+					</div>
 				</section>
 
 				{/* Contact Information Section */}
-				<section id='contact' className='my-12'>
-					<h2 className='text-[#a4925a] text-3xl font-semibold'>Who are we?</h2>
-					<div className='mt-4 ibm-plex-mono'>
-						<p className='pb-1'>We are two Online Master&apos;s in Computer Science student&apos;s at Georgia Tech. If you have any inquiries or need further information, please don&apos;t hesitate to contact us!</p>
-						<div className='py-2'>
-							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[100%]'>Connect with our LinkedIn accounts below</p>
-						</div>
-						<div className='flex flex-col sm:flex-row gap-8'>
-							{/* Card for Zack Axel */}
-							<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
-								<div className='w-full h-64 relative'>
-									<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' />
-								</div>
-								<div className='text-center py-1'>
-									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
-										Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
-									</a>
-									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
-											zaxel3@gatech.edu
+				<section id='contact' className='my-24 px-8'>
+					<div className='max-w-6xl mx-auto'>
+						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Who are we?</h2>
+						<div className='mt-4 ibm-plex-mono text-gray-800'>
+							<p className='pb-1'>
+								We are two Online Master&apos;s in Computer Science students at Georgia Tech. If you have any inquiries or need further information, please don&apos;t hesitate to
+								contact us!
+							</p>
+							<div className='py-2'>
+								<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-full'>Connect with our LinkedIn accounts below</p>
+							</div>
+							<div className='flex flex-col sm:flex-row gap-8'>
+								{/* Card for Zack Axel */}
+								<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
+									<div className='w-full h-64 relative'>
+										<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' />
+									</div>
+									<div className='text-center py-1'>
+										<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
+											Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 										</a>
-									</p>
+										<p className='text-lg mb-2 hover:text-blue-600'>
+											<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
+												zaxel3@gatech.edu
+											</a>
+										</p>
+									</div>
+								</div>
+
+								{/* Card for Parsa Khazaeepoul */}
+								<div className='bg-white rounded overflow-hidden shadow-lg w-[15rem] h-[20rem]'>
+									<div className='w-full h-64 relative'>
+										<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' />
+									</div>
+									<div className='text-center py-1'>
+										<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
+											Parsa Khazaeepoul <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
+										</a>
+										<p className='text-lg mb-2 hover:text-blue-600'>
+											<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
+												pkhazaeepoul3@gatech.edu
+											</a>
+										</p>
+									</div>
 								</div>
 							</div>
-
-							{/* Card for Parsa Khazaeepoul */}
-							<div className='bg-white rounded overflow-hidden shadow-lg w-[15rem] h-[20rem]'>
-								<div className='w-full h-64 relative'>
-									<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' />
-								</div>
-								<div className='text-center py-1'>
-									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
-										Parsa Khazaeepoul <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
-									</a>
-									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
-											pkhazaeepoul3@gatech.edu
-										</a>
-									</p>
-								</div>
-							</div>
 						</div>
-
-						{/* Add more officers if necessary */}
 					</div>
 				</section>
 
 				{/* Footer */}
-				<footer className='my-12 text-center text-sm'>
+				<footer className='my-12 text-center text-sm px-16'>
 					<p className='ibm-plex-mono'>
-						© 2024 Turing Award Speaker Series. All rights reserved. Launched in partnership with the Association for Computing Machinery at Georgia Tech. Website built by Parsa Khazaeepoul.
+						© 2024 Turing Award Speaker Series. All rights reserved. Launched in partnership with the Association for Computing Machinery at Georgia Tech. Website built by Parsa
+						Khazaeepoul.
 					</p>
 				</footer>
 			</div>
 			<ScrollToTop smooth id='scrollToTop' />
-		</>
+		</div>
 	);
 }
