@@ -72,11 +72,16 @@ export default function Home() {
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-lg py-2 font-light mb-2 text-gray-600'>
 								ACM A.M.
 							</motion.div>
-							<motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className='text-4xl md:text-6xl font-bold mb-2 md:mb-4 relative'>
+							<motion.h1
+								initial={{ opacity: 0, y: 50 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.8 }}
+								className='text-4xl md:text-6xl font-bold mb-2 md:mb-4 relative'
+							>
 								<span className='relative z-10'>Turing Award Speaker Series</span>
-								<motion.span 
-									className='absolute inset-0 text-[#a4925a] opacity-50 hidden md:inline-block' 
-									animate={{ x: [0, 5, 0], y: [0, 5, 0] }} 
+								<motion.span
+									className='absolute inset-0 text-[#a4925a] opacity-50 hidden md:inline-block'
+									animate={{ x: [0, 5, 0], y: [0, 5, 0] }}
 									transition={{ repeat: Infinity, duration: 5 }}
 									style={{ zIndex: -1 }}
 								>
@@ -95,7 +100,9 @@ export default function Home() {
 						transition={{ delay: 0.7, duration: 0.8 }}
 						className='w-full justify-center max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'
 					>
-						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>About the Turing Award Speaker Series</h2>
+						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>
+							About the Turing Award Speaker Series
+						</h2>
 
 						<p className='ibm-plex-mono mb-6 md:mb-8 text-sm md:text-base'>
 							The Turing Award Speaker Series is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
