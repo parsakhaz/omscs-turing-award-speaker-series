@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Dr. Zvi Galil",
+		"distinction": "Creator of OMSCS, Former Dean of Computing at Georgia Tech, Professor at Columbia University",
+		"description": "Zvi Galil is noted for his research in algorithms, complexity, and cryptography. Former Dean of Computing at Georgia Tech, he has written over 200 scientific papers and is recognized for his contributions to computer science education.",
+		"speakerPhoto": "/advisor-photos/zvi.jpg",
+		"biographyLink": "https://www.scs.gatech.edu/people/zvi-galil"
+	},
+	{
+		"name": "Dr. Edward Feigenbaum",
+		"distinction": "Turing Award Winner, Professor Emeritus at Stanford University",
+		"description": "Edward Feigenbaum is a pioneer in artificial intelligence, known as the 'father of expert systems.' He is a joint winner of the 1994 ACM Turing Award for his work in AI and expert systems.",
+		"speakerPhoto": "/advisor-photos/edward.jpg",
+		"biographyLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm"
+	},
+	{
+		"name": "Dr. Moshe Vardi",
+		"distinction": "University Professor at Rice University",
+		"description": "Moshe Vardi is a University Professor and the George Distinguished Service Professor in Computational Engineering at Rice University. He is known for his significant contributions in logic and computation.",
+		"speakerPhoto": "/advisor-photos/moshe.jpg",
+		"biographyLink": "https://www.cs.rice.edu/~vardi/"
+	},
+	{
+		"name": "Dr. Jeffrey Ullman",
+		"distinction": "Turing Award Winner, Professor Emeritus at Stanford University",
+		"description": "Jeffrey Ullman is a renowned computer scientist known for his work in database theory, data mining, and software engineering. He is a co-recipient of the 2020 ACM Turing Award.",
+		"speakerPhoto": "/advisor-photos/jeffrey.jpg",
+		"biographyLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm"
+	},
+	{
+		"name": "Dr. Leslie Lamport",
+		"distinction": "Turing Award Winner, Principal Researcher at Microsoft Research",
+		"description": "Leslie Lamport is a computer scientist and mathematician. He received the 2013 Turing Award for his fundamental contributions to the theory and practice of distributed and concurrent systems.",
+		"speakerPhoto": "/advisor-photos/leslie.jpg",
+		"biographyLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm"
+	}
+]
