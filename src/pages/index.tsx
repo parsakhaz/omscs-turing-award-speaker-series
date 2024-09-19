@@ -75,14 +75,14 @@ export default function Home() {
 								transition={{ duration: 0.8 }}
 								className='text-4xl md:text-6xl font-bold mb-2 md:mb-4 relative'
 							>
-								<span className='relative z-10'>Turing Award Speaker Series</span>
+								<span className='relative z-10'>Turing Minds</span>
 								<motion.span
 									className='absolute inset-0 text-[#a4925a] opacity-50 hidden md:inline-block'
 									animate={{ x: [0, 5, 0], y: [0, 5, 0] }}
 									transition={{ repeat: Infinity, duration: 5 }}
 									style={{ zIndex: -1 }}
 								>
-									Turing Award Speaker Series
+									Turing Minds
 								</motion.span>
 							</motion.h1>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>
