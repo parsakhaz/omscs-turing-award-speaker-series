@@ -53,7 +53,7 @@ export default function Home() {
 	return (
 		<div className='relative'>
 			{/* Sponsor banner moved to the top of the page, outside of other containers */}
-			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-800 text-white py-2 px-2'>
+			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-800 text-white px-2'>
 				<p className='text-center text-sm font-sans'>
 					<a href='https://www.ai2incubator.com/' className='italic underline hover:text-[#a4925a] font-medium tracking-wide ibm-plex-mono' target='_blank' rel="noopener noreferrer">
 						Sponsored by AI2 Incubator
