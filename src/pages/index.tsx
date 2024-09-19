@@ -6,8 +6,9 @@ import speakersData from '../data/speakersData2024.json';
 import advisorsData from '../data/advisorsData2024.json';
 import React, { useMemo } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 // Wrap components that don't need frequent updates in React.memo
 const MemoizedSpeakerCards = React.memo(SpeakerCards);
@@ -60,19 +61,45 @@ export default function Home() {
 				</p>
 			</div>
 
-			<div className='relative pt-10'> {/* Added padding-top to account for the fixed sponsor banner */}
-				{/* Updated header with simpler design */}
+			<div className='relative z-10'>
+				{/* Updated header with 3D elements */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-10 left-0 right-0 z-50 bg-white md:relative'> {/* Adjusted top value */}
+					<div className='fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg md:relative md:bg-transparent md:backdrop-filter-none'>
 						<div className='text-center py-4 md:mb-16 md:pt-64'>
-							<div className='text-lg py-2 font-light mb-2 text-gray-600'>ACM A.M.</div>
-							<h1 className='text-4xl md:text-6xl font-bold mb-2 md:mb-4'>Turing Minds</h1>
-							<div className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>Fall, 2024</div>
+							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-lg py-2 font-light mb-2 text-gray-600'>
+								ACM A.M.
+							</motion.div>
+							<motion.h1
+								initial={{ opacity: 0, y: 50 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.8 }}
+								className='text-4xl md:text-6xl font-bold mb-2 md:mb-4 relative'
+							>
+								<span className='relative z-10'>Turing Award Speaker Series</span>
+								<motion.span
+									className='absolute inset-0 text-[#a4925a] opacity-50 hidden md:inline-block'
+									animate={{ x: [0, 5, 0], y: [0, 5, 0] }}
+									transition={{ repeat: Infinity, duration: 5 }}
+									style={{ zIndex: -1 }}
+								>
+									Turing Award Speaker Series
+								</motion.span>
+							</motion.h1>
+							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>
+								Fall, 2024
+							</motion.div>
 						</div>
 					</div>
 
-					<div className='w-full justify-center max-w-4xl mx-auto bg-white rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'>
-						<h2 className='text-2xl md:text-3xl font-semibold mb-4 text-[#a4925a]'>About the Turing Award Speaker Series</h2>
+					<motion.div
+						initial={{ opacity: 0, y: 50 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.7, duration: 0.8 }}
+						className='w-full justify-center max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'
+					>
+						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>
+							About the Turing Award Speaker Series
+						</h2>
 
 						<p className='ibm-plex-mono mb-6 md:mb-8 text-sm md:text-base'>
 							The Turing Award Speaker Series is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
@@ -80,26 +107,17 @@ export default function Home() {
 						</p>
 						{/* Navigation buttons */}
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5'>
-							<button
-								onClick={() => scrollToSection('speakerCards')}
-								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
-							>
+							<a href='#speakerCards' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								RSVP NOW
-							</button>
-							<button
-								onClick={() => scrollToSection('contact')}
-								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
-							>
+							</a>
+							<a href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								CONTACT US
-							</button>
-							<button
-								onClick={() => scrollToSection('faq')}
-								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
-							>
+							</a>
+							<a href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								FAQ
-							</button>
+							</a>
 						</div>
-					</div>
+					</motion.div>
 				</header>
 
 				{/* Speaker Cards */}

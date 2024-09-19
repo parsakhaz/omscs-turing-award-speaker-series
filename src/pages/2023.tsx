@@ -6,7 +6,7 @@ import speakersData from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData.json';
 import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 export default function Home() {
