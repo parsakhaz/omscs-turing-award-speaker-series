@@ -102,7 +102,7 @@ export default function Home() {
 						</h2>
 
 						<p className='ibm-plex-mono mb-6 md:mb-8 text-sm md:text-base'>
-							The Turing Award Speaker Series is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
+							Turing Minds is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
 							science, this series features talks from Turing Award winners, sharing their groundbreaking research and insights into the future of technology.
 						</p>
 						{/* Navigation buttons */}
