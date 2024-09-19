@@ -4,11 +4,14 @@ import SpeakerCards from '../components/SpeakerCards';
 import AdvisorCards from '../components/AdvisorCards';
 import speakersData from '../data/speakersData2024.json';
 import advisorsData from '../data/advisorsData2024.json';
-import React from 'react';
+import React, { useMemo } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
+
+// Wrap components that don't need frequent updates in React.memo
+const MemoizedSpeakerCards = React.memo(SpeakerCards);
+const MemoizedAdvisorCards = React.memo(AdvisorCards);
 
 export default function Home() {
 	const rawSpeakersData = speakersData;
@@ -35,72 +38,38 @@ export default function Home() {
 		return 0;
 	};
 
-	const sortedSpeakersData = rawSpeakersData.sort(sortSpeakersByDate);
+	const sortedSpeakersData = useMemo(() => {
+		return rawSpeakersData.sort(sortSpeakersByDate);
+	}, [rawSpeakersData]);
 
-	const { scrollYProgress } = useScroll();
-	const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+	const scrollToSection = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView();
+		}
+	};
 
 	return (
-		<div className='relative overflow-hidden'>
-			{/* Geometric background */}
-			<motion.div
-				className='absolute inset-0 z-0 opacity-10'
-				style={{
-					backgroundImage: "url('/geometric-pattern.svg')",
-					y: backgroundY,
-				}}
-			/>
-
-			<div className='relative z-10'>
-				{/* Banners from 2023 version */}
-				{/* <div className="absolute top-0 left-0 z-20 w-full">
-					<p className='justify-center text-center py-2 px-2 ibm-plex-mono text-slate-800 bg-[#7b9cb71f]'>
-						<Link href='/share'>
-							We hosted 5 Turing Laureates and 1 Nobel Laureate! <span className='font-bold floating-text'>Click me</span> to share recordings with a friend.
-						</Link>
-					</p>
-
-					<p className='justify-center text-center py-1 px-2 ibm-plex-mono text-white bg-slate-800'>
-						The 2024 OMSCS Turing Award Series, hosted by <a href='https://www.linkedin.com/in/parsas/' className='italic underline' target='_blank'>Parsa Khazaeepoul</a> and <a href='https://www.linkedin.com/in/zackaxel/' className='italic underline' target='_blank'>Zach Axel</a>, has <span className='font-bold'>concluded.</span>
-					</p>
-				</div> */}
-
-				{/* Updated header with 3D elements */}
+		<div className='relative'>
+			<div className='relative'>
+				{/* Updated header with simpler design */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg md:relative md:bg-transparent md:backdrop-filter-none'>
+					<div className='fixed top-0 left-0 right-0 z-50 bg-white md:relative'>
 						<div className='text-center py-4 md:mb-16 md:pt-64'>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-lg py-2 font-light mb-2 text-gray-600'>
+							<div className='text-lg py-2 font-light mb-2 text-gray-600'>
 								ACM A.M.
-							</motion.div>
-							<motion.h1
-								initial={{ opacity: 0, y: 50 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.8 }}
-								className='text-4xl md:text-6xl font-bold mb-2 md:mb-4 relative'
-							>
-								<span className='relative z-10'>Turing Award Speaker Series</span>
-								<motion.span
-									className='absolute inset-0 text-[#a4925a] opacity-50 hidden md:inline-block'
-									animate={{ x: [0, 5, 0], y: [0, 5, 0] }}
-									transition={{ repeat: Infinity, duration: 5 }}
-									style={{ zIndex: -1 }}
-								>
-									Turing Award Speaker Series
-								</motion.span>
-							</motion.h1>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>
+							</div>
+							<h1 className='text-4xl md:text-6xl font-bold mb-2 md:mb-4'>
+								Turing Minds
+							</h1>
+							<div className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>
 								Fall, 2024
-							</motion.div>
+							</div>
 						</div>
 					</div>
 
-					<motion.div
-						initial={{ opacity: 0, y: 50 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.7, duration: 0.8 }}
-						className='w-full justify-center max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'
-					>
-						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>
+					<div className='w-full justify-center max-w-4xl mx-auto bg-white rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'>
+						<h2 className='text-2xl md:text-3xl font-semibold mb-4 text-[#a4925a]'>
 							About the Turing Award Speaker Series
 						</h2>
 
@@ -110,30 +79,30 @@ export default function Home() {
 						</p>
 						{/* Navigation buttons */}
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5'>
-							<a href='#speakerCards' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							<button onClick={() => scrollToSection('speakerCards')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								RSVP NOW
-							</a>
-							<a href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							</button>
+							<button onClick={() => scrollToSection('contact')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								CONTACT US
-							</a>
-							<a href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							</button>
+							<button onClick={() => scrollToSection('faq')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								FAQ
-							</a>
+							</button>
 						</div>
-					</motion.div>
+					</div>
 				</header>
 
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
-						<SpeakerCards key={index} {...speaker} />
+						<MemoizedSpeakerCards key={index} {...speaker} />
 					))}
 				</section>
 
-				{/* Updated FAQ with glassmorphism */}
+				{/* Updated FAQ with simpler design */}
 				<section id='faq' className='my-24 px-4'>
-					<div className='max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-8'>
-						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Frequently Asked Questions</h2>
+					<div className='max-w-4xl mx-auto bg-white rounded-lg p-8'>
+						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Frequently Asked Questions</h2>
 						<div className='space-y-6'>
 							<div>
 								<h3 className='text-xl font-semibold mb-2 text-gray-900'>What is the Turing Award?</h3>
@@ -170,13 +139,11 @@ export default function Home() {
 				{/* Program Advisors */}
 				<section className='my-24 px-8'>
 					<div className='max-w-6xl mx-auto'>
-						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Speaker Series Advisors</h2>
+						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Speaker Series Advisors</h2>
 						<p className='ibm-plex-mono mt-4 text-gray-800'> These are the people who helped make this event possible.</p>
 						<div id='programAdvisors' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 							{advisorsData.map((advisor, index) => (
-								<motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-									<AdvisorCards {...advisor} />
-								</motion.div>
+								<MemoizedAdvisorCards key={index} {...advisor} />
 							))}
 						</div>
 					</div>
@@ -185,7 +152,7 @@ export default function Home() {
 				{/* Contact Information Section */}
 				<section id='contact' className='my-24 px-8'>
 					<div className='max-w-6xl mx-auto'>
-						<h2 className='text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>Who are we?</h2>
+						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Who are we?</h2>
 						<div className='mt-4 ibm-plex-mono text-gray-800'>
 							<p className='pb-1'>
 								We are two Online Master&apos;s in Computer Science students at Georgia Tech. If you have any inquiries or need further information, please don&apos;t hesitate to
@@ -198,7 +165,14 @@ export default function Home() {
 								{/* Card for Zack Axel */}
 								<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
 									<div className='w-full h-64 relative'>
-										<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' />
+										<Image 
+											src='/team-photos/zack.jpg' 
+											layout='fill' 
+											alt='Zack Axel' 
+											className='rounded-t'
+											loading="lazy"
+											sizes="(max-width: 240px) 100vw, 240px"
+										/>
 									</div>
 									<div className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
@@ -215,7 +189,14 @@ export default function Home() {
 								{/* Card for Parsa Khazaeepoul */}
 								<div className='bg-white rounded overflow-hidden shadow-lg w-[15rem] h-[20rem]'>
 									<div className='w-full h-64 relative'>
-										<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' />
+										<Image 
+											src='/team-photos/parsa.jpg' 
+											layout='fill' 
+											alt='Parsa Khazaeepoul' 
+											className='rounded-t'
+											loading="lazy"
+											sizes="(max-width: 240px) 100vw, 240px"
+										/>
 									</div>
 									<div className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
@@ -241,7 +222,12 @@ export default function Home() {
 					</p>
 				</footer>
 			</div>
-			<ScrollToTop smooth id='scrollToTop' />
+			<ScrollToTop
+				smooth
+				top={0}
+				component={<div className="fixed bottom-4 right-4 z-[9999] cursor-pointer bg-gray-800 text-white p-2 rounded-full">↑</div>}
+			/>
 		</div>
+		
 	);
 }

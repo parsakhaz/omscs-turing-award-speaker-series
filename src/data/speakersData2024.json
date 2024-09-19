@@ -30,7 +30,7 @@
 		"description": "Dr. Robert Gentleman is a prominent statistician and bioinformatician, widely recognized for his significant contributions to statistical computing and bioinformatics. He is one of the original creators of the R programming language, which has become an essential tool in data analysis and statistical computing. Dr. Gentleman's work has bridged the gap between computer science and biology, advancing the field of computational biology.",
 		"rsvpLink": "https://lu.ma/placeholder",
 		"turingAwardWinner": false,
-		"speakerPhoto": "/speaker-photos/robert.jpg",
+		"speakerPhoto": "/speaker-photos/robert.png",
 		"talkTitle": "TBA",
 		"recordingLink": ""
 	},
@@ -65,7 +65,7 @@
 		"description": "Dr. Avi Wigderson is a distinguished computer scientist and mathematician, renowned for his contributions to computational complexity theory and the theory of parallel and distributed computation. His work has significantly advanced our understanding of fundamental computational problems and their inherent difficulty. Dr. Wigderson was awarded the Turing Award in 2021 for his pioneering work in theoretical computer science.",
 		"rsvpLink": "https://lu.ma/placeholder",
 		"turingAwardWinner": true,
-		"speakerPhoto": "/speaker-photos/avi.jpg",
+		"speakerPhoto": "/speaker-photos/avi.jpeg",
 		"turingLink": "https://awards.acm.org/award-recipients/wigderson_3844537#2023-acm-a.m.-turing-award",
 		"talkTitle": "TBA",
 		"recordingLink": ""
