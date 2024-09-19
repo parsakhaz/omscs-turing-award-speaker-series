@@ -56,22 +56,14 @@ export default function Home() {
 				<header className='min-h-screen flex flex-col relative'>
 					<div className='fixed top-0 left-0 right-0 z-50 bg-white md:relative'>
 						<div className='text-center py-4 md:mb-16 md:pt-64'>
-							<div className='text-lg py-2 font-light mb-2 text-gray-600'>
-								ACM A.M.
-							</div>
-							<h1 className='text-4xl md:text-6xl font-bold mb-2 md:mb-4'>
-								Turing Minds
-							</h1>
-							<div className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>
-								Fall, 2024
-							</div>
+							<div className='text-lg py-2 font-light mb-2 text-gray-600'>ACM A.M.</div>
+							<h1 className='text-4xl md:text-6xl font-bold mb-2 md:mb-4'>Turing Minds</h1>
+							<div className='text-xl md:text-2xl py-2 md:py-4 font-light text-gray-600'>Fall, 2024</div>
 						</div>
 					</div>
 
 					<div className='w-full justify-center max-w-4xl mx-auto bg-white rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'>
-						<h2 className='text-2xl md:text-3xl font-semibold mb-4 text-[#a4925a]'>
-							About the Turing Award Speaker Series
-						</h2>
+						<h2 className='text-2xl md:text-3xl font-semibold mb-4 text-[#a4925a]'>About the Turing Award Speaker Series</h2>
 
 						<p className='ibm-plex-mono mb-6 md:mb-8 text-sm md:text-base'>
 							The Turing Award Speaker Series is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
@@ -79,13 +71,22 @@ export default function Home() {
 						</p>
 						{/* Navigation buttons */}
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5'>
-							<button onClick={() => scrollToSection('speakerCards')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							<button
+								onClick={() => scrollToSection('speakerCards')}
+								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
+							>
 								RSVP NOW
 							</button>
-							<button onClick={() => scrollToSection('contact')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							<button
+								onClick={() => scrollToSection('contact')}
+								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
+							>
 								CONTACT US
 							</button>
-							<button onClick={() => scrollToSection('faq')} className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							<button
+								onClick={() => scrollToSection('faq')}
+								className='border border-[#a4925a] px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'
+							>
 								FAQ
 							</button>
 						</div>
@@ -165,14 +166,7 @@ export default function Home() {
 								{/* Card for Zack Axel */}
 								<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
 									<div className='w-full h-64 relative'>
-										<Image 
-											src='/team-photos/zack.jpg' 
-											layout='fill' 
-											alt='Zack Axel' 
-											className='rounded-t'
-											loading="lazy"
-											sizes="(max-width: 240px) 100vw, 240px"
-										/>
+										<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' loading='lazy' sizes='(max-width: 240px) 100vw, 240px' />
 									</div>
 									<div className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
@@ -189,14 +183,7 @@ export default function Home() {
 								{/* Card for Parsa Khazaeepoul */}
 								<div className='bg-white rounded overflow-hidden shadow-lg w-[15rem] h-[20rem]'>
 									<div className='w-full h-64 relative'>
-										<Image 
-											src='/team-photos/parsa.jpg' 
-											layout='fill' 
-											alt='Parsa Khazaeepoul' 
-											className='rounded-t'
-											loading="lazy"
-											sizes="(max-width: 240px) 100vw, 240px"
-										/>
+										<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='rounded-t' loading='lazy' sizes='(max-width: 240px) 100vw, 240px' />
 									</div>
 									<div className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
@@ -222,12 +209,7 @@ export default function Home() {
 					</p>
 				</footer>
 			</div>
-			<ScrollToTop
-				smooth
-				top={0}
-				component={<div className="fixed bottom-4 right-4 z-[9999] cursor-pointer bg-gray-800 text-white p-2 rounded-full">↑</div>}
-			/>
+			<ScrollToTop />
 		</div>
-		
 	);
 }
