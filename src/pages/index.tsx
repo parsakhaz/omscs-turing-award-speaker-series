@@ -51,10 +51,19 @@ export default function Home() {
 
 	return (
 		<div className='relative'>
-			<div className='relative'>
+			{/* Sponsor banner moved to the top of the page, outside of other containers */}
+			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-800 text-white py-2 px-2'>
+				<p className='text-center text-sm font-sans'>
+					<a href='https://www.ai2incubator.com/' className='italic underline hover:text-[#a4925a] font-medium tracking-wide ibm-plex-mono' target='_blank' rel="noopener noreferrer">
+						Sponsored by AI2 Incubator
+					</a>
+				</p>
+			</div>
+
+			<div className='relative pt-10'> {/* Added padding-top to account for the fixed sponsor banner */}
 				{/* Updated header with simpler design */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-0 left-0 right-0 z-50 bg-white md:relative'>
+					<div className='fixed top-10 left-0 right-0 z-50 bg-white md:relative'> {/* Adjusted top value */}
 						<div className='text-center py-4 md:mb-16 md:pt-64'>
 							<div className='text-lg py-2 font-light mb-2 text-gray-600'>ACM A.M.</div>
 							<h1 className='text-4xl md:text-6xl font-bold mb-2 md:mb-4'>Turing Minds</h1>
