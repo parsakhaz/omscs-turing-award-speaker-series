@@ -98,9 +98,9 @@
 		"name": "Dr. Don Chamberlin",
 		"dateTime": "January 24th, 1pm EST",
 		"isoDate": "2025-01-24T13:00:00-05:00",
-		"description": "Dr. Don Chamberlin, awarded the 1998 Turing Award with Ronald Fagin, is a distinguished computer scientist whose work has transformed how we interact with databases. As a principal designer of SQL (Structured Query Language) alongside Raymond F. Boyce, and a significant contributor to XQuery, Dr. Chamberlin has profoundly influenced the field of database management systems. His pioneering work on structured query languages continues to be the foundation for data manipulation and retrieval in countless systems worldwide, shaping the backbone of data-driven applications.",
+		"description": "Dr. Don Chamberlin is a distinguished computer scientist whose work has transformed how we interact with databases. As a principal designer of SQL (Structured Query Language) alongside Raymond F. Boyce, and a significant contributor to XQuery, Dr. Chamberlin has profoundly influenced the field of database management systems. His pioneering work on structured query languages continues to be the foundation for data manipulation and retrieval in countless systems worldwide, shaping the backbone of data-driven applications.",
 		"rsvpLink": "https://lu.ma/28q3vbho",
-		"turingAwardWinner": true,
+		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/don.jpg",
 		"talkTitle": "Question & Answer",
 		"recordingLink": ""
