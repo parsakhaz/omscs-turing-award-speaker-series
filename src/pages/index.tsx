@@ -231,8 +231,7 @@ export default function Home() {
 				{/* Footer */}
 				<footer className='my-12 text-center text-sm px-16'>
 					<p className='ibm-plex-mono'>
-						© 2024 Turing Award Speaker Series. All rights reserved. Launched in partnership with the Association for Computing Machinery at Georgia Tech. Website built by Parsa
-						Khazaeepoul.
+						© 2024 Turing Award Speaker Series. All rights reserved.
 					</p>
 				</footer>
 			</div>
