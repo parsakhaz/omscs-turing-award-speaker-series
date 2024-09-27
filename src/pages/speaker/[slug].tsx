@@ -26,15 +26,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const SpeakerPage = ({ speaker }: { speaker: any }) => {
 	const [daysUntil, setDaysUntil] = React.useState<number | null>(null);
-	const [isSessionAvailable, setIsSessionAvailable] = React.useState(false);
 	const [countdown, setCountdown] = React.useState('');
+	const [showJoinNow, setShowJoinNow] = React.useState(false);
+	const [showWatchNow, setShowWatchNow] = React.useState(false);
+	const [showRSVP, setShowRSVP] = React.useState(true);
+	const [showTalkConcluded, setShowTalkConcluded] = React.useState(false);
 
 	React.useEffect(() => {
 		const updateCountdown = () => {
 			const now = new Date();
 			const talkDate = new Date(speaker.isoDate);
 			const linkReleaseDate = new Date(talkDate.getTime() - 24 * 60 * 60 * 1000); // 1 day before talk
-			const timeDiff = linkReleaseDate.getTime() - now.getTime();
+			const timeDiff = talkDate.getTime() - now.getTime();
 			
 			const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 			const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -49,7 +52,13 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 			const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 			setDaysUntil(daysDiff);
-			setIsSessionAvailable(daysDiff >= -1 && daysDiff <= 1);
+
+			const hoursDiff = timeDiff / (1000 * 60 * 60);
+			
+			setShowJoinNow(Math.abs(hoursDiff) <= 1);
+			setShowWatchNow(daysDiff <= -1);
+			setShowRSVP(hoursDiff > 1);
+			setShowTalkConcluded(hoursDiff < -1 && hoursDiff > -24);
 		};
 
 		updateCountdown();
@@ -159,39 +168,60 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						</p>
 					)}
 					{daysUntil !== null && (
-						<>
-							<a
-								href={daysUntil > 0 ? speaker.rsvpLink : speaker.recordingLink}
-								className='bg-[#013057] text-white px-6 py-3 rounded text-lg font-bold hover:bg-[#a4925a] transition-colors duration-300 mr-4 inline-block'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								{daysUntil > 0 ? 'RSVP Now' : 'Watch Recording'}
-							</a>
-							<div className='mt-6 p-6 rounded-lg bg-gray-100 shadow-md'>
-								{isSessionAvailable ? (
+						<div className='mt-6 p-6 rounded-lg bg-gray-100 shadow-md'>
+							<div className='text-center mb-3'>
+								{showJoinNow && (
 									<a
 										href="https://linktr.ee/omscs"
-										className='bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 font-bold text-center block w-full sm:w-auto'
+										className='bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 font-bold text-center inline-block'
 										target='_blank'
 										rel='noopener noreferrer'
 									>
-										Join Speaker Session Now
+										Click to Join Speaker Session
 									</a>
-								) : (
-									<div className='text-center'>
-										<p className='text-gray-700 font-semibold mb-3'>
-											The link to the speaker session will be available 1 day before the event.
-										</p>
-										{countdown && (
-											<p className='text-gray-800 font-bold text-lg'>
-												Time until link release: {countdown}
-											</p>
-										)}
-									</div>
+								)}
+								{showWatchNow && (
+									<a
+										href={speaker.recordingLink}
+										className='bg-[#013057] text-white px-6 py-3 rounded text-lg font-bold hover:bg-[#a4925a] transition-colors duration-300 inline-block mx-auto'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Watch Recording
+									</a>
 								)}
 							</div>
-						</>
+							<p className='text-gray-700 font-semibold mb-3 text-center'>
+								{showJoinNow && 'Join the speaker session now!'}
+								{showWatchNow && 'Watch the recording of the talk.'}
+								{showRSVP && 'RSVP for the upcoming talk.'}
+								{showTalkConcluded && 'This talk has concluded. A recording may be available soon.'}
+							</p>
+							<div className='text-center'>
+								{showRSVP && (
+									<a
+										href={speaker.rsvpLink}
+										className='bg-[#013057] text-white px-6 py-3 rounded text-l font-bold hover:bg-[#a4925a] transition-colors duration-300 inline-block mx-auto'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										RSVP Now
+									</a>
+								)}
+							</div>
+							{!showJoinNow && !showWatchNow && !showTalkConcluded && (
+								<div className='text-center'>
+									<p className='text-gray-600 italic mb-2 mt-2'>
+										The link to the speaker session will be available 1 hour before the event.
+									</p>
+									{countdown && (
+										<p className='text-gray-800 font-bold text-lg'>
+											Time until link release: {countdown}
+										</p>
+									)}
+								</div>
+							)}
+						</div>
 					)}
 
 					{/* Render markdown biography */}
