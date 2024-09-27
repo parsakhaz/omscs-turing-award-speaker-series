@@ -4,34 +4,49 @@
 		"distinction": "Creator of OMSCS, Former Dean of Computing at Georgia Tech, Professor at Columbia University",
 		"description": "Zvi Galil is noted for his research in algorithms, complexity, and cryptography. Former Dean of Computing at Georgia Tech, he has written over 200 scientific papers and is recognized for his contributions to computer science education.",
 		"speakerPhoto": "/advisor-photos/zvi.jpg",
-		"biographyLink": "https://www.scs.gatech.edu/people/zvi-galil"
+		"biographyLink": "https://www.scs.gatech.edu/people/zvi-galil",
+		"markdownBiography": "# Dr. Zvi Galil\n\nDr. Zvi Galil is a renowned computer scientist and educator, best known for his groundbreaking research in algorithms, complexity theory, and cryptography. He is also recognized for his significant contributions to computer science education, particularly as the creator of the Online Master of Science in Computer Science (OMSCS) program at Georgia Tech.\n\n## Research Contributions\n\nGalil's research has significantly advanced the field of computer science, particularly in the areas of string algorithms, graph algorithms, and parallel algorithms. His work has been instrumental in developing more efficient computational methods and has applications in various domains of computer science and beyond.",
+		"markdownTimeline": "## Career Timeline\n\n- **1975**: Received Ph.D. in Computer Science from Cornell University\n- **1982**: Became Professor of Computer Science at Columbia University\n- **1995**: Appointed Chair of the Computer Science Department at Tel Aviv University\n- **2007**: Became Dean of the Fu Foundation School of Engineering and Applied Science at Columbia University\n- **2010**: Appointed Dean of the College of Computing at Georgia Tech\n- **2014**: Launched the Online Master of Science in Computer Science (OMSCS) program at Georgia Tech",
+		"slug": "zvi-galil"
 	},
 	{
 		"name": "Dr. Edward Feigenbaum",
 		"distinction": "Turing Award Winner, Professor Emeritus at Stanford University",
 		"description": "Edward Feigenbaum is a pioneer in artificial intelligence, known as the 'father of expert systems.' He is a joint winner of the 1994 ACM Turing Award for his work in AI and expert systems.",
 		"speakerPhoto": "/advisor-photos/edward.jpg",
-		"biographyLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm"
+		"biographyLink": "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm",
+		"markdownBiography": "# Dr. Edward Feigenbaum\n\nDr. Edward Feigenbaum is a pioneering computer scientist widely recognized as the 'father of expert systems.' His groundbreaking work in artificial intelligence has significantly shaped the field and led to practical applications of AI in various domains.\n\n## Research Contributions\n\nFeigenbaum's primary contribution to AI is the development of expert systems, which are AI programs that emulate the decision-making ability of a human expert. His work on the DENDRAL project, one of the first expert systems, paved the way for AI applications in scientific research and beyond.",
+		"markdownTimeline": "## Career Timeline\n\n- **1959**: Received Ph.D. in Industrial Administration from Carnegie Mellon University\n- **1965**: Joined Stanford University as Professor of Computer Science\n- **1965-1968**: Developed DENDRAL, one of the first expert systems\n- **1980-1984**: Director of the Stanford Computer Science Department\n- **1994**: Awarded the ACM Turing Award\n- **2000**: Became Professor Emeritus at Stanford University",
+		"slug": "edward-feigenbaum"
 	},
 	{
 		"name": "Dr. Moshe Vardi",
 		"distinction": "University Professor at Rice University",
 		"description": "Moshe Vardi is a University Professor and the George Distinguished Service Professor in Computational Engineering at Rice University. He is known for his significant contributions in logic and computation.",
 		"speakerPhoto": "/advisor-photos/moshe.jpg",
-		"biographyLink": "https://www.cs.rice.edu/~vardi/"
+		"biographyLink": "https://www.cs.rice.edu/~vardi/",
+		"markdownBiography": "# Dr. Moshe Vardi\n\nDr. Moshe Vardi is a distinguished computer scientist known for his fundamental contributions to the fields of logic and computation. His work spans across various areas including database theory, computational complexity theory, and artificial intelligence.\n\n## Research Contributions\n\nVardi's research has significantly advanced our understanding of the connections between logic and computation. His work on the theory of database systems, finite model theory, and verification of computer systems has had a profound impact on both theoretical computer science and practical applications.",
+		"markdownTimeline": "## Career Timeline\n\n- **1981**: Received Ph.D. in Computer Science from the Hebrew University of Jerusalem\n- **1985**: Joined IBM Almaden Research Center\n- **1993**: Joined Rice University as Professor of Computer Science\n- **2001**: Became the Karen Ostrum George Distinguished Service Professor in Computational Engineering at Rice University\n- **2002**: Elected to the National Academy of Engineering\n- **2017**: Received the Knuth Prize for outstanding contributions to the foundations of computer science",
+		"slug": "moshe-vardi"
 	},
 	{
 		"name": "Dr. Jeffrey Ullman",
 		"distinction": "Turing Award Winner, Professor Emeritus at Stanford University",
 		"description": "Jeffrey Ullman is a renowned computer scientist known for his work in database theory, data mining, and software engineering. He is a co-recipient of the 2020 ACM Turing Award.",
 		"speakerPhoto": "/advisor-photos/jeffrey.jpg",
-		"biographyLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm"
+		"biographyLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
+		"markdownBiography": "# Dr. Jeffrey Ullman\n\nDr. Jeffrey Ullman is a pioneering computer scientist whose work has profoundly influenced the fields of database systems, data mining, and software engineering. His contributions to algorithm design and computational theory have shaped the foundations of computer science education and practice.\n\n## Research Contributions\n\nUllman's research spans a wide range of areas in computer science. He is particularly noted for his work on database theory, compiler optimization, and algorithm design. His textbooks on these subjects have educated generations of computer scientists and continue to be widely used in universities around the world.",
+		"markdownTimeline": "## Career Timeline\n\n- **1966**: Received Ph.D. in Electrical Engineering from Princeton University\n- **1969**: Joined Princeton University as Associate Professor of Electrical Engineering\n- **1979**: Joined Stanford University as Professor of Computer Science\n- **1994**: Became the Stanford W. Ascherman Professor of Computer Science at Stanford University\n- **2003**: Retired from Stanford University and became Professor Emeritus\n- **2020**: Awarded the ACM Turing Award",
+		"slug": "jeffrey-ullman"
 	},
 	{
 		"name": "Dr. Leslie Lamport",
 		"distinction": "Turing Award Winner, Principal Researcher at Microsoft Research",
 		"description": "Leslie Lamport is a computer scientist and mathematician. He received the 2013 Turing Award for his fundamental contributions to the theory and practice of distributed and concurrent systems.",
 		"speakerPhoto": "/advisor-photos/leslie.jpg",
-		"biographyLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm"
+		"biographyLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
+		"markdownBiography": "# Dr. Leslie Lamport\n\nDr. Leslie Lamport is a renowned computer scientist and mathematician, best known for his seminal work in distributed and concurrent systems. His contributions have fundamentally shaped how we understand and design complex computing systems.\n\n## Research Contributions\n\nLamport's work has been crucial in developing the theoretical foundations of distributed systems. He introduced several key concepts and algorithms, including the Lamport timestamps, the state machine approach for distributed systems, and the Paxos algorithm for solving consensus in a network of unreliable processors. His work on LaTeX has also had a significant impact on scientific document preparation.",
+		"markdownTimeline": "## Career Timeline\n\n- **1972**: Received Ph.D. in Mathematics from Brandeis University\n- **1977**: Joined SRI International\n- **1985**: Joined Digital Equipment Corporation (DEC)\n- **2001**: Joined Microsoft Research\n- **2013**: Awarded the ACM Turing Award\n- **2015**: Received the Von Neumann Medal",
+		"slug": "leslie-lamport"
 	}
 ]

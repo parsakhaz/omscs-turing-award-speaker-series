@@ -9,7 +9,10 @@
 		"speakerPhoto": "/speaker-photos/joseph.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/sifakis_1701095.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Joseph Sifakis\n\nDr. Joseph Sifakis is a pioneering computer scientist known for his work in formal verification of systems. He received the 2007 Turing Award, sharing it with Edmund M. Clarke and E. Allen Emerson, for their role in developing model-checking techniques.\n\n## Research Contributions\n\nSifakis's work has been instrumental in advancing the field of model checking, a technique used to automatically verify the correctness of software and hardware systems. His contributions have significantly improved the reliability and safety of complex systems, particularly in critical domains such as aerospace, automotive, and healthcare.",
+		"markdownTimeline": "## Career Timeline\n\n- **1974**: Obtained Ph.D. in Computer Science from the University of Grenoble\n- **1983**: Founded the Verimag laboratory\n- **2007**: Awarded the ACM Turing Award\n- **2008**: Appointed CNRS Research Director\n- **2011**: Founded the RiSD (Rigorous System Design) laboratory at EPFL",
+		"slug": "joseph-sifakis"
 	},
 	{
 		"name": "Dr. Leslie Valiant",
@@ -21,7 +24,10 @@
 		"speakerPhoto": "/speaker-photos/leslie_valiant.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/valiant_2612174.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Leslie Valiant\n\nDr. Leslie Valiant is a renowned computer scientist and computational theorist. He is best known for his work on computational learning theory and the development of the 'probably approximately correct' (PAC) learning model. His contributions have significantly shaped the fields of machine learning, artificial intelligence, and computational complexity theory.\n\n## Research Contributions\n\nValiant's PAC model provides a mathematical framework for analyzing machine learning algorithms. This groundbreaking work has become fundamental to understanding the theoretical foundations of machine learning and has influenced the development of numerous learning algorithms.",
+		"markdownTimeline": "## Career Timeline\n\n- **1974**: Received Ph.D. in Computer Science from University of Warwick\n- **1982**: Joined Harvard University as a professor\n- **1985**: Introduced the PAC learning model\n- **2010**: Awarded the ACM Turing Award\n- **2011**: Received the IJCAI Research Excellence Award",
+		"slug": "leslie-valiant"
 	},
 	{
 		"name": "Dr. Robert Gentleman",
@@ -32,7 +38,10 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/robert.png",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Robert Gentleman\n\nDr. Robert Gentleman is a distinguished statistician and bioinformatician, best known as the co-creator of the R programming language. His work has revolutionized statistical computing and data analysis, particularly in the field of bioinformatics.\n\n## Research Contributions\n\nGentleman's contributions extend beyond the creation of R. He has been instrumental in developing tools and methods for analyzing genomic data, contributing significantly to the field of computational biology. His work has facilitated groundbreaking research in genetics and molecular biology.",
+		"markdownTimeline": "## Career Timeline\n\n- **1988**: Received Ph.D. in Statistics from the University of Washington\n- **1993**: Co-created the R programming language with Ross Ihaka\n- **2001**: Joined the Fred Hutchinson Cancer Research Center\n- **2009**: Became Vice President of Computational Biology at Genentech\n- **2020**: Joined Harvard T.H. Chan School of Public Health as professor",
+		"slug": "robert-gentleman"
 	},
 	{
 		"name": "Dr. Vint Cerf",
@@ -44,7 +53,10 @@
 		"speakerPhoto": "/speaker-photos/vint.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/cerf_1083211.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Vint Cerf\n\nDr. Vint Cerf is a computer scientist renowned as one of the 'fathers of the Internet'. His pioneering work in developing the protocols and structure of the Internet has earned him numerous accolades, including the Turing Award.\n\n## Research Contributions\n\nCerf's most significant contribution is the co-design of the TCP/IP protocols and the architecture of the Internet. This work laid the foundation for the global network we use today, enabling worldwide digital communication and the growth of the information age.",
+		"markdownTimeline": "## Career Timeline\n\n- **1965**: Graduated from Stanford University with a B.S. in Mathematics\n- **1972**: Earned Ph.D. in Computer Science from UCLA\n- **1973**: Began work on TCP/IP protocols with Bob Kahn\n- **1976**: Joined DARPA, overseeing the development of Internet and Internet-related data packet and security technologies\n- **2004**: Awarded the ACM Turing Award\n- **2005**: Joined Google as Vice President and Chief Internet Evangelist",
+		"slug": "vint-cerf"
 	},
 	{
 		"name": "Dr. Geoffrey Hinton",
@@ -56,7 +68,10 @@
 		"speakerPhoto": "/speaker-photos/geoffrey.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/hinton_4791679.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Geoffrey Hinton\n\nDr. Geoffrey Hinton is a cognitive psychologist and computer scientist, widely recognized as the 'godfather of deep learning'. His pioneering work in artificial neural networks has been fundamental to the development of modern AI and machine learning technologies.\n\n## Research Contributions\n\nHinton's research has been crucial in advancing the field of deep learning. His work on backpropagation algorithms, Boltzmann machines, and deep belief networks has laid the groundwork for many of today's AI applications, from speech recognition to computer vision.",
+		"markdownTimeline": "## Career Timeline\n\n- **1978**: Received Ph.D. from the University of Edinburgh\n- **1987**: Introduced the concept of backpropagation through time\n- **2006**: Co-authored a landmark paper on deep learning\n- **2012**: Breakthrough in image recognition using deep neural networks\n- **2013**: Joined Google as a Distinguished Researcher\n- **2018**: Awarded the ACM Turing Award",
+		"slug": "geoffrey-hinton"
 	},
 	{
 		"name": "Dr. Avi Wigderson",
@@ -68,7 +83,10 @@
 		"speakerPhoto": "/speaker-photos/avi.jpeg",
 		"turingLink": "https://awards.acm.org/award-recipients/wigderson_3844537#2023-acm-a.m.-turing-award",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Avi Wigderson\n\nDr. Avi Wigderson is a renowned mathematician and computer scientist, recognized for his fundamental contributions to theoretical computer science and mathematics. His work spans various areas, including computational complexity theory, cryptography, and algorithmic design.\n\n## Research Contributions\n\nWigderson's research has significantly advanced our understanding of computational complexity, randomness in computation, and the foundations of cryptography. His work has been instrumental in bridging the gap between mathematics and theoretical computer science, leading to new insights in both fields.",
+		"markdownTimeline": "## Career Timeline\n\n- **1983**: Received Ph.D. in Mathematics from Princeton University\n- **1986**: Joined the faculty at Hebrew University\n- **1999**: Became a permanent member of the Institute for Advanced Study\n- **2009**: Awarded the Gödel Prize\n- **2019**: Received the Knuth Prize\n- **2021**: Awarded the ACM Turing Award",
+		"slug": "avi-wigderson"
 	},
 	{
 		"name": "Dr. John Hennessy",
@@ -80,7 +98,10 @@
 		"speakerPhoto": "/speaker-photos/john.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/hennessy_1426931.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. John Hennessy\n\nDr. John Hennessy is a pioneering computer scientist and academic leader, best known for his work in computer architecture, particularly RISC processors. His contributions have significantly influenced the design of modern computing systems.\n\n## Research Contributions\n\nHennessy's work on RISC (Reduced Instruction Set Computing) architecture has been fundamental in advancing processor design. His research has led to more efficient and powerful computing systems, influencing the development of processors used in a wide range of devices, from smartphones to supercomputers.",
+		"markdownTimeline": "## Career Timeline\n\n- **1977**: Received Ph.D. in Computer Science from Stony Brook University\n- **1984**: Co-founded MIPS Computer Systems\n- **1986**: Published 'Computer Architecture: A Quantitative Approach' with David Patterson\n- **2000**: Became President of Stanford University\n- **2017**: Awarded the ACM Turing Award\n- **2018**: Became Chairman of Alphabet Inc.",
+		"slug": "john-hennessy"
 	},
 	{
 		"name": "Dr. Michael Stonebraker",
@@ -92,7 +113,10 @@
 		"speakerPhoto": "/speaker-photos/michael.png",
 		"turingLink": "https://amturing.acm.org/award_winners/stonebraker_1172121.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Michael Stonebraker\n\nDr. Michael Stonebraker is a pioneer in database research and technology, whose work has been fundamental to the development of modern database systems. He is renowned for his contributions to both relational and post-relational database systems.\n\n## Research Contributions\n\nStonebraker's work spans several decades and includes the development of influential database systems such as Ingres and PostgreSQL. His research has been crucial in advancing relational database theory, distributed database systems, and real-time data processing.",
+		"markdownTimeline": "## Career Timeline\n\n- **1971**: Received Ph.D. in Computer Science from the University of Michigan\n- **1973**: Began work on Ingres at UC Berkeley\n- **1992**: Co-founded Illustra Information Technologies\n- **2005**: Developed the C-Store column-oriented DBMS\n- **2014**: Awarded the ACM Turing Award\n- **2015**: Joined MIT as an adjunct professor",
+		"slug": "michael-stonebraker"
 	},
 	{
 		"name": "Dr. Don Chamberlin",
@@ -103,7 +127,10 @@
 		"turingAwardWinner": false,
 		"speakerPhoto": "/speaker-photos/don.jpg",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Don Chamberlin\n\nDr. Don Chamberlin is a computer scientist best known for his fundamental work in database languages. He is one of the principal designers of SQL (Structured Query Language), which has become the standard language for relational database management systems.\n\n## Research Contributions\n\nChamberlin's work on SQL has had a profound impact on the field of database management. His contributions extend beyond SQL to include significant work on XQuery, a query and functional programming language designed to query collections of XML data.",
+		"markdownTimeline": "## Career Timeline\n\n- **1971**: Received Ph.D. in Electrical Engineering from Stanford University\n- **1973**: Joined IBM Research\n- **1974**: Co-developed SQL with Raymond F. Boyce\n- **1988**: Became an IBM Fellow\n- **2000**: Began work on XQuery\n- **2009**: Retired from IBM",
+		"slug": "don-chamberlin"
 	},
 	{
 		"name": "Dr. Yoshua Bengio",
@@ -115,6 +142,9 @@
 		"speakerPhoto": "/speaker-photos/yoshua.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/bengio_3406375.cfm",
 		"talkTitle": "Question & Answer",
-		"recordingLink": ""
+		"recordingLink": "",
+		"markdownBiography": "# Dr. Yoshua Bengio\n\nDr. Yoshua Bengio is a computer scientist and a key figure in the field of artificial intelligence, particularly deep learning. He is recognized as one of the world's leading experts in machine learning and has made significant contributions to the advancement of neural networks and AI technologies.\n\n## Research Contributions\n\nBengio's work has been instrumental in developing deep learning techniques. His research on neural networks, representation learning, and generative models has pushed the boundaries of AI capabilities, leading to breakthroughs in areas such as natural language processing, computer vision, and speech recognition.",
+		"markdownTimeline": "## Career Timeline\n\n- **1991**: Received Ph.D. in Computer Science from McGill University\n- **1993**: Joined the faculty at Université de Montréal\n- **2000**: Became Canada Research Chair in Statistical Learning Algorithms\n- **2016**: Co-founded Element AI\n- **2018**: Awarded the ACM Turing Award\n- **2019**: Received the Killam Prize",
+		"slug": "yoshua-bengio"
 	}
 ]

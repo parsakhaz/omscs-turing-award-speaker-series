@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://turing.rsvp',
-  generateRobotsTxt: true,
-  outDir: 'public',
-}
+	siteUrl: 'https://turing.rsvp',
+	generateRobotsTxt: true,
+	outDir: 'public',
+};

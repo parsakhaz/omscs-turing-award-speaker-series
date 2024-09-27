@@ -6,9 +6,13 @@ import speakersData from '../data/speakersData2024.json';
 import advisorsData from '../data/advisorsData2024.json';
 import React, { useMemo } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { JsonLd } from 'react-schemaorg';
+import { WebSite, WithContext, FAQPage } from 'schema-dts';
+import { NextSeo } from 'next-seo';
+import { BreadcrumbJsonLd } from 'next-seo';
 
 // Wrap components that don't need frequent updates in React.memo
 const MemoizedSpeakerCards = React.memo(SpeakerCards);
@@ -50,12 +54,72 @@ export default function Home() {
 		}
 	};
 
+	const structuredData: WithContext<WebSite> = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Turing Minds Speaker Series',
+		description: 'Annual event featuring talks from Turing Award winners on computer science and technology.',
+		url: 'https://turing.rsvp',
+	};
+
+	const faqStructuredData: WithContext<FAQPage> = {
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: 'What is the Turing Award?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'The Turing Award is often referred to as the "Nobel Prize of Computing." It is an annual award given by the Association for Computing Machinery (ACM) to an individual for contributions of lasting and major technical importance to the computer field.',
+				},
+			},
+			{
+				'@type': 'Question',
+				name: 'How can I attend the speaker series?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'By RSVPing on our website when we release the event RSVPs.',
+				},
+			},
+			{
+				'@type': 'Question',
+				name: 'Are the talks recorded?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'At the speakers discretion, some talks are recorded and will be made available on our website after the event. However, we encourage live attendance for the opportunity to participate in Q&A sessions.',
+				},
+			},
+			{
+				'@type': 'Question',
+				name: 'Is there a cost to attend?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: 'The event is free for all.',
+				},
+			},
+			{
+				'@type': 'Question',
+				name: 'How can I suggest a speaker for future series?',
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: "We welcome suggestions for future speakers. Please send your recommendations to our hosts whos' emails can be found below.",
+				},
+			},
+		],
+	};
+
 	return (
 		<div className='relative'>
 			{/* Sponsor banner moved to the top of the page, outside of other containers */}
 			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-800 text-white px-2'>
 				<p className='text-center text-sm font-sans'>
-					<a href='https://www.ai2incubator.com/' className='italic underline hover:text-[#a4925a] font-medium tracking-wide ibm-plex-mono' target='_blank' rel="noopener noreferrer">
+					<a
+						href='https://www.ai2incubator.com/'
+						className='italic underline hover:text-[#a4925a] font-medium tracking-wide ibm-plex-mono'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						Sponsored by AI2 Incubator
 					</a>
 				</p>
@@ -97,13 +161,11 @@ export default function Home() {
 						transition={{ delay: 0.7, duration: 0.8 }}
 						className='w-full justify-center max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 md:pl-24 mt-48 md:mt-16 md:static'
 					>
-						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>
-							About Turing Minds
-						</h2>
+						<h2 className='text-2xl md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#a4925a] to-[#d4af37]'>About Turing Minds</h2>
 
 						<p className='ibm-plex-mono mb-6 md:mb-8 text-sm md:text-base'>
-							Turing Minds is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
-							science, this series features talks from Turing Award winners, sharing their groundbreaking research and insights into the future of technology.
+							Turing Minds is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer science, this series
+							features talks from Turing Award winners, sharing their groundbreaking research and insights into the future of technology.
 						</p>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5'>
@@ -123,7 +185,7 @@ export default function Home() {
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
-						<SpeakerCards key={index} {...speaker} />
+						<MemoizedSpeakerCards key={index} {...speaker} />
 					))}
 				</section>
 
@@ -230,12 +292,58 @@ export default function Home() {
 
 				{/* Footer */}
 				<footer className='my-12 text-center text-sm px-16'>
-					<p className='ibm-plex-mono'>
-						© 2024 Turing Award Speaker Series. All rights reserved.
-					</p>
+					<p className='ibm-plex-mono'>© 2024 Turing Award Speaker Series. All rights reserved.</p>
 				</footer>
 			</div>
 			<ScrollToTop />
+			<JsonLd<WebSite> item={structuredData} />
+			<JsonLd<FAQPage> item={faqStructuredData} />
+			<NextSeo
+				title='Turing Minds Speaker Series'
+				description='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
+				canonical='https://turing.rsvp'
+				openGraph={{
+					url: 'https://turing.rsvp',
+					title: 'Turing Minds Speaker Series',
+					description: 'Annual event featuring talks from Turing Award winners on computer science and technology. Hosted by Parsa Khazaeepoul and Zack Axel.',
+					images: [
+						{
+							url: 'https://turing.rsvp/og-banner.png',
+							width: 1686,
+							height: 1121,
+							alt: 'Turing Minds Speaker Series',
+						},
+					],
+					site_name: 'Turing Minds',
+				}}
+				twitter={{
+					handle: '@ParsaKhaz',
+					site: '@ParsaKhaz',
+					cardType: 'summary_large_image',
+				}}
+			/>
+			<BreadcrumbJsonLd
+				itemListElements={[
+					{
+						position: 1,
+						name: 'Home',
+						item: 'https://turing.rsvp',
+					},
+				]}
+			/>
+			<Head>
+				{/* Existing meta tags */}
+				<meta property='og:title' content='Turing Minds Speaker Series' />
+				<meta
+					property='og:description'
+					content='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
+				/>
+				<meta property='og:image' content='https://turing.rsvp/og-banner.png' />
+				<meta property='og:url' content='https://turing.rsvp' />
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:site' content='@ParsaKhaz' />
+				<meta name='twitter:creator' content='@ParsaKhaz' />
+			</Head>
 		</div>
 	);
 }

@@ -1,6 +1,7 @@
 [
 	{
 		"name": "Dr. Zvi Galil",
+		"slug": "zvi-galil",
 		"distinction": "Creator of OMSCS, Former Dean of Computing at Georgia Tech, Professor at Columbia University",
 		"description": "Zvi Galil is noted for his research in algorithms, complexity, and cryptography. Former Dean of Computing at Georgia Tech, he has written over 200 scientific papers and is recognized for his contributions to computer science education.",
 		"speakerPhoto": "/advisor-photos/zvi.jpg",
@@ -8,6 +9,7 @@
 	},
 	{
 		"name": "Dr. Bjarne Stroustrup",
+		"slug": "bjarne-stroustrup",
 		"distinction": "Creator of C++, Professor at Columbia University",
 		"description": "Bjarne Stroustrup, renowned for creating C++, has made significant contributions to computer science and software development. A professor at Columbia University, he's a recipient of numerous prestigious awards including the Charles Stark Draper Prize.",
 		"speakerPhoto": "/advisor-photos/bjarne.png",
@@ -15,6 +17,7 @@
 	},
 	{
 		"name": "Andi Gutmans",
+		"slug": "andi-gutmans",
 		"distinction": "Co-creator of PHP, Former CEO of Zend Technologies",
 		"description": "Andi Gutmans is a key figure in the development of PHP, co-creating PHP 3 and co-founding Zend Technologies. Recognized as an influential IT innovator, he has also held prominent roles at Amazon Web Services and Google.",
 		"speakerPhoto": "/advisor-photos/andi.jpg",
