@@ -3,11 +3,13 @@ import Head from 'next/head';
 import Image from 'next/legacy/image';
 import speakersData from '../../data/speakersData2024.json';
 import React from 'react';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 import { JsonLd } from 'react-schemaorg';
 import { Event, Person, WithContext } from 'schema-dts';
+import { FaShare } from 'react-icons/fa';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paths = speakersData.map((speaker) => ({
@@ -24,15 +26,36 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const SpeakerPage = ({ speaker }: { speaker: any }) => {
 	const [daysUntil, setDaysUntil] = React.useState<number | null>(null);
+	const [isSessionAvailable, setIsSessionAvailable] = React.useState(false);
+	const [countdown, setCountdown] = React.useState('');
 
 	React.useEffect(() => {
-		const getDaysUntil = () => {
-			const today = new Date();
+		const updateCountdown = () => {
+			const now = new Date();
 			const talkDate = new Date(speaker.isoDate);
-			const timeDiff = talkDate.getTime() - today.getTime();
-			return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+			const linkReleaseDate = new Date(talkDate.getTime() - 24 * 60 * 60 * 1000); // 1 day before talk
+			const timeDiff = linkReleaseDate.getTime() - now.getTime();
+			
+			const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+			if (timeDiff > 0) {
+				setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+			} else {
+				setCountdown('');
+			}
+
+			const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+			setDaysUntil(daysDiff);
+			setIsSessionAvailable(daysDiff >= -1 && daysDiff <= 1);
 		};
-		setDaysUntil(getDaysUntil());
+
+		updateCountdown();
+		const intervalId = setInterval(updateCountdown, 1000);
+
+		return () => clearInterval(intervalId);
 	}, [speaker.isoDate]);
 
 	const personStructuredData: WithContext<Person> = {
@@ -110,7 +133,14 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 			</Head>
 			<article className='container mx-auto px-4 py-8 relative z-10'>
 				<div className='max-w-4xl mx-auto bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg'>
-					<h1 className='text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#a4925a]'>{speaker.name}</h1>
+					<div className='flex justify-between items-center mb-4 md:mb-6'>
+						<h1 className='text-3xl md:text-4xl font-bold text-[#a4925a]'>{speaker.name}</h1>
+					
+							<Link href="/share" className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
+								<FaShare size={24} />
+								<span className='text-[8px] uppercase mt-1 text-black font-bold tracking-widest'>SHARE</span>
+							</Link>
+					</div>
 					<div className='mb-6 md:mb-8 relative w-32 h-32 md:w-48 md:h-48 mx-auto'>
 						<Image src={speaker.speakerPhoto} layout='fill' objectFit='cover' alt={`Portrait of ${speaker.name}`} className='rounded-full' />
 					</div>
@@ -129,14 +159,39 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						</p>
 					)}
 					{daysUntil !== null && (
-						<a
-							href={daysUntil > 0 ? speaker.rsvpLink : speaker.recordingLink}
-							className='bg-[#013057] text-white px-4 py-2 rounded hover:bg-[#a4925a] transition-colors duration-300'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							{daysUntil > 0 ? 'RSVP' : 'Watch Recording'}
-						</a>
+						<>
+							<a
+								href={daysUntil > 0 ? speaker.rsvpLink : speaker.recordingLink}
+								className='bg-[#013057] text-white px-6 py-3 rounded text-lg font-bold hover:bg-[#a4925a] transition-colors duration-300 mr-4 inline-block'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								{daysUntil > 0 ? 'RSVP Now' : 'Watch Recording'}
+							</a>
+							<div className='mt-6 p-6 rounded-lg bg-gray-100 shadow-md'>
+								{isSessionAvailable ? (
+									<a
+										href="https://linktr.ee/omscs"
+										className='bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 font-bold text-center block w-full sm:w-auto'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Join Speaker Session Now
+									</a>
+								) : (
+									<div className='text-center'>
+										<p className='text-gray-700 font-semibold mb-3'>
+											The link to the speaker session will be available 1 day before the event.
+										</p>
+										{countdown && (
+											<p className='text-gray-800 font-bold text-lg'>
+												Time until link release: {countdown}
+											</p>
+										)}
+									</div>
+								)}
+							</div>
+						</>
 					)}
 
 					{/* Render markdown biography */}
