@@ -105,17 +105,17 @@ export default function Home() {
 							Turing Minds is an annual event that brings together the brightest minds in computer science. Named after Alan Turing, the father of computer
 							science, this series features talks from Turing Award winners, sharing their groundbreaking research and insights into the future of technology.
 						</p>
-						{/* Navigation buttons */}
+						{/* Updated navigation buttons */}
 						<div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5'>
-							<a href='#speakerCards' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							<Link href='#speakerCards' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								RSVP NOW
-							</a>
-							<a href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							</Link>
+							<Link href='#contact' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								CONTACT US
-							</a>
-							<a href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
+							</Link>
+							<Link href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								FAQ
-							</a>
+							</Link>
 						</div>
 					</motion.div>
 				</header>
@@ -123,7 +123,7 @@ export default function Home() {
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 					{sortedSpeakersData.map((speaker, index) => (
-						<MemoizedSpeakerCards key={index} {...speaker} />
+						<SpeakerCards key={index} {...speaker} />
 					))}
 				</section>
 
