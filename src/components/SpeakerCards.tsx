@@ -1,18 +1,18 @@
 /**
  * SpeakerCards Component
- * 
+ *
  * This component renders a grid of speaker cards for the Turing Speaker Series.
- * 
+ *
  * Features:
  * - Displays speaker information including name, photo, date, and description
  * - Shows RSVP button for upcoming talks or Watch Recording for past events
  * - Highlights Turing Award winners
  * - Responsive grid layout
  * - Calculates days until the event
- * 
+ *
  * Props:
  * - speakers: An array of speaker objects containing details like name, slug, speakerPhoto, etc.
- * 
+ *
  * Usage:
  * <SpeakerCards speakers={speakersData} />
  */

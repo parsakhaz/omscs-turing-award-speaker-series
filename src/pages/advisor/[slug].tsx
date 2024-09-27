@@ -78,17 +78,17 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 			<Head>
 				<link rel='canonical' href={`https://turing.rsvp/advisor/${advisor.slug}`} />
 			</Head>
-			<div className="container mx-auto px-4 py-8 relative z-10 flex flex-col items-center">
-				<article className="w-full max-w-4xl">
+			<div className='container mx-auto px-4 py-8 relative z-10 flex flex-col items-center'>
+				<article className='w-full max-w-4xl'>
 					<div className='bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg'>
 						<div className='flex justify-between items-center mb-4 md:mb-6'>
 							<div className='flex items-center'>
-								<Link href="/" className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 mr-4'>
+								<Link href='/' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 mr-4'>
 									<FaChevronLeft size={24} />
 								</Link>
 								<h1 className='text-3xl md:text-4xl font-bold text-[#a4925a]'>{advisor.name}</h1>
 							</div>
-							<Link href="/share" className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
+							<Link href='/share' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
 								<FaShare size={24} />
 								<span className='text-[8px] uppercase mt-1 text-black font-bold tracking-widest'>SHARE</span>
 							</Link>
@@ -126,12 +126,8 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 						</section>
 					</div>
 				</article>
-				<aside className="hidden lg:block mt-8">
-					<SidebarGallery
-						currentSpeaker={advisor.name}
-						speakers={speakersData2024}
-						advisors={advisorsData2024}
-					/>
+				<aside className='hidden lg:block mt-8'>
+					<SidebarGallery currentSpeaker={advisor.name} speakers={speakersData2024} advisors={advisorsData2024} />
 				</aside>
 			</div>
 		</>

@@ -40,7 +40,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 			const talkDate = new Date(speaker.isoDate);
 			const linkReleaseDate = new Date(talkDate.getTime() - 24 * 60 * 60 * 1000); // 1 day before talk
 			const timeDiff = talkDate.getTime() - now.getTime();
-			
+
 			const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 			const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
@@ -56,7 +56,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 			setDaysUntil(daysDiff);
 
 			const hoursDiff = timeDiff / (1000 * 60 * 60);
-			
+
 			setShowJoinNow(Math.abs(hoursDiff) <= 1);
 			setShowWatchNow(daysDiff <= -1);
 			setShowRSVP(hoursDiff > 1);
@@ -103,7 +103,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 	};
 
 	return (
-		<div className="flex justify-center">
+		<div className='flex justify-center'>
 			<NextSeo
 				title={`${speaker.name} - Turing Speaker Series`}
 				description={speaker.description}
@@ -142,17 +142,17 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 			<Head>
 				<link rel='canonical' href={`https://turing.rsvp/speaker/${speaker.slug}`} />
 			</Head>
-			<div className="container mx-auto px-4 py-8 relative z-10">
-				<article className="max-w-4xl mx-auto">
+			<div className='container mx-auto px-4 py-8 relative z-10'>
+				<article className='max-w-4xl mx-auto'>
 					<div className='bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg'>
 						<div className='flex justify-between items-center mb-4 md:mb-6'>
 							<div className='flex items-center'>
-								<Link href="/" className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 mr-4'>
+								<Link href='/' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 mr-4'>
 									<FaChevronLeft size={24} />
 								</Link>
 								<h1 className='text-3xl md:text-4xl font-bold text-[#a4925a]'>{speaker.name}</h1>
 							</div>
-							<Link href="/share" className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
+							<Link href='/share' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
 								<FaShare size={24} />
 								<span className='text-[8px] uppercase mt-1 text-black font-bold tracking-widest'>SHARE</span>
 							</Link>
@@ -179,7 +179,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								<div className='text-center mb-3'>
 									{showJoinNow && (
 										<a
-											href="https://linktr.ee/omscs"
+											href='https://linktr.ee/omscs'
 											className='bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 font-bold text-center inline-block'
 											target='_blank'
 											rel='noopener noreferrer'
@@ -218,14 +218,8 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								</div>
 								{!showJoinNow && !showWatchNow && !showTalkConcluded && (
 									<div className='text-center'>
-										<p className='text-gray-600 italic mb-2 mt-2'>
-											The link to the speaker session will be available 1 hour before the event.
-										</p>
-										{countdown && (
-											<p className='text-gray-800 font-bold text-lg'>
-												Time until link release: {countdown}
-											</p>
-										)}
+										<p className='text-gray-600 italic mb-2 mt-2'>The link to the speaker session will be available 1 hour before the event.</p>
+										{countdown && <p className='text-gray-800 font-bold text-lg'>Time until link release: {countdown}</p>}
 									</div>
 								)}
 							</div>
@@ -248,11 +242,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						</section>
 					</div>
 				</article>
-				<SidebarGallery
-					currentSpeaker={speaker.name}
-					speakers={speakersData2024}
-					advisors={advisorsData2024}
-				/>
+				<SidebarGallery currentSpeaker={speaker.name} speakers={speakersData2024} advisors={advisorsData2024} />
 			</div>
 		</div>
 	);

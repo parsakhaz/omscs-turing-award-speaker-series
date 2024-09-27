@@ -111,6 +111,49 @@ export default function Home() {
 
 	return (
 		<div className='relative'>
+			<Head>
+				<title>Turing Minds Speaker Series</title>
+				<meta
+					name='description'
+					content='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
+				/>
+				<meta property='og:title' content='Turing Minds Speaker Series' />
+				<meta
+					property='og:description'
+					content='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
+				/>
+				<meta property='og:image' content='https://turing.rsvp/og-banner.png' />
+				<meta property='og:url' content='https://turing.rsvp' />
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:site' content='@ParsaKhaz' />
+				<meta name='twitter:creator' content='@ParsaKhaz' />
+			</Head>
+
+			<NextSeo
+				title='Turing Minds Speaker Series'
+				description='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
+				canonical='https://turing.rsvp'
+				openGraph={{
+					url: 'https://turing.rsvp',
+					title: 'Turing Minds Speaker Series',
+					description: 'Annual event featuring talks from Turing Award winners on computer science and technology. Hosted by Parsa Khazaeepoul and Zack Axel.',
+					images: [
+						{
+							url: 'https://turing.rsvp/og-banner.png',
+							width: 1686,
+							height: 1121,
+							alt: 'Turing Minds Speaker Series',
+						},
+					],
+					site_name: 'Turing Minds',
+				}}
+				twitter={{
+					handle: '@ParsaKhaz',
+					site: '@ParsaKhaz',
+					cardType: 'summary_large_image',
+				}}
+			/>
+
 			{/* Sponsor banner moved to the top of the page, outside of other containers */}
 			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-800 text-white px-2'>
 				<p className='text-center text-sm font-sans'>
@@ -298,30 +341,6 @@ export default function Home() {
 			<ScrollToTop />
 			<JsonLd<WebSite> item={structuredData} />
 			<JsonLd<FAQPage> item={faqStructuredData} />
-			<NextSeo
-				title='Turing Minds Speaker Series'
-				description='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
-				canonical='https://turing.rsvp'
-				openGraph={{
-					url: 'https://turing.rsvp',
-					title: 'Turing Minds Speaker Series',
-					description: 'Annual event featuring talks from Turing Award winners on computer science and technology. Hosted by Parsa Khazaeepoul and Zack Axel.',
-					images: [
-						{
-							url: 'https://turing.rsvp/og-banner.png',
-							width: 1686,
-							height: 1121,
-							alt: 'Turing Minds Speaker Series',
-						},
-					],
-					site_name: 'Turing Minds',
-				}}
-				twitter={{
-					handle: '@ParsaKhaz',
-					site: '@ParsaKhaz',
-					cardType: 'summary_large_image',
-				}}
-			/>
 			<BreadcrumbJsonLd
 				itemListElements={[
 					{
@@ -331,19 +350,6 @@ export default function Home() {
 					},
 				]}
 			/>
-			<Head>
-				{/* Existing meta tags */}
-				<meta property='og:title' content='Turing Minds Speaker Series' />
-				<meta
-					property='og:description'
-					content='Join us for the Turing Minds Speaker Series, featuring talks from Turing Award winners on groundbreaking research and the future of technology. Hosted by Parsa Khazaeepoul and Zack Axel.'
-				/>
-				<meta property='og:image' content='https://turing.rsvp/og-banner.png' />
-				<meta property='og:url' content='https://turing.rsvp' />
-				<meta name='twitter:card' content='summary_large_image' />
-				<meta name='twitter:site' content='@ParsaKhaz' />
-				<meta name='twitter:creator' content='@ParsaKhaz' />
-			</Head>
 		</div>
 	);
 }
