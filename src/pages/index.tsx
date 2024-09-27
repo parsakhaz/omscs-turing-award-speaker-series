@@ -13,6 +13,7 @@ import { JsonLd } from 'react-schemaorg';
 import { WebSite, WithContext, FAQPage } from 'schema-dts';
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
+import { FaInfoCircle } from 'react-icons/fa';
 
 // Wrap components that don't need frequent updates in React.memo
 const MemoizedSpeakerCards = React.memo(SpeakerCards);
@@ -227,6 +228,10 @@ export default function Home() {
 
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
+					<div className='col-span-full mb-4 flex items-center justify-center text-gray-600 py-2'>
+						<FaInfoCircle className='mr-2' />
+						<span className='text-sm'>Click on a speaker card to view their detailed biography</span>
+					</div>
 					{sortedSpeakersData.map((speaker, index) => (
 						<MemoizedSpeakerCards key={index} {...speaker} />
 					))}
@@ -271,9 +276,13 @@ export default function Home() {
 
 				{/* Program Advisors */}
 				<section className='my-24 px-8'>
-					<div className='max-w-6xl mx-auto'>
+					<div className='max-w-6xl mx-auto '>
 						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Speaker Series Advisors</h2>
 						<p className='ibm-plex-mono mt-4 text-gray-800'> These are the people who helped make this event possible.</p>
+						<div className='col-span-full mb-4 flex items-center justify-center text-gray-600 py-2'>
+							<FaInfoCircle className='mr-2' />
+							<span className='text-sm'>Click on an advisor card to view their detailed biography</span>
+						</div>
 						<div id='programAdvisors' className='my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
 							{advisorsData.map((advisor, index) => (
 								<MemoizedAdvisorCards key={index} {...advisor} />
