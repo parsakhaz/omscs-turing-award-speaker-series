@@ -6,8 +6,9 @@ import speakersData from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData.json';
 import React from 'react';
 import ScrollToTop from 'react-scroll-to-top';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Home() {
 	const rawSpeakersData = speakersData;
@@ -105,11 +106,20 @@ export default function Home() {
 					<meta property='linkedin:title' content='Turing Award Speaker Series' />
 				</Head>
 
-				{/* <!-- Google Tag Manager (noscript) --> */}
-				<noscript>
-					<iframe src='https://www.googletagmanager.com/ns.html?id=G-Y1G13WPJKZ' height='0' width='0' className='hidden'></iframe>
-				</noscript>
-				{/* <!-- End Google Tag Manager (noscript) --> */}
+				{/* Google Analytics 4 */}
+				<Script async src='https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ'></Script>
+				<Script
+					id='google-analytics'
+					dangerouslySetInnerHTML={{
+						__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-Y1G13WPJKZ');
+						`,
+					}}
+				/>
+				{/* End Google Analytics 4 */}
 
 				{/* Turing Award Speaker Series Header */}
 				<div className='bg-zinc-100 md:bg-[#7b9cb71f] px-5 rounded-sm h-[90vh] md:outline md:outline-[#a4925a]'>

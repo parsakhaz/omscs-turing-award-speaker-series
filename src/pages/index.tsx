@@ -14,6 +14,7 @@ import { WebSite, WithContext, FAQPage } from 'schema-dts';
 import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { FaInfoCircle } from 'react-icons/fa';
+import Script from 'next/script';
 
 // Wrap components that don't need frequent updates in React.memo
 const MemoizedSpeakerCards = React.memo(SpeakerCards);
@@ -143,6 +144,21 @@ export default function Home() {
 				/>
 				{/* End Google Tag Manager */}
 			</Head>
+			
+			{/* Google Analytics 4 */}
+			<Script async src='https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ'></Script>
+			<Script
+				id='google-analytics'
+				dangerouslySetInnerHTML={{
+					__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-Y1G13WPJKZ');
+						`,
+				}}
+			/>
+			{/* End Google Analytics 4 */}
 
 			<NextSeo
 				title='Turing Minds Speaker Series'

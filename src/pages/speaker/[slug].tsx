@@ -12,6 +12,7 @@ import { Event, Person, WithContext } from 'schema-dts';
 import { FaShare, FaChevronLeft } from 'react-icons/fa';
 import SidebarGallery from '../../components/SidebarGallery';
 import advisorsData2024 from '../../data/advisorsData2024.json';
+import Script from 'next/script';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const paths = speakersData2024.map((speaker) => ({
@@ -144,6 +145,17 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 			<Head>
 				<link rel='canonical' href={`https://turing.rsvp/speaker/${speaker.slug}`} />
 			</Head>
+			{/* Google Analytics 4 */}
+			<Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ" strategy="afterInteractive" />
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-Y1G13WPJKZ');
+				`}
+			</Script>
+			{/* End Google Analytics 4 */}
 			<div className='container mx-auto px-4 py-8 relative z-10'>
 				<article className='max-w-4xl mx-auto'>
 					<div className='bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg'>

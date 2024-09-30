@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import JSConfetti from 'js-confetti';
+import Script from 'next/script';
 
 export default function SharePage() {
 	const [confetti, setConfetti] = useState<JSConfetti | null>(null);
@@ -47,6 +48,17 @@ export default function SharePage() {
 					click me to navigate back to turing.rsvp
 				</a>
 			</div>
+			{/* Google Analytics 4 */}
+			<Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ" strategy="afterInteractive" />
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-Y1G13WPJKZ');
+				`}
+			</Script>
+			{/* End Google Analytics 4 */}
 		</>
 	);
 }

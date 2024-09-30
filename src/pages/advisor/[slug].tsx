@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Image from 'next/legacy/image';
+import Script from 'next/script';
 import advisorsData from '../../data/advisorsData2024.json';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -78,6 +79,17 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 			<Head>
 				<link rel='canonical' href={`https://turing.rsvp/advisor/${advisor.slug}`} />
 			</Head>
+			{/* Google Analytics 4 */}
+			<Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ" strategy="afterInteractive" />
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-Y1G13WPJKZ');
+				`}
+			</Script>
+			{/* End Google Analytics 4 */}
 			<div className='container mx-auto px-4 py-8 relative z-10 flex flex-col items-center'>
 				<article className='w-full max-w-4xl'>
 					<div className='bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg p-4 md:p-8 shadow-lg'>
