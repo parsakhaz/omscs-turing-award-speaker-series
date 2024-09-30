@@ -87,13 +87,15 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 		startDate: speaker.isoDate,
 		endDate: speaker.isoDate,
 		location: {
-			'@type': 'VirtualLocation',
+			'@type': 'Place',
+			name: 'Online Event',
 			url: speaker.rsvpLink,
 		},
 		performer: {
 			'@type': 'Person',
 			name: speaker.name,
 			image: speaker.speakerPhoto,
+			// ... other fields ...
 		},
 		organizer: {
 			'@type': 'Organization',
