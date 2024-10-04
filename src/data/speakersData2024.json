@@ -121,7 +121,7 @@
 		"name": "Dr. Michael Stonebraker",
 		"dateTime": "November 15th, 12pm EST",
 		"isoDate": "2024-11-15T12:00:00-05:00",
-		"description": "Dr. Michael Stonebraker, recipient of the 2014 Turing Award, is a pioneer whose work has revolutionized database systems. As a key developer of Ingres and PostgreSQL, he has been instrumental in advancing both relational and post-relational database systems. Dr. Stonebraker's fundamental contributions to the concepts and practices underlying modern database systems have shaped the entire landscape of data management, enabling the data-driven technologies that power today's information age.",
+		"description": "Dr. Michael Stonebraker, recipient of the 2014 Turing Award, is a pioneering computer scientist whose work has revolutionized database systems. As the inventor of INGRES and Postgres, and a key contributor to several other innovative database systems, he has been instrumental in advancing both relational and post-relational database technologies. Dr. Stonebraker's fundamental contributions to database management systems have shaped the entire landscape of data management, from his early work at UC Berkeley to his later innovations at MIT. His research and entrepreneurial ventures have enabled the data-driven technologies that power today's information age, influencing everything from traditional relational databases to modern big data and machine learning systems.",
 		"rsvpLink": "https://lu.ma/vasaqi8b",
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/michael.png",
