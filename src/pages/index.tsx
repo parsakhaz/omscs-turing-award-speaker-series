@@ -329,7 +329,7 @@ export default function Home() {
 				</section>
 
 				{/* Contact Information Section */}
-				<section id='contact' className='my-24 px-8'>
+				<section className='my-24 px-8'>
 					<div className='max-w-6xl mx-auto'>
 						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Who are we?</h2>
 						<div className='mt-4 ibm-plex-mono text-gray-800'>
@@ -346,7 +346,7 @@ export default function Home() {
 									<div className='w-full h-64 relative'>
 										<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' loading='lazy' sizes='(max-width: 240px) 100vw, 240px' />
 									</div>
-									<div className='text-center py-1'>
+									<div id='contact' className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
 											Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 										</a>
