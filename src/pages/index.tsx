@@ -258,6 +258,7 @@ export default function Home() {
 							<Link href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								FAQ
 							</Link>
+							<Link href='/share' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>SHARE</Link>
 						</div>
 					</motion.div>
 				</header>
