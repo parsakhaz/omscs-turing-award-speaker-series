@@ -28,21 +28,19 @@ export default function Home() {
 		const dateB = new Date(b.isoDate);
 		const now = new Date();
 
-		// Check if either date is in the past
-		const isPastA = dateA < now;
-		const isPastB = dateB < now;
+		// Subtract 1.5 hours from the current time to get the threshold
+		const threshold = new Date(now.getTime() - 1.5 * 60 * 60 * 1000);
 
-		// If both dates are either in the past or in the future, sort them normally
-		if ((isPastA && isPastB) || (!isPastA && !isPastB)) {
-			return dateA.getTime() - dateB.getTime();
-		}
+		// Check if either date is in the past (more than 1.5 hours ago)
+		const isPastA = dateA < threshold;
+		const isPastB = dateB < threshold;
 
-		// If one of them is in the past, sort it to appear last
-		if (isPastA) return 1;
-		if (isPastB) return -1;
+		// If one is past and the other isn't, sort the past one to the bottom
+		if (isPastA && !isPastB) return 1;
+		if (!isPastA && isPastB) return -1;
 
-		// In case both dates are equal (unlikely, but good to handle)
-		return 0;
+		// If both are past or both are not past, sort chronologically
+		return dateA.getTime() - dateB.getTime();
 	};
 
 	const sortedSpeakersData = useMemo(() => {
