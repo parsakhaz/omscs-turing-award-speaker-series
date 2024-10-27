@@ -28,21 +28,19 @@ export default function Home() {
 		const dateB = new Date(b.isoDate);
 		const now = new Date();
 
-		// Check if either date is in the past
-		const isPastA = dateA < now;
-		const isPastB = dateB < now;
+		// Subtract 1.5 hours from the current time to get the threshold
+		const threshold = new Date(now.getTime() - 1.5 * 60 * 60 * 1000);
 
-		// If both dates are either in the past or in the future, sort them normally
-		if ((isPastA && isPastB) || (!isPastA && !isPastB)) {
-			return dateA.getTime() - dateB.getTime();
-		}
+		// Check if either date is in the past (more than 1.5 hours ago)
+		const isPastA = dateA < threshold;
+		const isPastB = dateB < threshold;
 
-		// If one of them is in the past, sort it to appear last
-		if (isPastA) return 1;
-		if (isPastB) return -1;
+		// If one is past and the other isn't, sort the past one to the bottom
+		if (isPastA && !isPastB) return 1;
+		if (!isPastA && isPastB) return -1;
 
-		// In case both dates are equal (unlikely, but good to handle)
-		return 0;
+		// If both are past or both are not past, sort chronologically
+		return dateA.getTime() - dateB.getTime();
 	};
 
 	const sortedSpeakersData = useMemo(() => {
@@ -258,6 +256,7 @@ export default function Home() {
 							<Link href='#faq' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>
 								FAQ
 							</Link>
+							<Link href='/share' className='outline-[#a4925a] outline px-4 py-2 italic hover:bg-[#a4925a] hover:text-white transition-colors duration-300 text-center'>SHARE</Link>
 						</div>
 					</motion.div>
 				</header>
@@ -328,7 +327,7 @@ export default function Home() {
 				</section>
 
 				{/* Contact Information Section */}
-				<section id='contact' className='my-24 px-8'>
+				<section className='my-24 px-8'>
 					<div className='max-w-6xl mx-auto'>
 						<h2 className='text-3xl font-semibold mb-6 text-[#a4925a]'>Who are we?</h2>
 						<div className='mt-4 ibm-plex-mono text-gray-800'>
@@ -345,7 +344,7 @@ export default function Home() {
 									<div className='w-full h-64 relative'>
 										<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='rounded-t' loading='lazy' sizes='(max-width: 240px) 100vw, 240px' />
 									</div>
-									<div className='text-center py-1'>
+									<div id='contact' className='text-center py-1'>
 										<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
 											Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 										</a>

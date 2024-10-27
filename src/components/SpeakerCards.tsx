@@ -8,7 +8,7 @@
  * - Shows RSVP button for upcoming talks or Watch Recording for past events
  * - Highlights Turing Award winners
  * - Responsive grid layout
- * - Calculates days until the event
+ * - Calculates time until the event
  *
  * Props:
  * - speakers: An array of speaker objects containing details like name, slug, speakerPhoto, etc.
@@ -40,19 +40,39 @@ interface SpeakerBioProps {
 
 const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, speakerPhoto, turingLink, talkTitle, isoDate, recordingLink, slug }: SpeakerBioProps) => {
 	const [isClient, setIsClient] = React.useState(false);
-	const [daysUntil, setDaysUntil] = React.useState<number | null>(null);
+	const [timeUntil, setTimeUntil] = React.useState<number | null>(null);
 	const router = useRouter();
 
 	React.useEffect(() => {
 		setIsClient(true);
-		const getDaysUntil = () => {
-			const today = new Date();
+		const updateTimeUntil = () => {
+			const now = new Date();
 			const talkDate = new Date(isoDate);
-			const timeDiff = talkDate.getTime() - today.getTime();
-			return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+			const timeDiff = talkDate.getTime() - now.getTime();
+			setTimeUntil(timeDiff);
 		};
-		setDaysUntil(getDaysUntil());
+		updateTimeUntil();
+		const timer = setInterval(updateTimeUntil, 60000); // Update every minute
+		return () => clearInterval(timer);
 	}, [isoDate]);
+
+	const getTimeStatus = () => {
+		if (timeUntil === null) return '';
+		if (timeUntil > 0) {
+			const hours = Math.ceil(timeUntil / (1000 * 60 * 60));
+			if (hours > 24) {
+				const days = Math.ceil(hours / 24);
+				return `starts in ${days} day${days > 1 ? 's' : ''}`;
+			}
+			return `starts in ${hours} hour${hours > 1 ? 's' : ''}`;
+		}
+		if (timeUntil > -5400000) { // Within 1.5 hours after start time
+			return 'IS LIVE NOW';
+		}
+		return 'has concluded';
+	};
+
+	const isUpcoming = timeUntil !== null && timeUntil > -5400000; // Consider upcoming until 1.5 hours after start
 
 	return (
 		<div
@@ -79,23 +99,25 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 				</div>
 				<p className='mt-4 text-[1.1rem] italic'>
 					&apos;{talkTitle}&apos;
-					{isClient && daysUntil !== null && <span className='font-bold text-blue-500'>{daysUntil <= 0 ? ' has concluded.' : ` starts in ${daysUntil} days.`}</span>}
+					{isClient && timeUntil !== null && (
+						<span className='font-bold text-blue-500'> {getTimeStatus()}</span>
+					)}
 				</p>
 				<p className='mt-4 text-[1rem]'>{description}</p>
 			</div>
-			{isClient && daysUntil !== null && (
+			{isClient && timeUntil !== null && (
 				<a
-					href={daysUntil > 0 ? rsvpLink : recordingLink}
+					href={isUpcoming ? rsvpLink : recordingLink}
 					target='_blank'
 					rel='noreferrer'
 					className={
-						daysUntil > 0
+						isUpcoming
 							? 'floating-text bg-[#013057] mt-6 font-bold text-white hover:text-slate-500 p-4 text-center text-[1.2rem]'
 							: 'floating-text bg-[#7b9cb71f] mt-6 font-bold text-[#013057] hover:text-slate-500 p-4 text-center text-[1.2rem]'
 					}
 					onClick={(e) => e.stopPropagation()}
 				>
-					{daysUntil > 0 && !recordingLink.startsWith('https') ? 'RSVP NOW' : 'WATCH NOW'}
+					{isUpcoming && timeUntil > 0 ? 'RSVP NOW' : 'WATCH NOW'}
 				</a>
 			)}
 		</div>
