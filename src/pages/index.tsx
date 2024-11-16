@@ -15,6 +15,7 @@ import { NextSeo } from 'next-seo';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { FaInfoCircle } from 'react-icons/fa';
 import Script from 'next/script';
+import InfiniteSpeakerScroll from '../components/InfiniteSpeakerScroll';
 
 // Wrap components that don't need frequent updates in React.memo
 const MemoizedSpeakerCards = React.memo(SpeakerCards);
@@ -260,6 +261,13 @@ export default function Home() {
 						</div>
 					</motion.div>
 				</header>
+
+				<section className="max-w-full overflow-hidden my-12">
+					<h2 className="text-3xl font-semibold mb-6 text-[#a4925a] text-center">Our Distinguished Speakers</h2>
+					<InfiniteSpeakerScroll 
+						speakers={sortedSpeakersData}
+					/>
+				</section>
 
 				{/* Speaker Cards */}
 				<section id='speakerCards' className='mx-auto px-8 my-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
