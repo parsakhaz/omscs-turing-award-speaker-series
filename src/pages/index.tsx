@@ -2,9 +2,10 @@
 import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
 import AdvisorCards from '../components/AdvisorCards';
-import speakersData from '../data/speakersData2024.json';
+import speakersData2024 from '../data/speakersData2024.json';
+import speakersData2023 from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData2024.json';
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
@@ -22,7 +23,20 @@ const MemoizedSpeakerCards = React.memo(SpeakerCards);
 const MemoizedAdvisorCards = React.memo(AdvisorCards);
 
 export default function Home() {
-	const rawSpeakersData = speakersData;
+	const [selectedYear, setSelectedYear] = useState<'all' | 2023 | 2024>('all');
+	
+	// Combine speakers from both years and add year info
+	const combinedSpeakersData = [
+		...speakersData2024.map(speaker => ({ ...speaker, year: 2024 })),
+		...speakersData2023.map(speaker => ({ ...speaker, year: 2023 }))
+	];
+	
+	// Filter speakers based on selected year
+	const filteredSpeakersData = selectedYear === 'all' 
+		? combinedSpeakersData 
+		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear);
+	
+	const rawSpeakersData = filteredSpeakersData;
 	// Function to sort by ISO date
 	const sortSpeakersByDate = (a: { isoDate: string }, b: { isoDate: string }) => {
 		const dateA = new Date(a.isoDate);
@@ -196,14 +210,24 @@ export default function Home() {
 					{/* Desktop Layout */}
 					<div className='hidden md:flex items-center justify-between text-[11px] tracking-wide font-medium text-slate-600'>
 						<div className='flex items-center space-x-6'>
-							<span className='flex items-center space-x-1'>
+							<a 
+								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='flex items-center space-x-1 hover:text-slate-900 transition-colors'
+							>
 								<span className='text-amber-600'>●</span>
 								<span>Featured in Atlantic Jewish Times</span>
-							</span>
-							<span className='flex items-center space-x-1'>
+							</a>
+							<a 
+								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='flex items-center space-x-1 hover:text-slate-900 transition-colors'
+							>
 								<span className='text-blue-600'>●</span>
 								<span>Georgia Tech Computing News</span>
-							</span>
+							</a>
 						</div>
 						<div className='flex items-center space-x-2 text-slate-700'>
 							<span>Sponsored by</span>
@@ -220,9 +244,23 @@ export default function Home() {
 					{/* Mobile Layout */}
 					<div className='md:hidden text-center text-[10px] tracking-wide font-medium text-slate-600'>
 						<div className='flex items-center justify-center space-x-3'>
-							<span>GT Computing</span>
+							<a 
+								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='hover:text-slate-900 transition-colors'
+							>
+								GT Computing
+							</a>
 							<span className='text-slate-400'>•</span>
-							<span>Atlantic Jewish Times</span>
+							<a 
+								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='hover:text-slate-900 transition-colors'
+							>
+								Atlantic Jewish Times
+							</a>
 							<span className='text-slate-400'>•</span>
 							<a
 								href='https://www.ai2incubator.com/'
@@ -277,7 +315,7 @@ export default function Home() {
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
 						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Turing Minds is an annual speaker series connecting global audiences with distinguished computer scientists. We bring together Turing Award winners—the Nobel laureates of computing—to share insights on groundbreaking research and the future of technology. Sponsored by AI2 Incubator and with encouragement from industry leaders, we provide a unique platform for learning from computing&apos;s most influential minds.
+							Turing Minds is an annual speaker series that has successfully connected global audiences with 19 distinguished computer scientists across 2023 and 2024. We bring together Turing Award winners—the Nobel laureates of computing—to share insights on groundbreaking research and the future of technology. With 11 Turing Award recipients among our speakers, along with other luminaries including a Nobel Prize winner, we&apos;ve created an unparalleled educational platform. Sponsored by AI2 Incubator and with support from leading academic institutions, Turing Minds continues to grow as a premier forum for computing excellence.
 						</p>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
@@ -298,9 +336,45 @@ export default function Home() {
 				<section className="max-w-full overflow-hidden my-20">
 					<div className="max-w-6xl mx-auto px-8 mb-12">
 						<h2 className="text-4xl font-light mb-4 text-slate-900 text-center tracking-tight">Distinguished Speakers</h2>
-						<p className="text-slate-600 text-center text-lg font-light max-w-2xl mx-auto">
+						<p className="text-slate-600 text-center text-lg font-light max-w-2xl mx-auto mb-8">
 							Meet the Turing Award winners who have shaped the future of computing
 						</p>
+						
+						{/* Year Filter */}
+						<div className="flex justify-center mb-8">
+							<div className="bg-slate-100 rounded-lg p-1 flex gap-1">
+								<button
+									onClick={() => setSelectedYear('all')}
+									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+										selectedYear === 'all'
+											? 'bg-white text-slate-900 shadow-sm'
+											: 'text-slate-600 hover:text-slate-900'
+									}`}
+								>
+									All Years (19)
+								</button>
+								<button
+									onClick={() => setSelectedYear(2024)}
+									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+										selectedYear === 2024
+											? 'bg-white text-slate-900 shadow-sm'
+											: 'text-slate-600 hover:text-slate-900'
+									}`}
+								>
+									2024 (8)
+								</button>
+								<button
+									onClick={() => setSelectedYear(2023)}
+									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+										selectedYear === 2023
+											? 'bg-white text-slate-900 shadow-sm'
+											: 'text-slate-600 hover:text-slate-900'
+									}`}
+								>
+									2023 (11)
+								</button>
+							</div>
+						</div>
 					</div>
 					<InfiniteSpeakerScroll 
 						speakers={sortedSpeakersData}

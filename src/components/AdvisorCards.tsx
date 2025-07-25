@@ -18,25 +18,47 @@ const AdvisorBio = ({ name, distinction, description, speakerPhoto, biographyLin
 
 	return (
 		<div
-			className='card drop-shadow-md rounded-sm bg-base-100 shadow-xl flex flex-col outline outline-[#a4925a] p-6'
+			className="group bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
 			onClick={() => router.push(`/advisor/${slug}`)}
-			style={{ cursor: 'pointer' }}
 		>
-			<div className='flex'>
-				<div className='w-24 h-24 relative'>
-					<Image src={speakerPhoto} layout='fill' objectFit='cover' alt='Advisor' className='rounded' />
-				</div>
-				<div className='px-6'>
-					<h3 className='text-2xl font-semibold'>{name}</h3>
-					<p className='mt-2'>{distinction}</p>
-					<p className='mt-2'>
-						<a href={biographyLink} target='_blank' rel='noreferrer' className='text-blue-500' onClick={(e) => e.stopPropagation()}>
-							Biography
+			{/* Header with photo and basic info */}
+			<div className="p-6 pb-4">
+				<div className="flex items-start space-x-4">
+					<div className="w-20 h-20 relative flex-shrink-0">
+						<Image 
+							src={speakerPhoto} 
+							layout="fill" 
+							objectFit="cover" 
+							alt={name}
+							className="rounded-xl"
+						/>
+					</div>
+					<div className="flex-1 min-w-0">
+						<h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+							{name}
+						</h3>
+						<p className="text-sm text-slate-600 font-medium mb-3 leading-relaxed">
+							{distinction}
+						</p>
+						<a 
+							href={biographyLink} 
+							target="_blank" 
+							rel="noreferrer" 
+							className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium" 
+							onClick={(e) => e.stopPropagation()}
+						>
+							View Biography →
 						</a>
-					</p>
+					</div>
 				</div>
 			</div>
-			<p className='mt-4 text-[0.95rem]'>{description}</p>
+
+			{/* Content */}
+			<div className="px-6 pb-6">
+				<p className="text-sm text-slate-600 leading-relaxed">
+					{description}
+				</p>
+			</div>
 		</div>
 	);
 };
