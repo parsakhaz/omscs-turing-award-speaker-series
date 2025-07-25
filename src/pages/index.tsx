@@ -204,104 +204,111 @@ export default function Home() {
 			</noscript>
 			{/* End Google Tag Manager (noscript) */}
 
-			{/* Credibility Header */}
-			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-50/95 backdrop-blur-md border-b border-slate-200/60 px-3 md:px-6 py-4 shadow-sm'>
-				<div className='max-w-7xl mx-auto'>
-					{/* Desktop Layout */}
-					<div className='hidden lg:block text-[10px] tracking-wide font-light text-slate-600 text-center'>
-						<div className='flex items-center justify-center space-x-8'>
-							<a 
-								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='hover:text-slate-900 transition-colors'
-							>
-								Featured in Atlantic Jewish Times, reaching 65,000+ readers across the Southeast
-							</a>
-							<span className='text-slate-300'>|</span>
-							<a 
-								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='hover:text-slate-900 transition-colors'
-							>
-								Highlighted by Georgia Tech&apos;s #5 ranked Computer Science program
-							</a>
-							<span className='text-slate-300'>|</span>
-							<a
-								href='https://www.ai2incubator.com/'
-								className='hover:text-slate-900 transition-colors'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Sponsored by AI2 Incubator, managing $200M+ in AI investments
-							</a>
-						</div>
-					</div>
-					{/* Tablet/Mobile Layout */}
-					<div className='lg:hidden text-center text-[9px] tracking-wide font-light text-slate-600 px-2'>
-						<div className='space-y-1'>
-							<div>
-								<a 
-									href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='hover:text-slate-900 transition-colors'
-								>
-									Featured in Atlantic Jewish Times (65K+ readers)
-								</a>
-							</div>
-							<div className='flex items-center justify-center space-x-4'>
-								<a 
-									href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='hover:text-slate-900 transition-colors'
-								>
-									Georgia Tech #5 CS Program
-								</a>
-								<span className='text-slate-400'>•</span>
-								<a
-									href='https://www.ai2incubator.com/'
-									className='hover:text-slate-900 transition-colors'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									AI2 Incubator ($200M+)
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div className='relative z-10'>
 				{/* Updated header with 3D elements */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-filter-none mt-14'>
-						<div className='text-center py-8 md:mb-20 md:pt-72'>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-sm font-medium tracking-[0.2em] uppercase mb-6 text-slate-500'>
-								ACM Turing Award Series
-							</motion.div>
+					<div className='w-full max-w-6xl mx-auto px-6 py-16 md:py-24'>
+						<div className='text-center mb-12'>
+							{/* Main Title */}
 							<motion.h1
-								initial={{ opacity: 0, y: 50 }}
+								initial={{ opacity: 0, y: 30 }}
 								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.8 }}
-								className='text-5xl md:text-7xl font-light mb-4 md:mb-6 relative tracking-tight'
+								transition={{ duration: 0.6 }}
+								className='text-6xl md:text-8xl font-light mb-6 relative tracking-tight'
 							>
-								<span className='relative z-10 text-slate-900'>Turing</span>{' '}
-								<span className='relative z-10 text-slate-700 font-extralight'>Minds</span>
+								<span className='text-slate-900'>Turing</span>{' '}
+								<span className='text-slate-700 font-extralight'>Minds</span>
 							</motion.h1>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className='text-sm md:text-base py-2 font-medium text-slate-600 mb-4 tracking-wide'>
-								<span className='inline-flex items-center space-x-2'>
-									<span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold'>19 Speakers</span>
-									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>11 Turing Winners</span>
-									<span className='text-slate-400'>•</span>
-									<span>2023-2024</span>
-								</span>
+
+							{/* Value Proposition */}
+							<motion.p 
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.2, duration: 0.6 }}
+								className='text-xl md:text-2xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed'
+							>
+								Premier Speaker Series Featuring Turing Award Winners
+							</motion.p>
+
+							{/* Key Stats - Much More Prominent */}
+							<motion.div 
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.3, duration: 0.6 }}
+								className='flex flex-wrap justify-center gap-6 mb-12'
+							>
+								<div className='bg-blue-50 border border-blue-200 px-6 py-3 rounded-full'>
+									<span className='text-blue-900 font-semibold text-lg'>19 Distinguished Speakers</span>
+								</div>
+								<div className='bg-amber-50 border border-amber-200 px-6 py-3 rounded-full'>
+									<span className='text-amber-900 font-semibold text-lg'>11 Turing Award Winners</span>
+								</div>
+								<div className='bg-slate-50 border border-slate-200 px-6 py-3 rounded-full'>
+									<span className='text-slate-700 font-semibold text-lg'>2023-2024</span>
+								</div>
 							</motion.div>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-lg md:text-xl py-3 md:py-4 font-light text-slate-500 tracking-wide'>
-								Fall 2024
+
+							{/* Prominent Credibility Cards */}
+							<motion.div 
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.4, duration: 0.6 }}
+								className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-5xl mx-auto'
+							>
+								<a 
+									href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='bg-white rounded-xl border border-slate-200 p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1'
+								>
+									<div className='text-amber-600 text-2xl mb-2'>📰</div>
+									<div className='text-slate-900 font-semibold text-base mb-1'>Atlantic Jewish Times</div>
+									<div className='text-slate-600 text-sm'>65,000+ readers across Southeast</div>
+								</a>
+
+								<a 
+									href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='bg-white rounded-xl border border-slate-200 p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1'
+								>
+									<div className='text-blue-600 text-2xl mb-2'>🏫</div>
+									<div className='text-slate-900 font-semibold text-base mb-1'>Georgia Tech Computing</div>
+									<div className='text-slate-600 text-sm'>#5 ranked CS program</div>
+								</a>
+
+								<a 
+									href='https://www.ai2incubator.com/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='bg-white rounded-xl border border-slate-200 p-6 text-center hover:shadow-lg transition-all duration-200 hover:-translate-y-1'
+								>
+									<div className='text-green-600 text-2xl mb-2'>🚀</div>
+									<div className='text-slate-900 font-semibold text-base mb-1'>AI2 Incubator</div>
+									<div className='text-slate-600 text-sm'>$200M+ investment portfolio</div>
+								</a>
+							</motion.div>
+
+							{/* Prominent CTAs */}
+							<motion.div 
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.5, duration: 0.6 }}
+								className='flex flex-col sm:flex-row gap-4 justify-center'
+							>
+								<Link 
+									href='#speakerCards' 
+									className='bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
+								>
+									View All Speakers
+								</Link>
+								<Link 
+									href='#faq' 
+									className='border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-slate-400 hover:bg-slate-50 transition-all duration-200'
+								>
+									Learn More
+								</Link>
 							</motion.div>
 						</div>
 					</div>
