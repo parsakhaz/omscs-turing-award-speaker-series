@@ -205,71 +205,71 @@ export default function Home() {
 			{/* End Google Tag Manager (noscript) */}
 
 			{/* Credibility Header */}
-			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-50/95 backdrop-blur-md border-b border-slate-200/60 px-3 md:px-6 py-3 shadow-sm'>
+			<div className='fixed top-0 left-0 right-0 z-[9999] bg-slate-50/95 backdrop-blur-md border-b border-slate-200/60 px-3 md:px-6 py-4 shadow-sm'>
 				<div className='max-w-7xl mx-auto'>
 					{/* Desktop Layout */}
-					<div className='hidden md:flex items-center justify-between text-[11px] tracking-wide font-medium text-slate-600'>
-						<div className='flex items-center space-x-6'>
+					<div className='hidden lg:block text-[10px] tracking-wide font-light text-slate-600 text-center'>
+						<div className='flex items-center justify-center space-x-8'>
 							<a 
 								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='flex items-center space-x-1 hover:text-slate-900 transition-colors'
+								className='hover:text-slate-900 transition-colors'
 							>
-								<span className='text-amber-600'>●</span>
-								<span>Featured in Atlantic Jewish Times</span>
+								Featured in Atlantic Jewish Times, reaching 65,000+ readers across the Southeast
 							</a>
+							<span className='text-slate-300'>|</span>
 							<a 
 								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='flex items-center space-x-1 hover:text-slate-900 transition-colors'
+								className='hover:text-slate-900 transition-colors'
 							>
-								<span className='text-blue-600'>●</span>
-								<span>Georgia Tech Computing News</span>
+								Highlighted by Georgia Tech&apos;s #5 ranked Computer Science program
 							</a>
-						</div>
-						<div className='flex items-center space-x-2 text-slate-700'>
-							<span>Sponsored by</span>
+							<span className='text-slate-300'>|</span>
 							<a
 								href='https://www.ai2incubator.com/'
-								className='font-semibold text-slate-900 hover:text-blue-700 transition-colors duration-200'
+								className='hover:text-slate-900 transition-colors'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								AI2 Incubator
+								Sponsored by AI2 Incubator, managing $200M+ in AI investments
 							</a>
 						</div>
 					</div>
-					{/* Mobile Layout */}
-					<div className='md:hidden text-center text-[10px] tracking-wide font-medium text-slate-600'>
-						<div className='flex items-center justify-center space-x-3'>
-							<a 
-								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='hover:text-slate-900 transition-colors'
-							>
-								GT Computing
-							</a>
-							<span className='text-slate-400'>•</span>
-							<a 
-								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='hover:text-slate-900 transition-colors'
-							>
-								Atlantic Jewish Times
-							</a>
-							<span className='text-slate-400'>•</span>
-							<a
-								href='https://www.ai2incubator.com/'
-								className='font-semibold text-slate-900'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								AI2 Incubator
-							</a>
+					{/* Tablet/Mobile Layout */}
+					<div className='lg:hidden text-center text-[9px] tracking-wide font-light text-slate-600 px-2'>
+						<div className='space-y-1'>
+							<div>
+								<a 
+									href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='hover:text-slate-900 transition-colors'
+								>
+									Featured in Atlantic Jewish Times (65K+ readers)
+								</a>
+							</div>
+							<div className='flex items-center justify-center space-x-4'>
+								<a 
+									href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='hover:text-slate-900 transition-colors'
+								>
+									Georgia Tech #5 CS Program
+								</a>
+								<span className='text-slate-400'>•</span>
+								<a
+									href='https://www.ai2incubator.com/'
+									className='hover:text-slate-900 transition-colors'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									AI2 Incubator ($200M+)
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -278,7 +278,7 @@ export default function Home() {
 			<div className='relative z-10'>
 				{/* Updated header with 3D elements */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-filter-none mt-12'>
+					<div className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-filter-none mt-14'>
 						<div className='text-center py-8 md:mb-20 md:pt-72'>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-sm font-medium tracking-[0.2em] uppercase mb-6 text-slate-500'>
 								ACM Turing Award Series
