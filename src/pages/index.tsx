@@ -296,12 +296,10 @@ export default function Home() {
 								<span className='inline-flex items-center space-x-2'>
 									<span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold'>19 Speakers</span>
 									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>11 Turing Winners</span>
-									<span className='text-slate-400'>•</span>
-									<span>2023-2024</span>
 								</span>
 							</motion.div>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-lg md:text-xl py-3 md:py-4 font-light text-slate-500 tracking-wide'>
-								Fall 2024
+								Latest Series
 							</motion.div>
 						</div>
 					</div>
@@ -315,7 +313,7 @@ export default function Home() {
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
 						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Turing Minds is an annual speaker series that has successfully connected global audiences with 19 distinguished computer scientists across 2023 and 2024. We bring together Turing Award winners—the Nobel laureates of computing—to share insights on groundbreaking research and the future of technology. With 11 Turing Award recipients among our speakers, along with other luminaries including a Nobel Prize winner, we&apos;ve created an unparalleled educational platform. Sponsored by AI2 Incubator and with support from leading academic institutions, Turing Minds continues to grow as a premier forum for computing excellence.
+							Turing Minds is an annual speaker series that has successfully connected global audiences with 19 distinguished computer scientists. We bring together Turing Award winners—the Nobel laureates of computing—to share insights on groundbreaking research and the future of technology. With 11 Turing Award recipients among our speakers, along with other luminaries including a Nobel Prize winner, we&apos;ve created an unparalleled educational platform. Sponsored by AI2 Incubator and with support from leading academic institutions, Turing Minds continues to grow as a premier forum for computing excellence.
 						</p>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
