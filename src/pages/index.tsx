@@ -3,6 +3,7 @@ import Head from 'next/head';
 import SpeakerCards from '../components/SpeakerCards';
 import AdvisorCards from '../components/AdvisorCards';
 import speakersData2024 from '../data/speakersData2024.json';
+import speakersData2025 from '../data/speakersData2025.json';
 import speakersData2023 from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData2024.json';
 import React, { useMemo, useState } from 'react';
@@ -25,19 +26,29 @@ const MemoizedAdvisorCards = React.memo(AdvisorCards);
 export default function Home() {
 	const [selectedYear, setSelectedYear] = useState<'all' | 2023 | 2024>('all');
 	
-	// Combine speakers from both years and add year info
+	// Combine speakers from multiple years and add year info
 	const combinedSpeakersData = [
+		...speakersData2025.map(speaker => ({ ...speaker, year: 2025 })),
 		...speakersData2024.map(speaker => ({ ...speaker, year: 2024 })),
 		...speakersData2023.map(speaker => ({ ...speaker, year: 2023 }))
 	];
+
+	const totalSpeakersCount = combinedSpeakersData.length;
+	const speakersCountByYear: Record<number, number> = {
+		2025: speakersData2025.length,
+		2024: speakersData2024.length,
+		2023: speakersData2023.length,
+	};
+
+	const totalTuringWinnersCount = combinedSpeakersData.filter((s: { turingAwardWinner?: boolean }) => s.turingAwardWinner).length;
 	
-	// Filter speakers based on selected year
+	// Filter speakers based on selected year (2025 always included in 'all')
 	const filteredSpeakersData = selectedYear === 'all' 
 		? combinedSpeakersData 
-		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear);
+		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear || speaker.year === 2025);
 	
 	const rawSpeakersData = filteredSpeakersData;
-	// Function to sort by ISO date
+	// Function to sort by ISO date (newest first, with upcoming events prioritized)
 	const sortSpeakersByDate = (a: { isoDate: string }, b: { isoDate: string }) => {
 		const dateA = new Date(a.isoDate);
 		const dateB = new Date(b.isoDate);
@@ -54,8 +65,8 @@ export default function Home() {
 		if (isPastA && !isPastB) return 1;
 		if (!isPastA && isPastB) return -1;
 
-		// If both are past or both are not past, sort chronologically
-		return dateA.getTime() - dateB.getTime();
+		// If both are past or both are not past, sort reverse chronologically (newest first)
+		return dateB.getTime() - dateA.getTime();
 	};
 
 	const sortedSpeakersData = useMemo(() => {
@@ -294,8 +305,8 @@ export default function Home() {
 							</motion.h1>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className='text-sm md:text-base py-2 font-medium text-slate-600 mb-4 tracking-wide'>
 								<span className='inline-flex items-center space-x-2'>
-									<span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold'>19 Speakers</span>
-									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>11 Turing Winners</span>
+									<span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold'>{totalSpeakersCount} Speakers</span>
+									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>{totalTuringWinnersCount} Turing Winners</span>
 								</span>
 							</motion.div>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-lg md:text-xl py-3 md:py-4 font-light text-slate-500 tracking-wide'>
@@ -349,7 +360,7 @@ export default function Home() {
 											: 'text-slate-600 hover:text-slate-900'
 									}`}
 								>
-									All Years (19)
+									All Years ({totalSpeakersCount})
 								</button>
 								<button
 									onClick={() => setSelectedYear(2024)}
@@ -359,7 +370,7 @@ export default function Home() {
 											: 'text-slate-600 hover:text-slate-900'
 									}`}
 								>
-									2024 (8)
+									2024 ({speakersCountByYear[2024]})
 								</button>
 								<button
 									onClick={() => setSelectedYear(2023)}
@@ -369,7 +380,7 @@ export default function Home() {
 											: 'text-slate-600 hover:text-slate-900'
 									}`}
 								>
-									2023 (11)
+									2023 ({speakersCountByYear[2023]})
 								</button>
 							</div>
 						</div>
