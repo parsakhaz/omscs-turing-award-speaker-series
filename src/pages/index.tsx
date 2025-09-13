@@ -324,7 +324,7 @@ export default function Home() {
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
 						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Turing Minds is an annual speaker series that has successfully connected global audiences with 19 distinguished computer scientists. We bring together Turing Award winners—the Nobel laureates of computing—to share insights on groundbreaking research and the future of technology. With 11 Turing Award recipients among our speakers, along with other luminaries including a Nobel Prize winner, we&apos;ve created an unparalleled educational platform. Sponsored by AI2 Incubator and with support from leading academic institutions, Turing Minds continues to grow as a premier forum for computing excellence.
+							Turing Minds is a speaker series featuring distinguished computer scientists and Turing Award recipients. Our events provide access to leading figures in computing who share insights on their work and the field of computer science. With 20 speakers including 12 Turing Award winners, we have created a platform for learning from the most influential minds in computing. Sponsored by AI2 Incubator and supported by leading academic institutions.
 						</p>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
@@ -469,9 +469,9 @@ export default function Home() {
 				<section className='my-32 px-6 md:px-8'>
 					<div className='max-w-6xl mx-auto'>
 						<div className='text-center mb-16'>
-							<h2 className='text-4xl font-light mb-4 text-slate-900 tracking-tight'>Our Founders</h2>
+							<h2 className='text-4xl font-light mb-4 text-slate-900 tracking-tight'>Leadership</h2>
 							<p className='text-slate-600 text-lg font-light max-w-3xl mx-auto leading-relaxed'>
-								Turing Minds was co-founded by Parsa Khazaeepoul and Zack Axel, both Georgia Tech OMSCS students. Through dedicated outreach and community building, they have successfully organized talks with multiple Turing Award winners, creating a valuable educational platform for the computing community.
+								Turing Minds was founded by Parsa Khazaeepoul and Zack Axel, who have organized talks with multiple Turing Award winners and other leading computer scientists. Through dedicated outreach, they have created a platform connecting audiences with influential figures in computing.
 							</p>
 						</div>
 						
