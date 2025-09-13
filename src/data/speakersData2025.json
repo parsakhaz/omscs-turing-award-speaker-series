@@ -1,10 +1,10 @@
 [
 	{
 		"name": "Dr. Donald Knuth",
-		"dateTime": "March 5th, 12pm EST",
-		"isoDate": "2025-03-05T12:00:00-05:00",
+		"dateTime": "October 24th, 10am PDT",
+		"isoDate": "2025-10-24T10:00:00-07:00",
 		"description": "Dr. Donald E. Knuth, born January 10, 1938, is a renowned American computer scientist and mathematician, best known for his seminal work 'The Art of Computer Programming' and for developing the TeX typesetting system. Awarded the 1974 A.M. Turing Award, he is widely regarded as the 'father of algorithm analysis' and has profoundly influenced the field of computer science through his rigorous approach to programming and algorithms.",
-		"rsvpLink": "https://lu.ma/knuth-2025",
+		"rsvpLink": "https://luma.com/zu5f4ns3",
 		"turingAwardWinner": true,
 		"speakerPhoto": "/speaker-photos/donald.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/knuth_0691216.cfm",
