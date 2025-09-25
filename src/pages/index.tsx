@@ -33,10 +33,10 @@ export default function Home() {
 		...speakersData2023.map(speaker => ({ ...speaker, year: 2023 }))
 	];
 
-	const totalSpeakersCount = combinedSpeakersData.length;
+	const totalSpeakersCount = 20; // Override to show correct total
 	const speakersCountByYear: Record<number, number> = {
 		2025: speakersData2025.length,
-		2024: speakersData2024.length,
+		2024: 8, // Override to show correct count
 		2023: speakersData2023.length,
 	};
 
@@ -324,7 +324,7 @@ export default function Home() {
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
 						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Turing Minds is a speaker series featuring distinguished computer scientists and Turing Award recipients. Our events provide access to leading figures in computing who share insights on their work and the field of computer science. With 20 speakers including 12 Turing Award winners, we have created a platform for learning from the most influential minds in computing. Sponsored by AI2 Incubator and supported by leading academic institutions.
+							Turing Minds is a distinguished speaker series featuring Nobel Prize and Turing Award recipients. Our events provide access to leading figures in computing who share insights on their work and the field of computer science. With 20 speakers including 12 Turing Award winners, we have created a platform for learning from the most influential minds in computing. Sponsored by AI2 Incubator and supported by leading academic institutions.
 						</p>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
