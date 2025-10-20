@@ -490,8 +490,8 @@ export default function Home() {
 									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-3'>
 										Zack Axel <Image src='/linkedin.svg' className='ml-2' width={24} height={24} alt='LinkedIn' />
 									</a>
-									<a href='mailto:zaxel3@gatech.edu' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
-										zaxel3@gatech.edu
+									<a href='mailto:turingmindsofficial@gmail.com' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
+										turingmindsofficial@gmail.com
 									</a>
 								</div>
 							</div>
@@ -505,8 +505,8 @@ export default function Home() {
 									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-3'>
 										Parsa Khazaeepoul <Image src='/linkedin.svg' className='ml-2' width={24} height={24} alt='LinkedIn' />
 									</a>
-									<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
-										pkhazaeepoul3@gatech.edu
+									<a href='mailto:turingmindsofficial@gmail.com' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
+										turingmindsofficial@gmail.com
 									</a>
 								</div>
 							</div>

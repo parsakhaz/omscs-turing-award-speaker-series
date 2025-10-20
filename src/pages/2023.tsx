@@ -269,8 +269,8 @@ export default function Home() {
 										Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:zaxel3@gatech.edu' className='text-sm  mb-2 hover:text-blue-600'>
-											zaxel3@gatech.edu
+										<a href='mailto:turingmindsofficial@gmail.com' className='text-sm  mb-2 hover:text-blue-600'>
+											turingmindsofficial@gmail.com
 										</a>
 									</p>
 								</div>
@@ -286,8 +286,8 @@ export default function Home() {
 										Parsa Khazaeepoul <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
 									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:pkhazaeepoul3@gatech.edu' className='text-sm mb-2 hover:text-blue-600'>
-											pkhazaeepoul3@gatech.edu
+										<a href='mailto:turingmindsofficial@gmail.com' className='text-sm mb-2 hover:text-blue-600'>
+											turingmindsofficial@gmail.com
 										</a>
 									</p>
 								</div>
