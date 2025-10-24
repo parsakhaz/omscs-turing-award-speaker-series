@@ -105,7 +105,7 @@ export default function Home() {
 				name: 'How can I attend the speaker series?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'By RSVPing on our website when we release the event RSVPs.',
+					text: 'Attendance is available through our online RSVP system. Event registration links are published on this website in advance of each talk. We recommend monitoring our platform regularly or following our updates to ensure you don\'t miss registration opportunities for upcoming speakers.',
 				},
 			},
 			{
@@ -113,7 +113,7 @@ export default function Home() {
 				name: 'Are the talks recorded?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'At the speakers discretion, some talks are recorded and will be made available on our website after the event. However, we encourage live attendance for the opportunity to participate in Q&A sessions.',
+					text: 'Recording availability is determined at each speaker\'s discretion. When permitted, recordings are published on our website following the event. We strongly encourage live attendance to take full advantage of interactive Q&A sessions and the opportunity to engage directly with our distinguished speakers.',
 				},
 			},
 			{
@@ -121,7 +121,7 @@ export default function Home() {
 				name: 'Is there a cost to attend?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'The event is free for all.',
+					text: 'All Turing Minds events are free and open to the public. Our mission is to make these exceptional learning opportunities accessible to everyone interested in computer science and technology.',
 				},
 			},
 			{
@@ -129,7 +129,7 @@ export default function Home() {
 				name: 'How can I suggest a speaker for future series?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: "We welcome suggestions for future speakers. Please send your recommendations to our hosts whos' emails can be found below.",
+					text: 'We welcome suggestions for future speakers and value input from our community. Please send your recommendations to TuringMindsOfficial@gmail.com. We review all suggestions and appreciate your engagement in helping us continue to bring exceptional speakers to our platform.',
 				},
 			},
 		],
@@ -430,23 +430,22 @@ export default function Home() {
 							</div>
 							<div className='bg-white rounded-xl p-8 shadow-lg border border-slate-100'>
 								<h3 className='text-xl font-medium mb-4 text-slate-900'>How can I attend the speaker series?</h3>
-								<p className='text-slate-700 leading-relaxed font-light'>By RSVPing on our website when we release the event RSVPs.</p>
+								<p className='text-slate-700 leading-relaxed font-light'>Attendance is available through our online RSVP system. Event registration links are published on this website in advance of each talk. We recommend monitoring our platform regularly or following our updates to ensure you don&apos;t miss registration opportunities for upcoming speakers.</p>
 							</div>
 							<div className='bg-white rounded-xl p-8 shadow-lg border border-slate-100'>
 								<h3 className='text-xl font-medium mb-4 text-slate-900'>Are the talks recorded?</h3>
 								<p className='text-slate-700 leading-relaxed font-light'>
-									At the speakers discretion, some talks are recorded and will be made available on our website after the event. However, we encourage live attendance for the
-									opportunity to participate in Q&A sessions.
+									Recording availability is determined at each speaker&apos;s discretion. When permitted, recordings are published on our website following the event. We strongly encourage live attendance to take full advantage of interactive Q&A sessions and the opportunity to engage directly with our distinguished speakers.
 								</p>
 							</div>
 							<div className='bg-white rounded-xl p-8 shadow-lg border border-slate-100'>
 								<h3 className='text-xl font-medium mb-4 text-slate-900'>Is there a cost to attend?</h3>
-								<p className='text-slate-700 leading-relaxed font-light'>The event is free for all.</p>
+								<p className='text-slate-700 leading-relaxed font-light'>All Turing Minds events are free and open to the public. Our mission is to make these exceptional learning opportunities accessible to everyone interested in computer science and technology.</p>
 							</div>
 							<div className='bg-white rounded-xl p-8 shadow-lg border border-slate-100'>
 								<h3 className='text-xl font-medium mb-4 text-slate-900'>How can I suggest a speaker for future series?</h3>
 								<p className='text-slate-700 leading-relaxed font-light'>
-									We welcome suggestions for future speakers. Please send your recommendations to our hosts whose emails can be found below.
+									We welcome suggestions for future speakers and value input from our community. Please send your recommendations to TuringMindsOfficial@gmail.com. We review all suggestions and appreciate your engagement in helping us continue to bring exceptional speakers to our platform.
 								</p>
 							</div>
 						</div>
@@ -496,12 +495,10 @@ export default function Home() {
 									<Image src='/team-photos/zack.jpg' layout='fill' alt='Zack Axel' className='object-cover' loading='lazy' sizes='320px' />
 								</div>
 								<div id='contact' className='text-center p-6'>
-									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-3'>
+									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-1'>
 										Zack Axel <Image src='/linkedin.svg' className='ml-2' width={24} height={24} alt='LinkedIn' />
 									</a>
-									<a href='mailto:turingmindsofficial@gmail.com' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
-										turingmindsofficial@gmail.com
-									</a>
+									<p className='text-slate-500 text-sm font-medium'>Co-Founder</p>
 								</div>
 							</div>
 
@@ -511,13 +508,21 @@ export default function Home() {
 									<Image src='/team-photos/parsa.jpg' layout='fill' alt='Parsa Khazaeepoul' className='object-cover' loading='lazy' sizes='320px' />
 								</div>
 								<div className='text-center p-6'>
-									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-3'>
+									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex items-center justify-center font-semibold text-xl text-slate-900 hover:text-blue-600 transition-colors mb-1'>
 										Parsa Khazaeepoul <Image src='/linkedin.svg' className='ml-2' width={24} height={24} alt='LinkedIn' />
 									</a>
-									<a href='mailto:turingmindsofficial@gmail.com' className='text-slate-600 hover:text-blue-600 transition-colors font-medium'>
-										turingmindsofficial@gmail.com
-									</a>
+									<p className='text-slate-500 text-sm font-medium'>Co-Founder</p>
 								</div>
+							</div>
+						</div>
+
+						{/* Shared Contact Email */}
+						<div className='mt-12 text-center'>
+							<div className='bg-white rounded-xl p-8 shadow-lg border border-slate-100 max-w-md mx-auto'>
+								<h3 className='text-lg font-medium mb-3 text-slate-900'>Contact the Team</h3>
+								<a href='mailto:TuringMindsOfficial@gmail.com' className='text-blue-600 hover:text-blue-700 transition-colors font-medium text-lg'>
+									TuringMindsOfficial@gmail.com
+								</a>
 							</div>
 						</div>
 					</div>

@@ -258,7 +258,7 @@ export default function Home() {
 						<div className='py-2'>
 							<p className='italic ibm-plex-mono text-white font-bold bg-slate-800 underline py-2 px-2 w-[100%]'>Connect with our LinkedIn accounts below</p>
 						</div>
-						<div className='flex flex-col sm:flex-row gap-8'>
+						<div className='flex flex-col sm:flex-row gap-8 justify-center'>
 							{/* Card for Zack Axel */}
 							<div className='bg-white rounded overflow-hidden shadow-lg  w-[15rem] h-[20rem]'>
 								<div className='w-full h-64 relative'>
@@ -268,11 +268,6 @@ export default function Home() {
 									<a href='https://www.linkedin.com/in/zackaxel/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
 										Zack Axel <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
-									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:turingmindsofficial@gmail.com' className='text-sm  mb-2 hover:text-blue-600'>
-											turingmindsofficial@gmail.com
-										</a>
-									</p>
 								</div>
 							</div>
 
@@ -285,12 +280,17 @@ export default function Home() {
 									<a href='https://www.linkedin.com/in/parsas/' target='_blank' className='flex text-center justify-center font-bold underline text-lg hover:text-blue-600'>
 										Parsa Khazaeepoul <Image src='/linkedin.svg' className='pl-1' width={20} height={20} alt='LinkedIn' />
 									</a>
-									<p className='text-lg mb-2 hover:text-blue-600'>
-										<a href='mailto:turingmindsofficial@gmail.com' className='text-sm mb-2 hover:text-blue-600'>
-											turingmindsofficial@gmail.com
-										</a>
-									</p>
 								</div>
+							</div>
+						</div>
+
+						{/* Shared Contact Email */}
+						<div className='mt-8 text-center'>
+							<div className='bg-white rounded-lg p-6 shadow-lg max-w-md mx-auto'>
+								<h3 className='text-lg font-semibold mb-2'>Contact the Team</h3>
+								<a href='mailto:TuringMindsOfficial@gmail.com' className='text-blue-600 hover:text-blue-700 transition-colors font-medium'>
+									TuringMindsOfficial@gmail.com
+								</a>
 							</div>
 						</div>
 
