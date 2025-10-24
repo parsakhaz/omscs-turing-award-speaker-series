@@ -138,12 +138,12 @@ export default function Home() {
 	return (
 		<div className='relative'>
 			<Head>
-				<title>Turing Minds - Premier Platform for Computing Luminaries</title>
+				<title>Turing Minds - Premier Global Platform for Computing Luminaries</title>
 				<meta
 					name='description'
 					content='Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.'
 				/>
-				<meta property='og:title' content='Turing Minds - Premier Platform for Computing Luminaries' />
+				<meta property='og:title' content='Turing Minds - Premier Global Platform for Computing Luminaries' />
 				<meta
 					property='og:description'
 					content='Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.'
@@ -185,19 +185,19 @@ export default function Home() {
 			{/* End Google Analytics 4 */}
 
 			<NextSeo
-				title='Turing Minds - Premier Platform for Computing Luminaries'
+				title='Turing Minds - Premier Global Platform for Computing Luminaries'
 				description='Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.'
 				canonical='https://turing.rsvp'
 				openGraph={{
 					url: 'https://turing.rsvp',
-					title: 'Turing Minds - Premier Platform for Computing Luminaries',
+					title: 'Turing Minds - Premier Global Platform for Computing Luminaries',
 					description: 'Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.',
 					images: [
 						{
 							url: 'https://turing.rsvp/og-banner.png',
 							width: 1686,
 							height: 1121,
-							alt: 'Turing Minds - Premier Platform for Computing Luminaries',
+							alt: 'Turing Minds - Premier Global Platform for Computing Luminaries',
 						},
 					],
 					site_name: 'Turing Minds',
@@ -323,9 +323,18 @@ export default function Home() {
 					>
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
-						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Turing Minds is a distinguished speaker series featuring Nobel Prize and Turing Award recipients. Our events provide access to leading figures in computing who share insights on their work and the field of computer science. With 20 speakers including 12 Turing Award winners, we have created a platform for learning from the most influential minds in computing. Sponsored by AI2 Incubator and supported by leading academic institutions.
+						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
+							Turing Minds is the premier global platform for computing luminaries, having forged strategic relationships with 13 Turing Award winners and several Nobel laureates. Initially started in their garage as students at Georgia Tech, co-founders Zachary Axel and Parsa Khazaeepoul launched Turing Minds, ultimately developing, guiding, and executing the overarching product strategy.
 						</p>
+						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
+							Under their charismatic and technically gifted leadership, the co-founders crafted and fine tuned go-to-market strategy and scale up plan that expanded laureate participation from 5 to 13 Turing Award winners between pilot year and penultimate years, respectively. They also pioneered and defined new paradigms, and approaches in partnership strategy and the art and science of creative deal making, taking influence from the likes of strategic partnerships guru Dan'l Lewin of Apple and NeXT. Key achievements under their leadership include:
+						</p>
+						<ul className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl list-disc list-inside space-y-2'>
+							<li>Spearheaded a strategic partnership with Computer History Museum, and reporting directly to the former CEO.</li>
+							<li>Secured institutional buy in from Georgia Tech senior leadership incl. Emeritus Dean(creator of OMSCS), Director of CoC Communications, department chairs of Physics, MechE, and CS, and PR and marketing teams, effectively aligning institutional strategy and program expansion to 15,000+ students in 105 countries.</li>
+							<li>Developed a pioneering sponsorship strategy and secured prestigious AI2 Incubator sponsorship, ultimately securing resources and buy-in from AI2 CFO.</li>
+							<li>And recruited a genius senior Deep Learning/LLM engineer on an H-1B visa located near company HQ, strengthening the founding technical team and accelerating development capacity.</li>
+						</ul>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
 							<Link href='#speakerCards' className='bg-slate-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-800 transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'>
