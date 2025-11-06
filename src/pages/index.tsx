@@ -291,9 +291,9 @@ export default function Home() {
 				<header className='min-h-screen flex flex-col relative'>
 					<div className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-filter-none mt-12'>
 						<div className='text-center py-8 md:mb-20 md:pt-72'>
-							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-sm font-medium tracking-[0.2em] uppercase mb-6 text-slate-500'>
+							{/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-sm font-medium tracking-[0.2em] uppercase mb-6 text-slate-500'>
 								ACM Turing Award Series
-							</motion.div>
+							</motion.div> */}
 							<motion.h1
 								initial={{ opacity: 0, y: 50 }}
 								animate={{ opacity: 1, y: 0 }}
@@ -527,7 +527,8 @@ export default function Home() {
 				<footer className='mt-32 mb-16 text-center px-6'>
 					<div className='max-w-4xl mx-auto'>
 						<div className='h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-8'></div>
-						<p className='text-slate-500 font-light tracking-wide'>© 2025 Turing Minds. All rights reserved.</p>
+						<p className='text-slate-600 font-light tracking-wide'>© 2025 Turing Minds. All rights reserved.</p>
+						<p className='text-slate-600 font-light tracking-wide text-sm'>Turing Minds™ is an independent company and is not affiliated with the Association for Computing Machinery (ACM) or the A.M. Turing Award.</p>
 					</div>
 				</footer>
 			</div>
