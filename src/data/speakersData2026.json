@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Dr. Bob Metcalfe",
+		"dateTime": "January 13th, 1pm EST",
+		"isoDate": "2026-01-13T13:00:00-05:00",
+		"description": "Dr. Bob Metcalfe is a pioneering computer scientist and engineer who invented Ethernet, the foundational technology that enables local area networks worldwide. Awarded the 2022 A.M. Turing Award for the invention, standardization, and commercialization of Ethernet, his work has fundamentally shaped how computers communicate and connect. Dr. Metcalfe is also known for formulating Metcalfe's Law, which describes the exponential value growth of telecommunications networks.",
+		"rsvpLink": "",
+		"turingAwardWinner": true,
+		"speakerPhoto": "/speaker-photos/bob-metcalfe.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/metcalfe_1702174.cfm",
+		"talkTitle": "Question & Answer",
+		"recordingLink": "",
+		"markdownBiography": "",
+		"markdownTimeline": "",
+		"slug": "bob-metcalfe"
+	},
+	{
+		"name": "Dr. Pat Hanrahan",
+		"dateTime": "March 30th, 1pm EDT",
+		"isoDate": "2026-03-30T13:00:00-04:00",
+		"description": "Dr. Pat Hanrahan is a renowned computer scientist whose groundbreaking work in computer graphics has transformed the entertainment and technology industries. Awarded the 2019 A.M. Turing Award alongside Ed Catmull for their pioneering contributions to 3D computer graphics, Dr. Hanrahan's innovations in rendering and graphics systems have been instrumental in the development of Pixar's RenderMan and have influenced generations of visual effects and animated films.",
+		"rsvpLink": "",
+		"turingAwardWinner": true,
+		"speakerPhoto": "https://engineering.stanford.edu/sites/default/files/styles/large_square/public/media/person/patrick-hanrahan1219536232000.jpg",
+		"turingLink": "https://amturing.acm.org/award_winners/hanrahan_4652251.cfm",
+		"talkTitle": "Question & Answer",
+		"recordingLink": "",
+		"markdownBiography": "",
+		"markdownTimeline": "",
+		"slug": "pat-hanrahan"
+	}
+]

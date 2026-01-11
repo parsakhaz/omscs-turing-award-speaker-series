@@ -218,7 +218,7 @@ export default function TuringMindsWaitlist() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-stone-500 text-sm">
-              © 2025 Turing Minds. Inspired by the OMSCS Turing Award Speaker Series.
+              © 2026 Turing Minds. Inspired by the OMSCS Turing Award Speaker Series.
             </div>
             <div className="flex gap-6 text-sm text-stone-400">
               <a href="#" className="hover:text-emerald-400 transition-colors">Mission</a>

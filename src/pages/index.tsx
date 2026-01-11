@@ -4,6 +4,7 @@ import SpeakerCards from '../components/SpeakerCards';
 import AdvisorCards from '../components/AdvisorCards';
 import speakersData2024 from '../data/speakersData2024.json';
 import speakersData2025 from '../data/speakersData2025.json';
+import speakersData2026 from '../data/speakersData2026.json';
 import speakersData2023 from '../data/speakersData.json';
 import advisorsData from '../data/advisorsData2024.json';
 import React, { useMemo, useState } from 'react';
@@ -24,17 +25,19 @@ const MemoizedSpeakerCards = React.memo(SpeakerCards);
 const MemoizedAdvisorCards = React.memo(AdvisorCards);
 
 export default function Home() {
-	const [selectedYear, setSelectedYear] = useState<'all' | 2023 | 2024>('all');
+	const [selectedYear, setSelectedYear] = useState<'all' | 2023 | 2024 | 2025 | 2026>('all');
 	
 	// Combine speakers from multiple years and add year info
 	const combinedSpeakersData = [
+		...speakersData2026.map(speaker => ({ ...speaker, year: 2026 })),
 		...speakersData2025.map(speaker => ({ ...speaker, year: 2025 })),
 		...speakersData2024.map(speaker => ({ ...speaker, year: 2024 })),
 		...speakersData2023.map(speaker => ({ ...speaker, year: 2023 }))
 	];
 
-	const totalSpeakersCount = 20; // Override to show correct total
+	const totalSpeakersCount = 22; // Override to show correct total
 	const speakersCountByYear: Record<number, number> = {
+		2026: speakersData2026.length,
 		2025: speakersData2025.length,
 		2024: 8, // Override to show correct count
 		2023: speakersData2023.length,
@@ -42,10 +45,10 @@ export default function Home() {
 
 	const totalTuringWinnersCount = combinedSpeakersData.filter((s: { turingAwardWinner?: boolean }) => s.turingAwardWinner).length;
 	
-	// Filter speakers based on selected year (2025 always included in 'all')
-	const filteredSpeakersData = selectedYear === 'all' 
-		? combinedSpeakersData 
-		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear || speaker.year === 2025);
+	// Filter speakers based on selected year
+	const filteredSpeakersData = selectedYear === 'all'
+		? combinedSpeakersData
+		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear);
 	
 	const rawSpeakersData = filteredSpeakersData;
 	// Function to sort by ISO date (newest first, with upcoming events prioritized)
@@ -305,8 +308,7 @@ export default function Home() {
 							</motion.h1>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className='text-sm md:text-base py-2 font-medium text-slate-600 mb-4 tracking-wide'>
 								<span className='inline-flex items-center space-x-2'>
-									<span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold'>{totalSpeakersCount} Speakers</span>
-									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>{totalTuringWinnersCount} Turing Winners</span>
+									<span className='bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold'>17 Turing Award and Nobel Prize Winners</span>
 								</span>
 							</motion.div>
 							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text-lg md:text-xl py-3 md:py-4 font-light text-slate-500 tracking-wide'>
@@ -324,10 +326,10 @@ export default function Home() {
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
 						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							We started Turing Minds as students at Georgia Tech in 2023 with a mission to bring computing luminaries to a global audience. Since then, we&apos;ve hosted 13 Turing Award winners and several Nobel laureates, and we&apos;ve grown the series to reach audiences across 105 countries.
+							We started Turing Minds as students at Georgia Tech in 2023 with a mission to bring computing luminaries to a global audience. Since then, we&apos;ve hosted 17 Turing Award and Nobel Prize winners, and we&apos;ve grown the series to reach audiences across 105 countries.
 						</p>
 						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Through strategic outreach and partnership development, we expanded the series from 5 to 13 Turing Award winners between our pilot year and 2024. Along the way, we&apos;ve been able to:
+							Through strategic outreach and partnership development, we expanded the series from 5 to 17 Turing and Nobel Prize winners between our pilot year and 2024. Along the way, we&apos;ve been able to:
 						</p>
 						<ul className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl list-disc list-inside space-y-2'>
 							<li>Establish a partnership with Computer History Museum, reporting directly to the former CEO.</li>
@@ -370,6 +372,26 @@ export default function Home() {
 									}`}
 								>
 									All Years ({totalSpeakersCount})
+								</button>
+								<button
+									onClick={() => setSelectedYear(2026)}
+									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+										selectedYear === 2026
+											? 'bg-white text-slate-900 shadow-sm'
+											: 'text-slate-600 hover:text-slate-900'
+									}`}
+								>
+									2026 ({speakersCountByYear[2026]})
+								</button>
+								<button
+									onClick={() => setSelectedYear(2025)}
+									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+										selectedYear === 2025
+											? 'bg-white text-slate-900 shadow-sm'
+											: 'text-slate-600 hover:text-slate-900'
+									}`}
+								>
+									2025 ({speakersCountByYear[2025]})
 								</button>
 								<button
 									onClick={() => setSelectedYear(2024)}
@@ -532,7 +554,7 @@ export default function Home() {
 				<footer className='mt-32 mb-16 text-center px-6'>
 					<div className='max-w-4xl mx-auto'>
 						<div className='h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-8'></div>
-						<p className='text-slate-600 font-light tracking-wide'>© 2025 Turing Minds. All rights reserved.</p>
+						<p className='text-slate-600 font-light tracking-wide'>© 2026 Turing Minds. All rights reserved.</p>
 						<p className='text-slate-600 font-light tracking-wide text-sm'>Turing Minds™ is an independent company and is not affiliated with the Association for Computing Machinery (ACM) or the A.M. Turing Award.</p>
 					</div>
 				</footer>
