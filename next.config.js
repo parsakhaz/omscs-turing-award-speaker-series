@@ -9,6 +9,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'turing.rsvp',
       },
+      {
+        protocol: 'https',
+        hostname: 'engineering.stanford.edu',
+      },
     ],
     path: '/_next/image',
     loader: 'default',

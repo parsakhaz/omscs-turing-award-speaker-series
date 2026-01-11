@@ -21,7 +21,7 @@
 		"description": "Dr. Pat Hanrahan is a renowned computer scientist whose groundbreaking work in computer graphics has transformed the entertainment and technology industries. Awarded the 2019 A.M. Turing Award alongside Ed Catmull for their pioneering contributions to 3D computer graphics, Dr. Hanrahan's innovations in rendering and graphics systems have been instrumental in the development of Pixar's RenderMan and have influenced generations of visual effects and animated films.",
 		"rsvpLink": "",
 		"turingAwardWinner": true,
-		"speakerPhoto": "/speaker-photos/pat-hanrahan.jpg",
+		"speakerPhoto": "https://engineering.stanford.edu/sites/default/files/styles/large_square/public/media/person/patrick-hanrahan1219536232000.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/hanrahan_4652251.cfm",
 		"talkTitle": "Question & Answer",
 		"recordingLink": "",
