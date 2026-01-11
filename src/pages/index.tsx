@@ -532,7 +532,7 @@ export default function Home() {
 				<footer className='mt-32 mb-16 text-center px-6'>
 					<div className='max-w-4xl mx-auto'>
 						<div className='h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-8'></div>
-						<p className='text-slate-600 font-light tracking-wide'>© 2025 Turing Minds. All rights reserved.</p>
+						<p className='text-slate-600 font-light tracking-wide'>© 2026 Turing Minds. All rights reserved.</p>
 						<p className='text-slate-600 font-light tracking-wide text-sm'>Turing Minds™ is an independent company and is not affiliated with the Association for Computing Machinery (ACM) or the A.M. Turing Award.</p>
 					</div>
 				</footer>
