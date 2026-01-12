@@ -292,7 +292,7 @@ export default function Home() {
 			<div className='relative z-10'>
 				{/* Updated header with 3D elements */}
 				<header className='min-h-screen flex flex-col relative'>
-					<div className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:relative md:bg-transparent md:backdrop-filter-none mt-12'>
+					<div className='relative top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl md:bg-transparent md:backdrop-filter-none mt-12'>
 						<div className='text-center py-8 md:mb-20 md:pt-72'>
 							{/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className='text-sm font-medium tracking-[0.2em] uppercase mb-6 text-slate-500'>
 								ACM Turing Award Series
@@ -321,7 +321,7 @@ export default function Home() {
 						initial={{ opacity: 0, y: 50 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.7, duration: 0.8 }}
-						className='w-full justify-center max-w-5xl mx-auto bg-white/80 backdrop-blur-2xl rounded-2xl p-8 md:p-12 mt-48 md:mt-20 md:static shadow-xl border border-slate-200/50'
+						className='w-full justify-center max-w-5xl mx-auto bg-white/80 backdrop-blur-2xl rounded-2xl p-8 md:p-12 mt-8 md:mt-20 shadow-xl border border-slate-200/50'
 					>
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
