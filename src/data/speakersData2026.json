@@ -6,7 +6,7 @@
 		"description": "Dr. Bob Metcalfe is a pioneering computer scientist and engineer who invented Ethernet, the foundational technology that enables local area networks worldwide. Awarded the 2022 A.M. Turing Award for the invention, standardization, and commercialization of Ethernet, his work has fundamentally shaped how computers communicate and connect. Dr. Metcalfe is also known for formulating Metcalfe's Law, which describes the exponential value growth of telecommunications networks.",
 		"rsvpLink": "",
 		"turingAwardWinner": true,
-		"speakerPhoto": "/speaker-photos/bob-metcalfe.jpg",
+		"speakerPhoto": "https://upload.wikimedia.org/wikipedia/commons/8/85/With_Bob_Metcalfe_%28cropped%29.jpg",
 		"turingLink": "https://amturing.acm.org/award_winners/metcalfe_1702174.cfm",
 		"talkTitle": "Question & Answer",
 		"recordingLink": "",

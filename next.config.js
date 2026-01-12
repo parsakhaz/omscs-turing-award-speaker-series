@@ -13,6 +13,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'engineering.stanford.edu',
       },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
     ],
     path: '/_next/image',
     loader: 'default',
