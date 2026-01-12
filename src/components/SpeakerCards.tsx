@@ -82,22 +82,21 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 		>
 			{/* Header with photo and basic info */}
 			<div className="relative p-6 pb-4">
-				{/* Year badge */}
-				{year && (
-					<div className="absolute top-4 right-4 bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-medium">
-						{year}
-					</div>
-				)}
-				
 				<div className="flex items-start space-x-4">
 					<div className="w-20 h-20 relative flex-shrink-0">
-						<Image 
-							src={speakerPhoto} 
-							layout="fill" 
-							objectFit="cover" 
+						<Image
+							src={speakerPhoto}
+							layout="fill"
+							objectFit="cover"
 							alt={name}
 							className="rounded-xl"
 						/>
+						{/* Year badge on photo */}
+						{year && (
+							<div className="absolute -top-1 -right-1 bg-slate-800/80 text-white px-2 py-0.5 rounded-full text-[10px] font-medium">
+								{year}
+							</div>
+						)}
 					</div>
 					<div className="flex-1 min-w-0">
 						<h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
