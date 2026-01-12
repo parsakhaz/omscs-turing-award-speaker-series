@@ -488,7 +488,20 @@ export default function Home() {
 					</div>
 				</footer>
 			</div>
-			<ScrollToTop />
+			<ScrollToTop
+				smooth
+				style={{
+					backgroundColor: '#1e293b',
+					borderRadius: '50%',
+					boxShadow: '0 4px 14px rgba(0,0,0,0.15)',
+					right: '20px',
+					bottom: '20px',
+					width: '48px',
+					height: '48px',
+					zIndex: 9999,
+				}}
+				component={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" width="24" height="24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" /></svg>}
+			/>
 			<JsonLd<WebSite> item={structuredData} />
 			<JsonLd<FAQPage> item={faqStructuredData} />
 			<BreadcrumbJsonLd
