@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 interface Speaker {
   name: string;
   speakerPhoto: string;
+  year?: number;
 }
 
 interface Props {
@@ -59,10 +60,15 @@ export default function InfiniteSpeakerScroll({ speakers }: Props) {
                 objectFit="contain"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
               />
+              {speaker.year && (
+                <div className="absolute top-1 right-1 bg-slate-800/80 text-white px-2 py-0.5 rounded-full text-[10px] font-medium">
+                  {speaker.year}
+                </div>
+              )}
             </div>
           ))}
         </div>
-        
+
         {/* Duplicated set of images */}
         <div className="flex md:gap-16 gap-4 md:px-8 px-2">
           {speakers.map((speaker, idx) => (
@@ -77,6 +83,11 @@ export default function InfiniteSpeakerScroll({ speakers }: Props) {
                 objectFit="contain"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
               />
+              {speaker.year && (
+                <div className="absolute top-1 right-1 bg-slate-800/80 text-white px-2 py-0.5 rounded-full text-[10px] font-medium">
+                  {speaker.year}
+                </div>
+              )}
             </div>
           ))}
         </div>

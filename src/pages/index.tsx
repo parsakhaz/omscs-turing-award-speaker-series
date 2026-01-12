@@ -25,8 +25,6 @@ const MemoizedSpeakerCards = React.memo(SpeakerCards);
 const MemoizedAdvisorCards = React.memo(AdvisorCards);
 
 export default function Home() {
-	const [selectedYear, setSelectedYear] = useState<'all' | 2023 | 2024 | 2025 | 2026>('all');
-	
 	// Combine speakers from multiple years and add year info
 	const combinedSpeakersData = [
 		...speakersData2026.map(speaker => ({ ...speaker, year: 2026 })),
@@ -35,22 +33,9 @@ export default function Home() {
 		...speakersData2023.map(speaker => ({ ...speaker, year: 2023 }))
 	];
 
-	const totalSpeakersCount = 22; // Override to show correct total
-	const speakersCountByYear: Record<number, number> = {
-		2026: speakersData2026.length,
-		2025: speakersData2025.length,
-		2024: 8, // Override to show correct count
-		2023: speakersData2023.length,
-	};
-
 	const totalTuringWinnersCount = combinedSpeakersData.filter((s: { turingAwardWinner?: boolean }) => s.turingAwardWinner).length;
-	
-	// Filter speakers based on selected year
-	const filteredSpeakersData = selectedYear === 'all'
-		? combinedSpeakersData
-		: combinedSpeakersData.filter(speaker => speaker.year === selectedYear);
-	
-	const rawSpeakersData = filteredSpeakersData;
+
+	const rawSpeakersData = combinedSpeakersData;
 	// Function to sort by ISO date (newest first, with upcoming events prioritized)
 	const sortSpeakersByDate = (a: { isoDate: string }, b: { isoDate: string }) => {
 		const dateA = new Date(a.isoDate);
@@ -356,65 +341,9 @@ export default function Home() {
 				<section className="max-w-full overflow-hidden my-20">
 					<div className="max-w-6xl mx-auto px-8 mb-12">
 						<h2 className="text-4xl font-light mb-4 text-slate-900 text-center tracking-tight">Distinguished Speakers</h2>
-						<p className="text-slate-600 text-center text-lg font-light max-w-2xl mx-auto mb-8">
+						<p className="text-slate-600 text-center text-lg font-light max-w-2xl mx-auto">
 							Meet the Turing Award winners who have shaped the future of computing
 						</p>
-						
-						{/* Year Filter */}
-						<div className="flex justify-center mb-8">
-							<div className="bg-slate-100 rounded-lg p-1 flex gap-1">
-								<button
-									onClick={() => setSelectedYear('all')}
-									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-										selectedYear === 'all'
-											? 'bg-white text-slate-900 shadow-sm'
-											: 'text-slate-600 hover:text-slate-900'
-									}`}
-								>
-									All Years ({totalSpeakersCount})
-								</button>
-								<button
-									onClick={() => setSelectedYear(2026)}
-									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-										selectedYear === 2026
-											? 'bg-white text-slate-900 shadow-sm'
-											: 'text-slate-600 hover:text-slate-900'
-									}`}
-								>
-									2026 ({speakersCountByYear[2026]})
-								</button>
-								<button
-									onClick={() => setSelectedYear(2025)}
-									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-										selectedYear === 2025
-											? 'bg-white text-slate-900 shadow-sm'
-											: 'text-slate-600 hover:text-slate-900'
-									}`}
-								>
-									2025 ({speakersCountByYear[2025]})
-								</button>
-								<button
-									onClick={() => setSelectedYear(2024)}
-									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-										selectedYear === 2024
-											? 'bg-white text-slate-900 shadow-sm'
-											: 'text-slate-600 hover:text-slate-900'
-									}`}
-								>
-									2024 ({speakersCountByYear[2024]})
-								</button>
-								<button
-									onClick={() => setSelectedYear(2023)}
-									className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-										selectedYear === 2023
-											? 'bg-white text-slate-900 shadow-sm'
-											: 'text-slate-600 hover:text-slate-900'
-									}`}
-								>
-									2023 ({speakersCountByYear[2023]})
-								</button>
-							</div>
-						</div>
 					</div>
 					<InfiniteSpeakerScroll 
 						speakers={sortedSpeakersData}
