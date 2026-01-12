@@ -31,6 +31,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# generated sitemaps
+public/sitemap*.xml
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
