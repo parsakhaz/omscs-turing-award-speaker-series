@@ -310,18 +310,9 @@ export default function Home() {
 					>
 						<h2 className='text-3xl md:text-4xl font-light mb-8 text-slate-900 tracking-tight'>About Turing Minds</h2>
 
-						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							We started Turing Minds as students at Georgia Tech in 2023 with a mission to bring computing luminaries to a global audience. Since then, we&apos;ve hosted 17 Turing Award and Nobel Prize winners, and we&apos;ve grown the series to reach audiences across 105 countries.
+						<p className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
+							We started Turing Minds as students at Georgia Tech in 2023 with a mission to bring computing luminaries to a global audience. Since then, we&apos;ve hosted 17 Turing Award and Nobel Prize winners, reaching audiences across 105 countries. Sponsored by AI2 Incubator and supported by leading academic institutions.
 						</p>
-						<p className='text-slate-700 mb-6 text-base md:text-lg leading-relaxed font-light max-w-4xl'>
-							Through strategic outreach and partnership development, we expanded the series from 5 to 17 Turing and Nobel Prize winners between our pilot year and 2024. Along the way, we&apos;ve been able to:
-						</p>
-						<ul className='text-slate-700 mb-10 text-base md:text-lg leading-relaxed font-light max-w-4xl list-disc list-inside space-y-2'>
-							<li>Establish a partnership with Computer History Museum, reporting directly to the former CEO.</li>
-							<li>Secure institutional support from Georgia Tech senior leadership including the Emeritus Dean (creator of OMSCS), Director of CoC Communications, department chairs of Physics, MechE, and CS, and PR and marketing teams, enabling program expansion to 15,000+ students in 105 countries.</li>
-							<li>Secure AI2 Incubator sponsorship and resources through collaboration with AI2 CFO.</li>
-							<li>Recruit a senior Deep Learning/LLM engineer to strengthen our founding technical team.</li>
-						</ul>
 						{/* Updated navigation buttons */}
 						<div className='flex flex-col sm:flex-row gap-4 md:gap-6'>
 							<Link href='#speakerCards' className='bg-slate-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-800 transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'>
