@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/legacy/image';
 import speakersData2024 from '../../data/speakersData2024.json';
 import speakersData2025 from '../../data/speakersData2025.json';
+import speakersData2026 from '../../data/speakersData2026.json';
 import React from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
@@ -16,7 +17,7 @@ import advisorsData2024 from '../../data/advisorsData2024.json';
 import Script from 'next/script';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const paths = [...speakersData2025, ...speakersData2024].map((speaker) => ({
+	const paths = [...speakersData2026, ...speakersData2025, ...speakersData2024].map((speaker) => ({
 		params: { slug: speaker.slug },
 	}));
 
@@ -24,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const allSpeakers = [...speakersData2025, ...speakersData2024];
+	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024];
 	const speaker = allSpeakers.find((s) => s.slug === params?.slug);
 	return { props: { speaker } };
 };
