@@ -62,10 +62,11 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 			const hoursDiff = timeDiff / (1000 * 60 * 60);
 
-			setShowJoinNow(Math.abs(hoursDiff) <= 1);
-			setShowWatchNow(daysDiff <= -1);
+			const hasRecording = speaker.recordingLink && speaker.recordingLink.length > 0;
+			setShowJoinNow(Math.abs(hoursDiff) <= 1 && !hasRecording);
+			setShowWatchNow(hoursDiff < -1 && hasRecording);
 			setShowRSVP(hoursDiff > 1);
-			setShowTalkConcluded(hoursDiff < -1 && hoursDiff > -24);
+			setShowTalkConcluded(hoursDiff < -1 && !hasRecording);
 		};
 
 		updateCountdown();
@@ -307,11 +308,11 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 						{/* Render markdown biography - progressive disclosure, still crawlable */}
 						{speaker.markdownBiography && (
-							<details className='mt-8 md:mt-12 group' open>
-								<summary className='text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#013057] cursor-pointer list-none'>
+							<details className='mt-6 md:mt-8 group' open>
+								<summary className='text-2xl md:text-3xl font-bold mb-2 md:mb-3 text-[#013057] cursor-pointer list-none'>
 									Biography <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
-								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800 prose-headings:mt-4 prose-headings:mb-2 prose-p:my-1.5 prose-ul:my-1.5 prose-li:my-0.5'>
 									{speaker.markdownBiography}
 								</ReactMarkdown>
 							</details>
@@ -319,11 +320,11 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 						{/* Render markdown timeline - progressive disclosure, still crawlable */}
 						{speaker.markdownTimeline && (
-							<details className='mt-8 md:mt-12 group' open>
-								<summary className='text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#013057] cursor-pointer list-none'>
+							<details className='mt-6 md:mt-8 group' open>
+								<summary className='text-2xl md:text-3xl font-bold mb-2 md:mb-3 text-[#013057] cursor-pointer list-none'>
 									Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
-								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800 prose-headings:mt-4 prose-headings:mb-2 prose-p:my-1.5 prose-ul:my-1.5 prose-li:my-0.5'>
 									{speaker.markdownTimeline}
 								</ReactMarkdown>
 							</details>
