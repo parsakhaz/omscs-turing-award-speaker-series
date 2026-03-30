@@ -9,6 +9,16 @@
 		"speakerPhoto": "/speaker-photos/moshe.jpg",
 		"talkTitle": "How to Be an Ethical Technologist",
 		"recordingLink": "https://youtu.be/ZjKQTgxAOkU",
+		"talkSummary": "Dr. Vardi traces the twin tsunamis launched in 1981 — the IBM PC and Reaganomics — showing how computing and neoliberalism together produced economic inequality, cognitive filter bubbles, and political polarization. He argues that surveillance capitalism, addiction-by-design social media, and unchecked corporate power have made technologists complicit in societal harm, and calls on computer scientists to commit to consistently supporting the public good through a 'Lovelace Oath' and mandatory ethics education.",
+		"talkTakeaways": [
+			"Mega-corporations are already the 'superintelligence' we should fear — they concentrate the talent of many people toward a single goal of profit maximization, functioning exactly like Bostrom's paperclip maximizer.",
+			"Internal corporate ethics efforts have proven to be an 'utter failure' — whistleblowers get pushed out, responsible-technology boards get sidelined, and nonprofit governance structures get overridden by investors. Only external regulation can effectively constrain corporate behavior.",
+			"The combination of surveillance capitalism and large language models creates an imminent threat of hyper-personalized persuasion — individually tailored phishing and persuasive chatbots that exploit personal data at unprecedented scale."
+		],
+		"talkQuotes": [
+			"We thought we were the Rebel Alliance. Now computing is not the rebels anymore — we are the Empire, and we have to deal with the responsibility that this creates.",
+			"Today's technology is taking advantage of our Paleolithic emotions and medieval institutions."
+		],
 		"slug": "moshe-vardi"
 	},
 	{
@@ -22,6 +32,16 @@
 		"turingLink": "https://amturing.acm.org/award_winners/lamport_1205376.cfm",
 		"talkTitle": "How to Write a 21st Century Proof (AMA)",
 		"recordingLink": "https://youtu.be/-DG6AfJeWKA",
+		"talkSummary": "Dr. Lamport argued that traditional paragraph-style proofs are insufficient for the precision demanded by computing, where tiny errors crash systems, and that structured hierarchical proofs are both more rigorous and more readable. He discussed the role of AI in theorem proving, the cultural resistance of mathematicians to adopting structured proofs, and why reasoning at the algorithm level rather than the code level is far more cost-effective for catching errors in concurrent systems.",
+		"talkTakeaways": [
+			"One-third of published mathematical papers contain incorrect results — errors persist because if a result is important enough, other readers eventually catch them, but this tolerance is unacceptable for program correctness proofs.",
+			"The incentive structure in academia actively discourages rigorous proofs: the best-case outcome is confirming what you already believed, and the worst case is discovering your theorem is wrong and losing the publication.",
+			"Lamport distinguishes 'coding' from 'programming' — programming includes specifying what a program should do and designing algorithms before any code is written, and proofs are most cost-effective at that algorithm level."
+		],
+		"talkQuotes": [
+			"The incentives are all wrong for writing rigorous proofs. The best case is you'll discover that your theorem is correct, which is something you believed in the first place, and the worst case is you will learn that it's not correct and you don't get the publication.",
+			"Mathematicians seem to be really afraid that they will have to write machine-checked proofs. I think what that indicates is some sort of very deep insecurity among mathematicians."
+		],
 		"slug": "leslie-lamport"
 	},
 	{
@@ -34,6 +54,16 @@
 		"speakerPhoto": "/speaker-photos/noel.jpeg",
 		"talkTitle": "Managing Technology Marketing in the 21st Century",
 		"recordingLink": "https://youtu.be/Rkgpyf9gvgI",
+		"talkSummary": "Professor Capon presents a strategic framework for marketing: firms must deliver customer value better than competitors to attract, retain, and grow customers. He walks through market environment forces, PESTEL analysis, six marketing imperatives, and five marketing principles, illustrating with examples including Apple's privacy changes devastating Facebook's ad business and Kodak's failure to pursue its own digital photography invention.",
+		"talkTakeaways": [
+			"Complementors — entities whose actions can dramatically help or harm your business — are an underappreciated force. Apple's privacy policy change caused Facebook's stock to plummet by cutting off the browsing data Facebook relied on for ad targeting.",
+			"Kodak actually invented digital photography but refused to pursue it because they couldn't figure out how to make more money from digital than from chemical film — a textbook case of incumbent blindness.",
+			"The six marketing imperatives form a complete strategic sequence: identify markets, segment and target, set strategic direction, design the market offer, secure cross-functional support, and monitor/control results."
+		],
+		"talkQuotes": [
+			"If you do a better job than the other guys, good things happen to you and shareholder value increases. If the other guys do a better job than you, you ultimately go out of business.",
+			"Kodak were the people who discovered digital photography, but because they couldn't figure out how to make more money on digital photography than they made on their regular chemical film photography, they never pursued it."
+		],
 		"slug": "noel-capon"
 	},
 	{
@@ -47,6 +77,16 @@
 		"turingLink": "https://amturing.acm.org/award_winners/liskov_1108679.cfm",
 		"talkTitle": "How Data Abstraction Changed Computing Forever",
 		"recordingLink": "https://youtu.be/M4YIDz2WTCI",
+		"talkSummary": "Dr. Liskov traces the origins of data abstraction from her accidental entry into computer science through her PhD at Stanford under John McCarthy, to her pivotal realization at MIT that partitions could be conceptualized as data types — linking modularity to program design. She describes designing CLU, which introduced clusters, iterators, exception handling, and parametric polymorphism, and recounts how her specification-oriented thinking led to the Liskov Substitution Principle.",
+		"talkTakeaways": [
+			"The key intellectual breakthrough was recognizing that partitions could be understood as data types — this single conceptual link connected modularity to design, because programmers already understood data types from existing languages.",
+			"Liskov deliberately chose a heap-based object model for CLU, going against the prevailing view that pointers were 'evil' — essential for true independent compilation of modules.",
+			"The Liskov Substitution Principle arose from Liskov's discovery that the OOP community was confusing implementation inheritance with type hierarchy — stacks aren't subtypes of queues because they behave differently."
+		],
+		"talkQuotes": [
+			"I realized that I could think about partitions as data types. It links modularity to design. You can't design a program by saying I just want a bunch of black boxes, but you can design a program if you think about abstractions.",
+			"When I got the Turing Award I realized the world had changed while I was not paying attention. My graduate students didn't know there was a time before data abstraction."
+		],
 		"slug": "barbara-liskov"
 	},
 	{
@@ -59,6 +99,16 @@
 		"speakerPhoto": "/speaker-photos/nir.jpg",
 		"talkTitle": "Tissue vs. Silicone Musings on the Future of Deep Learning Hardware and Software",
 		"recordingLink": "https://youtu.be/4iEvYx9cAnk",
+		"talkSummary": "Dr. Shavit explores the relationship between neurobiology and the design of hardware and software for machine learning. He demonstrates that the human brain operates at roughly iPhone-level compute but on a petabyte of memory — the opposite of current GPUs. He argues that the future lies in mimicking the brain's sparsity and locality of reference rather than simply adding more floating-point operations.",
+		"talkTakeaways": [
+			"The human brain performs roughly 2 trillion operations per second — comparable to an iPhone — not a massive TPU pod. We are building the opposite of what we need.",
+			"GPUs are built with massive compute and tiny memory, but to mimic a brain we need iPhone-level compute paired with a petabyte of memory.",
+			"By applying pruning and cache-aware depth-wise execution on CPUs, researchers can match GPU latency for inference tasks like BERT — brain-inspired software strategies can close the hardware gap."
+		],
+		"talkQuotes": [
+			"If you want to mimic us, you don't need that much compute. An iPhone does five trillion operations per second. My brain is not more powerful than an iPhone.",
+			"We don't need all those flops. What we need is memory and the right algorithms."
+		],
 		"slug": "nir-shavit"
 	},
 	{
@@ -72,6 +122,16 @@
 		"turingLink": "https://amturing.acm.org/award_winners/ullman_1054360.cfm",
 		"talkTitle": "Data Science: Is it Real?",
 		"recordingLink": "https://youtu.be/09hvsK4fsoE",
+		"talkSummary": "Professor Ullman presents four algorithmic techniques for large-scale data problems outside machine learning: locality-sensitive hashing for entity resolution, approximate counting of distinct elements in streams, proper sampling of data streams, and optimal triangle-finding in large graphs. He demonstrates that clever algorithmic design can solve problems at scales where brute-force approaches are computationally infeasible.",
+		"talkTakeaways": [
+			"Locality-sensitive hashing solves the seemingly impossible problem of finding similar pairs among billions of items without comparing every pair — designing hash functions where similar items land in the same bucket while dissimilar items rarely do.",
+			"When sampling data streams, sampling by position versus by key value gives fundamentally different results — position-based sampling is useless for uniqueness queries because items appearing twice have an 18% chance of appearing exactly once in a 10% sample.",
+			"The Flajolet-Martin algorithm for counting distinct elements uses only a few bits per counter by tracking maximum trailing zeros in hashed values — elegant sublinear-space counting."
+		],
+		"talkQuotes": [
+			"Everyone knows machine learning is a very important deal these days, but the point I'm trying to make is that there are still some very interesting algorithms, typically involving very large scale data, that are not really machine learning.",
+			"Marvin Minsky once said that you can tell a computer scientist by the fact that they believe that hashing is real. I think locality-sensitive hashing is another one of these ideas that your intuition would be that it's impossible, but it in fact is possible."
+		],
 		"slug": "jeffrey-ullman"
 	},
 	{
@@ -84,6 +144,16 @@
 		"speakerPhoto": "/speaker-photos/assaf.jpg",
 		"talkTitle": "AMA Style Interview with Dr. Assaf Schuster",
 		"recordingLink": "https://youtu.be/5c2l5UnWugo",
+		"talkSummary": "Dr. Schuster presents Complex Event Processing (CEP) — detecting patterns in real-time data streams. He explains how CEP engines use nondeterministic finite automata and evaluation trees, but face a combinatorial explosion of partial matches. He introduces data-aware optimization techniques drawing on 40 years of database join-order optimization to dramatically improve performance, and demonstrates that hybrid parallelism achieves super-linear speedups.",
+		"talkTakeaways": [
+			"The core performance nightmare in CEP is combinatorial explosion: for a pattern ABCD with 1,000 each of A, B, and C events, the first D arrival creates one billion partial matches.",
+			"By reducing CEP plan generation to the well-studied database join-order optimization problem, decades of existing algorithms become immediately applicable — a powerful cross-pollination.",
+			"Hybrid parallelism combining data and state parallelism achieves over three orders of magnitude throughput improvement with 24 cores — super-linear speedup from fitting in faster cache levels."
+		],
+		"talkQuotes": [
+			"We already proved that the CEP evaluation is equivalent to or at least as hard as an NP-complete problem. We know that deep neural networks are not very good at tackling NP-hard problems.",
+			"With 24 cores, the equivalence in speedup is more than three orders of magnitude — because when you reduce the amount of memory, you get super-linear speedup from working with faster levels of the memory hierarchy."
+		],
 		"slug": "assaf-schuster"
 	},
 	{
@@ -97,6 +167,16 @@
 		"turingLink": "https://amturing.acm.org/award_winners/dongarra_3406337.cfm",
 		"talkTitle": "A Not so Simple Matter of Software",
 		"recordingLink": "https://youtu.be/KiY_eaR-aqI",
+		"talkSummary": "Dr. Dongarra surveys high performance computing, tracing the evolution from vector processors to exascale systems. He explains how the end of Dennard scaling forced a shift from clock frequency gains to multicore parallelism, details the DOE's $4 billion Exascale Computing Project and the Frontier supercomputer, and highlights that real applications achieve only 0.8-3% of theoretical peak performance — revealing an enormous gap between hardware capability and software utilization.",
+		"talkTakeaways": [
+			"Dennard scaling ended around 2004-2006 — doubling frequency would increase power by 8x (100W to 800W per chip), making cooling infeasible. This forced the shift to multicore parallelism.",
+			"The DOE's Exascale Computing Project cost $4 billion over seven years with no follow-on at scale, leaving 800 researchers scrambling — many will move to hyperscaler companies, a brain drain from government HPC.",
+			"Frontier achieves only 0.8% of its theoretical peak on the sparse matrix benchmark representing real workloads — analogous to a 200 mph race car traveling at 2 mph."
+		],
+		"talkQuotes": [
+			"If each person on Earth completed one calculation per second, it would take about four years to do what that exascale computer can do in just one second.",
+			"Algorithms and software always follow the hardware. The hardware comes first, it gets thrown over the fence, and then we scramble to try to make use of that."
+		],
 		"slug": "jack-dongarra"
 	},
 	{
@@ -134,6 +214,16 @@
 		"speakerPhoto": "/speaker-photos/tony.jpg",
 		"talkTitle": "Quantum Liquids",
 		"recordingLink": "https://youtu.be/xKQFUnWHZTo",
+		"talkSummary": "Nobel laureate Dr. Leggett explains quantum liquids — systems exhibiting macroscopic quantum behavior when three conditions are met: low temperature, quantum mechanics, and liquidity. He shows how indistinguishable bosonic particles undergo Bose-Einstein condensation, and connects this to superconductivity via Cooper pairs, whose persistence has been measured to exceed many times the estimated age of the universe.",
+		"talkTakeaways": [
+			"Three precise ingredients are needed for a quantum liquid: low temperature for order, quantum mechanics for wavelike behavior, and the ability of particles to change places. Solids satisfy the first two but not the third.",
+			"The indistinguishability of particles only matters when they can exchange positions — in a solid, atoms are tagged by their lattice positions, but in a liquid, swapping creates fundamental quantum ambiguity.",
+			"Superconductivity arises because Cooper pairs of electrons behave as bosons. BCS theory shows they must automatically undergo Bose condensation, forcing all pairs to move identically — sustaining current indefinitely."
+		],
+		"talkQuotes": [
+			"Bosons are extremely gregarious, and under certain conditions they like to have a macroscopic number of particles in a single state. That is Bose-Einstein condensation, and it is basically the root of most properties of quantum liquids.",
+			"The lower limit on the time necessary for the superconducting current to decay turns out to be many times the estimated age of the universe. This really is a very macroscopic phenomenon."
+		],
 		"slug": "anthony-leggett"
 	}
 ]

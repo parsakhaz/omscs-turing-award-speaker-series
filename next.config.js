@@ -7,6 +7,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'www.turing.rsvp',
+      },
+      {
+        protocol: 'https',
         hostname: 'turing.rsvp',
       },
       {

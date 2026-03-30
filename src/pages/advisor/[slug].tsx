@@ -11,6 +11,8 @@ import { JsonLd } from 'react-schemaorg';
 import { Person, WithContext } from 'schema-dts';
 import SidebarGallery from '../../components/SidebarGallery';
 import speakersData2024 from '../../data/speakersData2024.json';
+import speakersData2025 from '../../data/speakersData2025.json';
+import speakersData2026 from '../../data/speakersData2026.json';
 import advisorsData2024 from '../../data/advisorsData2024.json';
 import Link from 'next/link';
 import { FaChevronLeft, FaShare } from 'react-icons/fa';
@@ -29,6 +31,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const AdvisorPage = ({ advisor }: { advisor: any }) => {
+	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024];
+	const otherAdvisors = advisorsData.filter((a) => a.slug !== advisor.slug);
+
 	const structuredData: WithContext<Person> = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
@@ -36,21 +41,21 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 		description: advisor.description,
 		image: advisor.speakerPhoto,
 		jobTitle: advisor.distinction,
-		url: `https://turing.rsvp/advisor/${advisor.slug}`,
+		url: `https://www.turing.rsvp/advisor/${advisor.slug}`,
 		sameAs: [advisor.biographyLink],
 	};
 
 	return (
 		<>
 			<NextSeo
-				title={`${advisor.name} - Turing Advisor`}
+				title={`${advisor.name} | Biography & Career - Turing Minds Advisor`}
 				description={advisor.description}
 				openGraph={{
-					title: `${advisor.name} - Turing Advisor`,
+					title: `${advisor.name} | Biography & Career - Turing Minds Advisor`,
 					description: advisor.description,
 					images: [{ url: advisor.speakerPhoto, alt: advisor.name }],
 					type: 'profile',
-					url: `https://turing.rsvp/advisor/${advisor.slug}`,
+					url: `https://www.turing.rsvp/advisor/${advisor.slug}`,
 				}}
 				twitter={{
 					cardType: 'summary_large_image',
@@ -61,23 +66,18 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 					{
 						position: 1,
 						name: 'Home',
-						item: 'https://turing.rsvp',
+						item: 'https://www.turing.rsvp',
 					},
 					{
 						position: 2,
-						name: 'Advisors',
-						item: 'https://turing.rsvp/advisors',
-					},
-					{
-						position: 3,
 						name: advisor.name,
-						item: `https://turing.rsvp/advisor/${advisor.slug}`,
+						item: `https://www.turing.rsvp/advisor/${advisor.slug}`,
 					},
 				]}
 			/>
 			<JsonLd<WithContext<Person>> item={structuredData} />
 			<Head>
-				<link rel='canonical' href={`https://turing.rsvp/advisor/${advisor.slug}`} />
+				<link rel='canonical' href={`https://www.turing.rsvp/advisor/${advisor.slug}`} />
 			</Head>
 			{/* Google Analytics 4 */}
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ" strategy="afterInteractive" />
@@ -121,20 +121,58 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 							</a>
 						</div>
 
-						{/* Render markdown biography */}
-						<section className='mt-8 md:mt-12'>
-							<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Biography</h2>
+						{/* Render markdown biography - progressive disclosure, still crawlable */}
+						<details className='mt-8 md:mt-12 group' open>
+							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
+								Biography
+								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
+							</summary>
 							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
 								{advisor.markdownBiography}
 							</ReactMarkdown>
-						</section>
+						</details>
 
-						{/* Render markdown timeline */}
-						<section className='mt-8 md:mt-12'>
-							<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Career Timeline</h2>
+						{/* Render markdown timeline - progressive disclosure, still crawlable */}
+						<details className='mt-8 md:mt-12 group'>
+							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
+								Career Timeline
+								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
+							</summary>
 							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
 								{advisor.markdownTimeline}
 							</ReactMarkdown>
+						</details>
+
+						{/* Other Advisors - Internal Linking */}
+						{otherAdvisors.length > 0 && (
+							<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>
+								<h2 className='text-2xl md:text-3xl font-semibold mb-6 text-[#a4925a] text-center'>Other Advisors</h2>
+								<div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+									{otherAdvisors.map((a) => (
+										<Link key={a.slug} href={`/advisor/${a.slug}`} className='flex flex-col items-center p-3 rounded-lg hover:bg-gray-50 transition-colors'>
+											<div className='relative w-16 h-16 md:w-20 md:h-20 mb-2'>
+												<Image src={a.speakerPhoto} layout='fill' objectFit='cover' alt={a.name} className='rounded-full' />
+											</div>
+											<span className='text-sm font-medium text-gray-800 text-center'>{a.name}</span>
+										</Link>
+									))}
+								</div>
+							</section>
+						)}
+
+						{/* Featured Speakers - Internal Linking */}
+						<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>
+							<h2 className='text-2xl md:text-3xl font-semibold mb-6 text-[#a4925a] text-center'>Featured Speakers</h2>
+							<div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+								{allSpeakers.slice(0, 6).map((s) => (
+									<Link key={s.slug} href={`/speaker/${s.slug}`} className='flex flex-col items-center p-3 rounded-lg hover:bg-gray-50 transition-colors'>
+										<div className='relative w-16 h-16 md:w-20 md:h-20 mb-2'>
+											<Image src={s.speakerPhoto} layout='fill' objectFit='cover' alt={s.name} className='rounded-full' />
+										</div>
+										<span className='text-sm font-medium text-gray-800 text-center'>{s.name}</span>
+									</Link>
+								))}
+							</div>
 						</section>
 					</div>
 				</article>

@@ -73,7 +73,7 @@ export default function Home() {
 		'@type': 'WebSite',
 		name: 'Turing Minds Speaker Series',
 		description: 'Annual event featuring talks from Turing Award winners on computer science and technology.',
-		url: 'https://turing.rsvp',
+		url: 'https://www.turing.rsvp',
 	};
 
 	const faqStructuredData: WithContext<FAQPage> = {
@@ -136,8 +136,8 @@ export default function Home() {
 					property='og:description'
 					content='Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.'
 				/>
-				<meta property='og:image' content='https://turing.rsvp/og-banner.png' />
-				<meta property='og:url' content='https://turing.rsvp' />
+				<meta property='og:image' content='https://www.turing.rsvp/og-banner.png' />
+				<meta property='og:url' content='https://www.turing.rsvp' />
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta name='twitter:site' content='@ParsaKhaz' />
 				<meta name='twitter:creator' content='@ParsaKhaz' />
@@ -175,14 +175,14 @@ export default function Home() {
 			<NextSeo
 				title='Turing Minds - Premier Global Platform for Computing Luminaries'
 				description='Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.'
-				canonical='https://turing.rsvp'
+				canonical='https://www.turing.rsvp'
 				openGraph={{
-					url: 'https://turing.rsvp',
+					url: 'https://www.turing.rsvp',
 					title: 'Turing Minds - Premier Global Platform for Computing Luminaries',
 					description: 'Annual speaker series featuring Turing Award winners. Sponsored by AI2 Incubator and organized in partnership with Georgia Tech, bringing insights from distinguished computer scientists to a global audience.',
 					images: [
 						{
-							url: 'https://turing.rsvp/og-banner.png',
+							url: 'https://www.turing.rsvp/og-banner.png',
 							width: 1686,
 							height: 1121,
 							alt: 'Turing Minds - Premier Global Platform for Computing Luminaries',
@@ -500,7 +500,7 @@ export default function Home() {
 					{
 						position: 1,
 						name: 'Home',
-						item: 'https://turing.rsvp',
+						item: 'https://www.turing.rsvp',
 					},
 				]}
 			/>
