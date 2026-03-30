@@ -131,7 +131,7 @@ const AdvisorPage = ({ advisor }: { advisor: any }) => {
 						</details>
 
 						{/* Render markdown timeline - progressive disclosure, still crawlable */}
-						<details className='mt-8 md:mt-12 group'>
+						<details className='mt-8 md:mt-12 group' open>
 							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none text-center'> Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 							</summary>
 							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>

@@ -306,7 +306,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 						{/* Render markdown timeline - progressive disclosure, still crawlable */}
 						{speaker.markdownTimeline && (
-							<details className='mt-8 md:mt-12 group'>
+							<details className='mt-8 md:mt-12 group' open>
 								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
 									Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
