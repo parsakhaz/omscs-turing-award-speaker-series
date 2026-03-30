@@ -130,8 +130,8 @@
 		"turingLink": "https://awards.acm.org/award-recipients/wigderson_3844537#2023-acm-a.m.-turing-award",
 		"talkTitle": "Question & Answer",
 		"recordingLink": "",
-		"markdownBiography": "# Avi Wigderson\n\n## Early Life and Education\n\nAvi Wigderson, born September 9, 1956, in Haifa, Israel, to Holocaust survivor parents, is a mathematician and computer scientist. He earned his B.Sc. from the Technion (1977-1980) and his Ph.D. from Princeton University in 1983 under Richard Lipton.\n\n## Career and Contributions\n\nAfter positions at UC Berkeley and IBM Almaden, Wigderson joined the Hebrew University of Jerusalem in 1986. In 1999 he moved to the Institute for Advanced Study in Princeton, where he is the Herbert H. Maass Professor. His research has reshaped our understanding of the role of randomness in computation, showing that under certain hardness assumptions, any randomized algorithm can be replaced by a deterministic one. With Reingold and Vadhan, he developed the zig-zag product for graphs. His work with Goldreich and Micali on zero-knowledge proofs showed any problem in NP can be proven in zero knowledge.\n\n## Awards and Honors\n\n- **1994**: Nevanlinna Prize\n- **2009**: Godel Prize\n- **2019**: Knuth Prize\n- **2021**: Abel Prize (shared with Laszlo Lovasz)\n- **2023**: ACM A.M. Turing Award",
-		"markdownTimeline": "## Career Timeline\n\n- **1956**: Born in Haifa, Israel\n- **1980**: B.Sc. from the Technion\n- **1983**: Ph.D. from Princeton University\n- **1986**: Joined Hebrew University of Jerusalem\n- **1994**: Nevanlinna Prize\n- **1999**: Joined the Institute for Advanced Study, Princeton\n- **2009**: Godel Prize\n- **2019**: Knuth Prize\n- **2021**: Abel Prize (shared with Laszlo Lovasz)\n- **2023**: ACM A.M. Turing Award",
+		"markdownBiography": "Learn more about Dr. Avi Wigderson on his [website](https://www.math.ias.edu/avi/)",
+		"markdownTimeline": "Learn more about Dr. Avi Wigderson on his [website](https://www.math.ias.edu/avi/)",
 		"slug": "avi-wigderson"
 	},
 	{
