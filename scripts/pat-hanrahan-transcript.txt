@@ -1,0 +1,827 @@
+Speaker 0:
+
+Right.
+
+Speaker 1:
+
+Okay. So Parsa's here, and he's Hello.
+
+Speaker 2:
+
+Hello. How's it going?
+
+Speaker 0:
+
+Hi, Parsa.
+
+Speaker 1:
+
+He's our head of technology.
+
+Speaker 2:
+
+Thanks for joining us and being a part of this. Really excited to have you.
+
+Speaker 0:
+
+Thank you. Yeah. I'm excited.
+
+Speaker 2:
+
+Looks like we do have a couple people waiting, which is pretty exciting. 21 so far. And usually in the first few minutes, people start to, like, pour in. So we might wanna made in wait another minute or two, and then I'll just admit everybody at once. It's been able to open up the barriers.
+
+Sweet.
+
+Speaker 1:
+
+That's good.
+
+Speaker 2:
+
+I'm very excited. I think you're our
+
+Speaker 1:
+
+final might have I I emailed my, I guess, my my connection, Vince Surf, and he said he might he actually RCP'd to this, so he might show up.
+
+Speaker 0:
+
+I see. Yeah.
+
+Speaker 1:
+
+He he replied to me.
+
+Speaker 0:
+
+I know. Yeah. He's always fun.
+
+Speaker 1:
+
+Yeah. And let's see. Okay. I'm just clearing up my alarms and things.
+
+Speaker 2:
+
+Yeah. I'm gonna give it another minute or two, and I'm just gonna turn off the wait like, the wait list so people can just start flooding in.
+
+Speaker 1:
+
+We're also wearing a Georgia Tech, T shirt today.
+
+Speaker 0:
+
+Oh, okay. That's good. I see the GT.
+
+Speaker 2:
+
+Representing. Previous.
+
+Speaker 0:
+
+And you're both where are you? You're both at home or in your office? Or
+
+Speaker 2:
+
+Yeah. I'm working out of a space called, foundations in Seattle to get coworking space for entrepreneurs. And I I found it's really nice because there's a lot of space, and not everybody shows up every day. So you end up having plenty of meeting rooms.
+
+Speaker 0:
+
+Oh, nice. Oh, I didn't realize you're in Seattle. You're not in Atlanta.
+
+Speaker 2:
+
+Yeah. I am currently in Seattle right now.
+
+Speaker 0:
+
+Uh-huh.
+
+Speaker 1:
+
+I'm based in Clearwater Beach, Florida.
+
+Speaker 0:
+
+I'm on the beach right now. Oh, okay. So you're both not at Georgia Tech right now?
+
+Speaker 1:
+
+Both not at yeah. We both, you know, left the program. Okay.
+
+Speaker 0:
+
+Right.
+
+Speaker 2:
+
+I left for a startup, and so it just, like, made sense. I feel like there was a lot of value I was able to extract from doing almost the entire degree. And I learned a ton from it. It was, yeah, it was a lot of fun. It's a great program.
+
+Speaker 0:
+
+Where's the start up in c I I've Tableau was the company I started was in Tableau I mean, in Seattle. So I
+
+Speaker 2:
+
+Oh, yeah. Wow. A lot
+
+Speaker 0:
+
+of time in Seattle. So I know I love that. That's cool.
+
+Speaker 2:
+
+Yeah. Do you ever come back out here?
+
+Speaker 0:
+
+Yeah. Yeah. Yeah. I mean, not I used to come up, like, you know, constantly, and I used to spend the summers up there too. I spent several summers up there.
+
+But but Wow. Since I'm no longer at Tableau. I mean, so Yeah. Very tired from Tableau. So I don't have the same reasons to come up.
+
+But, you know, I have lots of friends and the people I founded the company with and all our stuff.
+
+Speaker 2:
+
+That's super cool. The space I'm at right now is, like, I guess, we're the only coworking space for founders that is invite only in Seattle, and we host lots of cool people. Like, last week, we had Kevin Lin from OpenAI come out
+
+Speaker 0:
+
+Okay.
+
+Speaker 2:
+
+On, like, agentic engineering and all that fun stuff. So it's been, yeah, it's been really cool to have a space like this with with we had Arman Dadgar, the CEO of HashiCorp or CTO, sorry, of HashiCorp come out before his acquisition to IBM. It's
+
+Speaker 0:
+
+like Mhmm.
+
+Speaker 2:
+
+Lots of cool stuff. So if you're ever back in Seattle, let me know. Yeah.
+
+Speaker 0:
+
+Where is it located? It's in, Capitol Hill. Oh, okay. I know Capitol. That's yeah.
+
+That's where our first office was. We were, when we first started Tableau, we were in Wow. My founder's basement. Yeah, we're we're year. Wow.
+
+Yeah.
+
+Speaker 2:
+
+We're in Wilson Wilson Avenue.
+
+Speaker 0:
+
+Okay. Yeah. I don't know if you know that. Exactly. Yeah.
+
+Yeah. But
+
+Speaker 2:
+
+That's totally alright. Okay. Cool. I'm gonna give it just one or two more minutes, and I'll just let everybody in. Great.
+
+Like, the first ten minutes are usually always late joins. Let's give it one more minute and then Yeah.
+
+Speaker 0:
+
+Whenever you're ready. Do
+
+Speaker 1:
+
+you know, Jim, Lars? Yeah.
+
+Speaker 0:
+
+Yeah.
+
+Speaker 1:
+
+Okay. I I emailed him the other day. We, I worked on, like, a article or a piece where I took, we we have about 10 recorded videos of our 15 Turing Award winners that we, like, recorded the sessions. And I, like, analyze the entire things, we put into an article with, like, 10 different Turing Award winners giving their opinions on what they think the future holds.
+
+Speaker 0:
+
+Uh-huh.
+
+Speaker 1:
+
+And I I sent it to Jim, Lars, and he wants me to, I guess, like, submit it for, like, an article for, CACM.
+
+Speaker 0:
+
+Oh, awesome. That's a good idea. Yeah. That could be I think I think when you have these futures things, having a bunch of different people give short short answers is a good idea. You know?
+
+Yeah. Yeah. Like, sometimes The New York Times does does that kind of thing as well. That sounds cool. Yeah.
+
+I'm just about to I I wrote a article with Bill Dally called the origins of GPU computing, which I think is gonna come out any day. Wow. So that's a Kakam article. So so they they do a good job. Yeah.
+
+Awesome.
+
+Speaker 2:
+
+I'm actually
+
+Speaker 3:
+
+on the
+
+Speaker 0:
+
+I visit ACM headquarters because I'm on I'm actually on the touring award committee selection committee. So Wow. Yeah.
+
+Speaker 2:
+
+Alright. Let's kick this off. I'm gonna get everybody in, and we can get going. Let's do this. Alright.
+
+Admit all.
+
+Speaker 0:
+
+Oh, yeah. Screen just filled up.
+
+Speaker 2:
+
+Wow. Hello? How many Buddy? Do we have? So far, we have 42.
+
+Speaker 1:
+
+Okay. That's for you.
+
+Speaker 2:
+
+Okay. Cool. Hey, everyone. Thanks for joining us, and thanks for your patience as we kick this off.
+
+Speaker 1:
+
+Typically, the first much everyone for coming out to join us today. We're really excited. Do we wanna get started, Parsa? Do we want to or Let's Have we
+
+Speaker 0:
+
+ask Yeah. Hello. Pat,
+
+Speaker 1:
+
+are you comfortable if we record this session so that, like, other people who aren't able to join can watch?
+
+Speaker 0:
+
+That's fine with me. Yeah.
+
+Speaker 1:
+
+Awesome. Okay. So, Parsa, if you wanna get recording so that we can put this into history.
+
+Speaker 2:
+
+Recording is good to go.
+
+Speaker 1:
+
+Okay. Awesome. That's great. Are we ready to start, Parsa? Or
+
+Speaker 2:
+
+Yeah. I'll kick it off. I think this is yeah.
+
+Speaker 1:
+
+Awesome. So thank you everyone for taking the time to come out here. We really, really appreciate it. We really appreciate our speaker, Pat, for coming out today. He is our fifteenth turnover winner to come out.
+
+He is the last speaker that we have. We're very excited. I'm gonna give a very brief synopsis, and, really, we're gonna allocate all the time to Pat so he
+
+Speaker 0:
+
+can
+
+Speaker 1:
+
+talk. But very briefly, according to Wikipedia, he is American computer graphics researcher, the Canon USA professor of computer science and electrical engineering at in the computer graphics laboratory at Stanford. His research focuses on rendering algorithms, graphics processing units, as well as scientific illustration and visualization. He received numerous awards including the 2019 Turing Award. He is a cofounder of Tableau, which was acquired by, I think, Salesforce in 2019 for about 15,700,000,000.0.
+
+She's our first billionaire to present. If everyone can give a massive round of applause for Pat, we are so grateful to have you today.
+
+Speaker 0:
+
+Thank you. I recognize a bunch of names that I know, so thank you for coming.
+
+Speaker 2:
+
+Awesome. Do any, we usually kick it off with our own questions. But if any of the names you recognize have any that they wanna kick it off with, they're welcome to unmute and jump in to raise their hand. We can call on you.
+
+Speaker 1:
+
+Right. I mean, we'll yeah. We can get started with, like, a question. My question is gonna be the least the least technical as everyone's. I'm curious, like, I guess, what your involvement was in, like, Toy Story, for example, which is, like, for I think a lot maybe a lot of us here in in the chat, we grew up with movies such as Toy Story and other films in being such a critical piece in being a founding employee of Pixar.
+
+Can you tell us a little bit about, like, what it was like to be involved in such, like, a tremendous, impactful animation movie stuff?
+
+Speaker 0:
+
+Yeah. Thanks for the question. Yeah. So I well, first of I wasn't I wasn't working at Pixar when they produced Toy Story, so my involvement was sort of, you know, indirect. But I worked there I mean, you know, Pixar had a long journey.
+
+I mean, we the company was founded in 1986, I think, and then Toy Story came out in 1995. And, you know, they were they were sort of, you know, trying to find their path, you know, and eventually signed this contract with Disney, which led to Toy Story. But most of time when I was there, they had spun out a Lucasfilm, and they were gonna build graphics hardware. We had something called the Pixar Image Computer. So my first job there was to be the software product manager of the Pixar Image Computer.
+
+And and then I I started the Rendoran project, which was you know, we were just trying to figure out we were a startup owned by Steve Jobs. He put in a lot of money, and, you know, we weren't making much money. So I started the Rendaround project, you know, in in order to try to find a product that would at least generate some revenue because because it it was just such an incredible place to work. I was just a little worried that, you know, we might go out of business. And, you know, I mean, having ten years before your really big success is a long time.
+
+I don't know and half of that. So, anyway but I worked on RenderMan, and and but I wasn't involved in the actual production of Toy Story. I I did go to the premiere of Toy Story, and I did I have one really fond memory of that, which you know, I'm a I'm a I'm a nerd. I'm sitting you know, computer scientists were hacking all day, writing software, trying to debug, you know, artifacts and images and whatever. And, you know, I was so focused on my job, which was just to make this rendering software production, you know, quality that I off you know, I and and, you know, if you've ever been involved in any kind of movie thing, you get these very small short scenes.
+
+You know? And you're working on little things, they send you these bugs or whatever, And you try to figure it out, but you don't really get the big picture. And when I went to the premiere, you know, it was it was a great movie. I said, wow. This is a really good movie.
+
+Mean, normally, when I go to a computer generated movie, I'm looking for all the artifacts and the images and, you know, know, what new technologies they're using. But the movie was just so you know, such a great story. And I remember after walking out, and everybody had all their kids there. And all these kids were just, like, smiling like you've never seen before. You know?
+
+And so, you know, that just made this huge impression on me because, you know, you I mean, you develop technology, you know, to do good and to bring pleasure to people and make them happy, and that seemed to be more satisfying than fixing all those bugs. So so yeah. So it was a it was a really I was really fortunate to be a part of all that.
+
+Speaker 1:
+
+That's really awesome. Is it said on Wikipedia that you're credited with, it said on Wikipedia that you are, credited in Pixar productions, including Toy Story. So that's
+
+Speaker 0:
+
+Yeah. Well, they did I mean, you know, partly because it was such a long road to get to the movie, you know, to finish the movie. They they were very generous in in including a lot of people that may have left or gone on to other things, and so I was lucky enough to get a credit. But, you know, I I I still am very close to a lot of people at Pixar. And in fact, we we just received last year or the year before, we got this IEEE milestone for RenderMan, which was this plaque that they put outside of it just, you know, just recently installed.
+
+And they would you know, it's just great to go back there, and all the a lot of people I know still work there. And Wow. Just a good place. Yeah.
+
+Speaker 1:
+
+Wow. Okay. So, Parsa, do we want people to raise their Yeah.
+
+Speaker 2:
+
+I'm gonna jump in really fast because we do have a comment, from Vasant Hanover, which says, hi, Pat. Good to see you. If you don't mind, please share your personal journey starting with the early schooling in Milwaukee. I think it'll be inspiring for the students in the audience.
+
+Speaker 0:
+
+Okay. Well, Vasant so, Vasant, I know because I think we shared the same adviser, PhD adviser, Leonard Ewer. So, yeah, that's our it is our I mean, it's a long journey. I mean, I started out in physics, at the University of Wisconsin Madison, and, and I was actually in an honors program in physics, which was awesome. And as I and I got because I was in the science program, got to take all these courses in other areas besides physics.
+
+So I took a bunch of biology courses, and one that I particularly like was about neurobiology caught by my co adviser, actually, Tony Stratton. And we worked on simple nervous systems. And then I met Leonard Ure, who was in the computer science department, and he was working on computer vision. And he was working on neural nets, somewhat surprisingly. This was, you know, this is in the period sort of maybe the dark ages of neural nets.
+
+You know? I mean, you know, I mean, neural nets had been around. I'd I'd learned about them in grad school. Mean, they, you know, go back to McCulloch Pitt, I think, in 1939. You know?
+
+And they've been around for a long time. And Len always liked them. I mean, he he he just spent his much of his career working on neural net technologies, including some crazy stuff, like, he called neuralsymboliccom computation at the time. But, anyways, he was trying to train them. I think Fassad has a very famous paper about how to train the weights on neural nets, which he wrote around that period of time.
+
+And correct me if I'm wrong, Vasant. But, anyway, my first job was actually programming, neural nets on, some image processing hardware. We were very interested in parallel computing. Len, my adviser, was a really big parallel computing guy. He was built interested in building AI machines because he just, you know, realized it would take incredible amount of computer.
+
+So I actually learned a lot about parallel computing from him, particularly parallel image processing and parallel graphics, which turned out to be a really big thing in my later work. You know? But yeah. So I I wrote one of my I actually I gave I gave a talk recently. I still showed a program I wrote for this image processing machine that implemented neural nets, which was, I think, in 1982 maybe or something like that.
+
+I don't know. Something like that. Anyways, it anyways, so it it was a really great thing. And then but during that period, I because of the image processing work with with Len and because my roommate, a guy some of you may know named Paul Haberle, introduced me to computer graphics. And I was working on neural nets and also sort of simulating nervous systems, and so I got some visualization in computer graphics.
+
+But then I just got completely hooked on computer graphics and, you know, left left the PhD program, went to a place called NYIT, New York Institute of Technology, and sort of immersed myself in computer graphics. So so, you know, I don't know. I can go on and on about the various, you know, turns in my life. But, yeah, it was sort of an interesting background being in AI, you know, and, you know, neurobiology, learn about parallel computing, neural nets. Physics background obviously had a huge impact on my work in computer graphics.
+
+Speaker 1:
+
+Awesome. Partially, do we want, to just
+
+Speaker 2:
+
+David has raised his hand for a while now. If you wanna unmute, you can bend.
+
+Speaker 1:
+
+Yeah. David.
+
+Speaker 4:
+
+Yeah. Thanks, guys. Hi, Pat. I'm a big
+
+Speaker 0:
+
+Hey, bud.
+
+Speaker 4:
+
+Guys at work. You know, I grew up watching Toy Story and all those Pixar movies. I just wanna say thanks first. And, you know, as a layman, I have some background in mathematics and computer science, but, you know, not not anything too technical. So I think for me to understand some of the work you've done is already too late.
+
+I'm about 35 now. So I'm I'm thinking about the younger folks. I have some younger nephews and maybe some kids in the future. And I just wanna know if I were to, you know, try to inspire them to retrace your steps, you know, as someone as great as you who who has done such great work. I would like to see maybe you have some key points of inspiration in your life that really pushed you to accomplish what you've done.
+
+I'd really like to hear your story.
+
+Speaker 0:
+
+Okay. Thanks for well, that's that's a interest interesting question. I mean, you know, I think one one thing that has always driven me forward a little bit is finding things I'm really passionate about working on and problems I wanna solve. You know? So, like, to me, in computer graphics, there was this challenge of, like, could we make a full length computer generated movie?
+
+You know? Like, is it possible? And, you know, actually, I didn't actually think it was possible, to be honest, but I thought it would be really interesting to try. You You know what I mean? You know?
+
+And, you know, it it let me sorry to understand why. I I didn't think it was possible because I was I was trained in AI, and I remember reading Turing's paper, you know, the one where he proposed this idea of an imitation game. Know, the idea is that if you could talk to a computer program and and if you couldn't tell it was diff it was not a person, then, you know, it would be intelligent. And I actually sort of always thought that was true of computer graphics because if you're gonna make a full length computer generated movie, you would have to, like, not only have believable characters in there that you'd have to, you know, believe are, you know, living beings and so on, but you'd to make a, you know, a virtual world with, you know, plants and animals and scenery, and and it'd have to look realistic as well as be you know, people behaving realistically. So it just seemed like even harder than, you know, the Turing test because you'd have to be able to see it, which I think would be easier to, you know, tell it was fake compared to just typing text on a terminal.
+
+So I didn't actually think we'd be able to do it. And, you know, it was sort of an insurmountable problem. I mean, you know, if you you know, you know, we get credit for it, but there you have to realize, like, thousands of people, really brilliant researchers, worked on all sorts of things to make it happen. Like, you know, you have to figure out how you know, you have to have characters. They have to move realistically.
+
+They have to be able to show emotions. You have to have good facial animation, but you have to have plants. You have to have mountains. You have to have water. You know?
+
+Just think of everything you see in the movies. You have to have clouds moving. You know? It's just it's just simulating the entire world. It's just really, really an amazing challenge.
+
+And different people are working on, you know, different aspects of it, like water and clouds and skin and muscle and cloth. And it just it just was a huge effort by a lot of people. So it was a really, really challenging problem. There was just no end to, you know, interesting things to work on. Like, sometimes academics, you know, they get real narrow in their interests, and they just sort of spend their whole life working on one small problem, one specific problem.
+
+And, you know, here, we just had problem after problem after problem. You just you figure out one way to do something, then you have to figure out another way to do another thing. And it just so, you know, it really was a great career choice because because, you know, there were so many interesting problems to solve. And and then the other thing I just think was just my basic you know, I learned math, and I taught myself programming. But I've I've always been sort of a back to the basis kind of person.
+
+So I I just, you know, I just knew, like, the physics. You know? Like, you know, when we're work when I was working on rendering, I knew the physics of light, and I knew about light transport, and I knew about, you know, materials and how they scattered light. I mean, there's just all these, like, these things I learned, you know, all the math and CS and physics, which just, you know, provides the platform. So if you if you know if you train yourself in in in really fundamental skills and and concepts and then you get exposed to really interesting problems, you almost can't help but come up with great stuff.
+
+That's my that's that's what I would say was characterized my life.
+
+Speaker 2:
+
+Awesome. So we have more questions in the chat that we can jump over to that are coming in. So Daniel Wexler asks, hey, Pat. I'd be curious.
+
+Speaker 0:
+
+I know you.
+
+Speaker 2:
+
+I that's awesome. I'd be curious to hear your thoughts on the future of traditional rendering. The world of AI and neural rendering is, is the future of graphics just to provide sample data to an MLD noiser that also does uplifting like the latest DLSS five release from NVIDIA? What happens, to all the fantastic work done with, signal processing and advanced sampling?
+
+Speaker 0:
+
+Yeah. Well, that's, yeah, that's a good question. And, I'm not actively working in those areas, so I'm not sure I have the expertise. But one thing, when I first started reading these papers, I can just say, like, there's a certain part of rendering which was, like, based on physics and so on. You know, I tend to be drawn to that part because of my background.
+
+But then there was a bunch of, like, random heuristics, you know what I mean, that, you know, people just came up with. You know? And, you know, some of the work with sampling patterns, Sampling patterns just means you have to send rays out at certain points inside of a pixel. Or another good example is what we do is we do this technique called path tracing where you send a ray out into the world, it hits an object, then and it bounces around, and it keeps bouncing around till it hits a light source. But, you know, you have to, in some sense, sample, you know, an infinite infinite dimensional space of paths.
+
+Right? Because, you know, paths can have any length. And every time you hit something, you can go off at any angle. And so you you're just you're gonna take, like, a billion example pass, but, you know you know, there's an infinite number of them. So how do you pick the billion?
+
+You know? And that's still a lot. But so you have to you have all these heuristics about how to do the sampling. And there's no, you know, there's no analytical solutions for that. So a lot of the techniques are very heuristic.
+
+And, you know, things like neural, you know, neural nets, you know, can propose methods for sampling paths. You know? It's just sort just like the game of chess, you know, or or even math these days. I mean, what the neural neural nets do will they say you're you're say you're doing math, which is amazing right now. There's new math stuff that's been done.
+
+If you're trying to prove a theorem, you have to, you know, apply some law, like, you know, commutative law, a plus b equals b. So you have to apply a series of transformations to one side of the equation to get to the other side of the equation. Well, the laws are well known. It's just which law do you apply and does it lead to the answer? And you can train a neural net to to propose those moves.
+
+You know? So, you know, you can combine this technology with traditional methods. I mean, I think the math example is even better than and programming too. I I use Claude every day now. So, know, you can combine the the neural nets to provide heuristics for help you solve really complex problems.
+
+And I think in rendering, you know, that that's that's a good one. And then, you know, and and that includes things like interpolating or sampling or all sorts of things where there's often a lot of heuristics involved that, you know, there's no right answer. It's a really hard problem. So I think I think that, you know, that's gonna be the way to go. I you know, whether everything will just be based on, you know, diffusion and and neural rendering, You know, I'm I'm not sure about that, but it's pretty amazing what can be done.
+
+So I you know, I mean, obviously, we'll see more and more, you know, things like that. But I still think that, you know, three d works. For example, I I'm just spending a lot of time doing three d printing right now. And I can ask, you know you know, Claude to generate, you know, some, scene description file or even in a I use OpenSCAD, which is this programming language for designing geometry. It'll generate pretty good OpenSCAD just like you can generate good C code.
+
+So I can combine, you know, generative models to produce traditional three d assets as well. So I don't really know the answer. I'm just rambling here a little bit, but I think it's pretty exciting times because it helps us know, like, what we what's really we know about fundamentally and what where we apply heuristics. And having, you know, AI help us apply heuristics more in better ways seems really exciting to me.
+
+Speaker 2:
+
+Amazing. That was a really great answer. Actually, I have a follow-up here. So there was a comment you made, and I wanted to kinda, like, pull a thread on there. You clearly have a very, very deep understanding of the fundamentals having been so, like, you know, just an inaugural person in this space, I'd I'd say.
+
+What do you think about, you know, using tools such as Claude and how it affects someone who's maybe still in the program, computer science program, learning about the subject, does it help or hinder? Because I think there's this tension in the major right now where there's those students that are very pro for it and those that believe that all codes should be handwritten and maybe just informed by AI, kinda like how we used to use Stack Overflow and Google in the in the previous to AI days to find solutions to ans questions that we had. And, you know, there's just this rift, I guess. And I I'd love to hear your perspective as someone who's, I guess, a veteran in the space.
+
+Speaker 0:
+
+Yeah. That seems to be the question of the day. So Yeah. So, I mean, you know, they're they're different purse there are two perspectives on it. I've been programming my whole life.
+
+You know? And I I think I'm I'm not a great programmer, but, you know, I'd just give myself a very good. You know what I mean? And because I know great programmers, and I'm not one of them. But, you know, I'm a pretty good programmer.
+
+I still program every day. You know? I I love to program. I just get great pleasure out of it. You know?
+
+I I wrote I wrote the first version of Tableau. I wrote a lot of the software, you know, other parts of RenderMan. So I love the program. And to me, it's just I I just love to do it. Like, it's a creative thing.
+
+I like to build stuff, and I just love to do it. But I've been doing it for a long time, and I also have been teaching it. And, you know, like, I can like, I was I'm teaching I was teaching the intro computer science course on systems programming. And it was a small course, and I got to look help, you know, new new students learn the program, basically. And, you know, they can write some code, and I can look at the code, I can immediately see what's good and bad about it.
+
+I mean, I can like, they'll be, like, laboring over it for, like, days. You know? And I'll look at, oh, there's the bug right there. You know? You know?
+
+And and, you know, I might I won't lose it just point it out, but I'll look at the code and instantly see what's wrong with it, you know, and then try to, like, you know, just question them like, well, are you assuming this is true? Or you know? So but, you know, if you're new to it, if you don't really understand programming and how it works, it's a very different end of the spectrum. Right? And so I find Claude awesome.
+
+I mean, because, you know, to me so the here here's here's my here's the way I'm using it these days, and you can I'm sure other people have better ideas. But, you know, like, a lot of what I've seen since then, they just start writing all this code, start randomly. They, you know, just start, you know, typing in a 100 lines of code, and they don't, you know, test it. They don't spec it and so on. So when I use it, I think of the prompt as a spec.
+
+Like, what do I want? So you have to think really clearly. What are you trying to do? That's really good. You know what I mean?
+
+And a lot of people don't know what they're trying to do. They just start hacking away. They go off in random directions and just see what happens. The second thing is you have to read the code it generates. You know, sometimes you don't need to read all of it, but, you know, you just wanna check it over.
+
+Like, does it make sense? You know? And I think reading code is more important than writing code in my experience. So having it generate a lot of code that you read just seems really awesome to me. And I'm really good at reading code because I I I've worked in, you know, industry. You have to read code. You have to do code reviews. You have to read code. You spend more time reading code than you do writing code. So that's good at emphasizing reading code over writing code.
+
+And, you know, a lot of writing code is pretty boring. So, you know, it just gets rid of all that boring stuff and lets you think about the higher level star. And then the final thing is you have to test and verify the code. And, again, you know, I know a lot of people I mean, you know, there are lots of people I know, especially older. They don't even test or they you know, I require unit tests in my course.
+
+You know? Yeah. I mean Yeah. And so, you know, how do you know it works? You know?
+
+And so, you know, now sometimes with more formal techniques nowadays, and that's a big thing. But you can you can, you know, maybe avoid it, you know, because it's can prove it's correct, but that's pretty rare. So you usually have to be able to so, anyway, spec, read, verify. And I think that's a better way to program than the way most people learn to program. So I think, you know, you you you don't have to write the same code over I don't have to read in another CSV file in the panda and do I I need a 100 dives already.
+
+You know what mean?
+
+Speaker 2:
+
+About syntax and memorizing structure, and you can think at more of a systems design level or architectural level. But I guess I guess the sorry. I'll I'll close this thread up quickly too. But No. It's a good answer.
+
+Speaker 0:
+
+This is question of the day for everybody. Right?
+
+Speaker 2:
+
+Yeah. Yeah. It's like if I'm somebody who's going through computer science, a bachelor's, a master's, whatever it is, and I'm learning it. If I have teachers who are, you know, forcing me or pushing me to just write from scratch code, but I never get to train the muscle of reviewing, reading. Because you you know, the position of being the teacher or a TA or, you know, some something that allows you to, like, kind of review and share your taste and share your intuition.
+
+You can you can extend that to students if you chose to teach a classroom that way. But if you don't, then there's no one to do that. Who who where does the systems design thinking come from if that's the case. Right? Anyways, this is just a very big question.
+
+But I
+
+Speaker 0:
+
+agree. But I I think that but I don't quite really know, and I'm sure lots of other people are, you know, probably in the audience may know better than me. You know, if you're brand new to programming, you don't know how to read code, and you don't know what's good code and bad code, you know, I'm it's a little unclear to me how you learn it, you know what I mean, with this stuff. But, you know, that's something, you know, people are or all a lot of people are thinking about. And, you know, what do you really need to learn?
+
+How much program I mean, you know, you have to you have to do it a little bit. But, you know, you might be able to just do you know? Like, we used to give these really complicated big projects and have people write a lot of code. Maybe we just give them lots of small exercises and just test their conceptual understanding. You know?
+
+Speaker 2:
+
+Yeah. It's like, give them three variations of the same function implemented. Which one is the strongest implementation? Explain why.
+
+Speaker 0:
+
+Like, analyze it. You know, comment on it. Right? You know mean?
+
+Speaker 2:
+
+Yeah. Okay. Very cool.
+
+Speaker 0:
+
+Yeah. Like, I I I went to this conference about math, and they're talking about all the mathematical proof systems. And Yeah. You know, you know, the the there aren't many math people that actually prove theorems. I didn't realize that because I'm like, I write code.
+
+You know? But they and you think they'd prove theorem. No. Mostly, read theorems and comment on them. So it's the same thing.
+
+You know? So you just have to you know, by reading the theorems and and understanding the structure of the theorem and commenting on it and, you know, trying to understand the implications of it, you know, that's, you know, interesting job. Yeah. So I think that's that's that's program.
+
+Speaker 2:
+
+Yeah. Also, Also, looks like doctor Zvi Galil just joined, so thank you for joining us. If you you know, he's the creator of the OMSDS program and helped greatly in setting up the speaker series. So if you do wanna jump in, say any words, feel free to at any time. Alright.
+
+So let's move on to some of the other questions. We have a ton here in the chat. Jacob asks for hey, Pat. For those interested in computer graphics, do you recommend pursuing a PhD in computer science or related fields like physics or engineering?
+
+Speaker 0:
+
+So as an undergrad or as a grad student?
+
+Speaker 2:
+
+That's a great question. Jacob, feel free to unmute if you wanna add some comments to, that if you're around.
+
+Speaker 3:
+
+Okay. Yeah. Can you hear me?
+
+Speaker 0:
+
+Yeah. I can. Nice to meet you too.
+
+Speaker 3:
+
+Nice to meet you. Thank you. Yeah. I'm I'm a master's student in Penn and, like, they have a computer graphics master's program here.
+
+Speaker 0:
+
+Uh-huh.
+
+Speaker 3:
+
+And I'm I'm trying to figure out as I try to look into PhDs if I should stick with computer science if I'm very interested in graphics or if it might be a better idea to get a degree in something like engineering or something more technical? Because I'm very interested in things like physical simulation, a lot of the technical stuff that goes with graphics. So I wonder what you think about that.
+
+Speaker 0:
+
+Yeah. Well, I mean, I you know, there are different different paths in computer graphics. Right? I mean, there's so you know, it sounds like you're interested in more like the simulation path. I mean, there's also, like, the engineering path, you know, work on GPUs kind of thing or work at Adobe on their software, and there's also the artistic path.
+
+Right? And so it sort of depends on, you know, what of that. But if you're interested in the simulation path, I mean, you definitely need to know the physics and math. I mean, you that's one thing that's sort of unusual. Like, if you're a PhD in computer science, you might not get exposed to all the math that you need to know for computer graphics.
+
+You know, like, just for example, just geometry. Like, you know, I do learn differential geometry, and that's not sort of part of a standard, you know, computer science curriculum or solving, you know, differential equation. I mean, you might see that in scientific computing, but you might not see that in normal computer science. So you you have to learn you have to learn that. And computer graphics nowadays is is extremely, you know, mathematical and algorithmic.
+
+So you you have to somehow pick up that knowledge. I you know, different people pick it up in different ways. Some people can just pick it up by, you know, reading books and, you know, learning through projects, and other people wanna take a lot of courses or need you know, or help help some learn it. So I know it depends on you a little bit, but you need to know it. You know, one thing I have noticed is that if you're in if you're in we have this computational math program at Stanford, which is really quite good.
+
+It used to be called, you know, Scientific Computing Institute. And but, you know, they they don't know much computer science. And I also know a physics, lot of physics people, you know, that spend their whole day all day programming, but they really don't know computer science. I mean, you know, by by that, I mean, like, you'll say something like, oh, that's an order n log n algorithm, and they won't even know what that means. And if you look at their code, it's pretty bad.
+
+You know? So, I mean, you know, not learning any computer science, you know, is is because, I mean, at least in computer graphics, when I was in the field, you had to implement everything and and try it out and so on. So if you can't and and, you know, we often wanted to put it into practice. So, you know, you need to be a pretty good algorithms person and implementer. So I I don't know what's easier to pick up, but it's it's sort of a challenge to have both sides of that.
+
+You know? Experience both sides of that and learn what you know.
+
+Speaker 3:
+
+Thank you. I mean, is it is it really useful if you're, like if you're a person who's more in physics, but you're somebody that can program really well or you're somebody who is in kind of programming, but you also know a lot of the mathematical basis? Is that, like, a pretty, like, desirable skill to have if you
+
+Speaker 0:
+
+put across the platform? Absolutely. I mean, you know, not in all areas of computer graphics, but certainly in anything involving simulation. Mhmm. Absolutely.
+
+Yeah. It's very hard to find computer science students with backgrounds like that If if you could just take a typical computer science student, they won't have the physics and the math background. And, anyway and it's a certain kind of math. It's like continuous math. You know?
+
+It's like solving differential equations and stuff like that.
+
+Speaker 1:
+
+Yeah. Mhmm.
+
+Speaker 3:
+
+Well, thank you very much. I appreciate it.
+
+Speaker 2:
+
+Thank you. Alright. We have a follow-up from Yifan Lee asking, hi, Pat. Can I ask you, do you see a convergence between computer graphics simulation and AI world models in the future? Essentially, do you see the chat GBT moment of world models happening soon?
+
+Speaker 0:
+
+So so if you just clarify a little bit what you mean by world models? I mean, just because I
+
+Speaker 2:
+
+Yeah. Feel free to jump in, unmute, and share your thoughts there if you're around. Yeah. Hi, Pat. Thank you for sharing.
+
+Yeah. Just I was wondering, like, the warm weather is, like, something that they're doing right now to trying to let the AI model to understand the the physical world at the moment, yeah, rather than the big language model.
+
+Speaker 0:
+
+Right. Yeah. So, I mean, you know, I I think that's very much an active area of research. Again, you know, it's not my area of research. I mean, you know, I I first of all, I think that this approach is really gonna be a valuable approach because, like, even in computer graphics, you know, we mostly just have, like, you know, information about the physical world.
+
+Like, you know, we have materials, and we have shapes, and we have light, and we have all this kind of stuff, and we have motion. But, you know, there's a lot of other things that go into a scene. Like, you know, are you trying to create a happy character, or are you trying to create a character of a given culture, or you're trying to make a building of a certain type. You know? And and all that knowledge is not in the computer.
+
+You know what I mean? That's that knowledge you have to provide as an artist. So I think the, you know, the the thing which I find really impressive about even LLMs is that they have all the semantic knowledge, you know what I mean, about the world. And so when they produce things like, if you ask it to generate a three d model for you, you can tell it, like, what country it's you know, this a Tset, you know, from China. It'll it'll know what a TCET from China looks like, and it's not just a bunch of curved surfaces.
+
+So I think this convergence of sort of the more, you know, physical world models like we typically use in graphics with the more of the semantic world models seems really, really great to me. And, you know, I think a lot I don't know all the technology in play here, but, you know, a lot of them, you know, do, like, these multimodal embeddings where you embed, you know, images and and and and and, you know, geometry and language all in the same space, I find that really appealing that you can take these different modalities and and combine them together. And then you add, you know, things like, you know, the control and all that. So, I mean, yeah, it's gonna be amazing, you know, as that as that stuff develops. But I think that's still, you know, I think still very active area of research.
+
+I I don't really know. But that that's not my area of research, so I'm not really an expert on it.
+
+Speaker 2:
+
+Yeah. Thank you. Thank you, Pat. Amazing. So we have another question from Christopher V asking, hi, Pat.
+
+Have you personally used any of the video generation models like Sora two, v o 3.1 from Google DeepMind, and so on? What is your opinion on these video models, and will they ever achieve Pixar level quality?
+
+Speaker 0:
+
+Well, first of I I've used a lot of image generation models, but I have not used the video generation models. I I think I watch video video generated by those models, like, every day. I mean, it's, like, unbelievable. Yeah. I I I think they will get yeah.
+
+I think they're gonna get I mean, they're already pretty amazing. You know, I mean, you know, the other thing about those models I mean, you know, like, Pixar looks are sort of style. I mean, they're not, like, just photorealistic. Right? They're they're cartoons.
+
+Right? And, you know, I think a lot of the models I've seen have a certain cartoon. You know? If you look at, like, a modern CG movie, you know, they just have a certain sort of look that almost seems a little bit like the lust illustrator, like, looks at these world these video generators generate you know, the characters look like characters. You see how a DreamWorks movie or a Pixar movie.
+
+So so, you know, you know, they can generate stuff that looks like that. You know, I I haven't seen them generate a movie yet that has a whole complex storyline, but maybe I just haven't seen that. I don't know. Yeah.
+
+Speaker 2:
+
+This is a bit of, like, follow-up, I guess, personal one anyways is I wonder if, like, years from now, we'll have the same, like, computer science moment that happened with LLMs and the shift to reviewing code. But in other, like, fields like that one where people realize, oh, like, maybe it's faster to be mass generating and reviewing than creating a frame by frame animation. And I don't know how much authority you have to speak on this topic, but I
+
+Speaker 0:
+
+would No. No. Well, I I think you're right. It it's a very similar kind of thing. You could you could have it generate a lot of code, and you could go into some loop.
+
+And if it can do it fast I mean, I I I went to talk about this from somebody at Google recently. And, you know, it's still very expensive to generate these things. I mean, it's it's you know, it's you know, although Cloud Code can be I I was talking to somebody in the industry. They each developer is spending $20,000 a month using Claude. But, you know, I can imagine spending much more than that on this video generation.
+
+Yeah. So, you know, it might not be totally economical right now. They'll generate a lot of examples, but I don't know. It's hard to tell. But, you know, the cost of this is gonna go way down.
+
+So, you know, it it's it's possible.
+
+Speaker 2:
+
+Cool. So another follow-up from Abhinav asking, hi, Pat. Thanks for being a constant source of inspiration to researchers worldwide. Given your expertise, I'm curious. Where is computer graphics and generative models going?
+
+What does the future look like from your perspective? I guess we kinda touched on that.
+
+Speaker 0:
+
+But Yeah. We I mean, we've been. Yeah. Let's check. I I with all due respect, I I don't I'm not really an expert on on that particular topic.
+
+And, you know, I I mean, you know, I mean yeah. And I don't like talking about the future of comediatrics that much. Yeah. The one thing is you don't wanna ask me about the future. Okay?
+
+You should ask you you should be thinking about the future because you're gonna make the future, not me.
+
+Speaker 2:
+
+Yeah. Yeah. So another one from William Dormer. At what point do the advantages in rendering accuracy become outweighed by the cost in terms of electricity, time, and so on? Do people really care about hyperrealism in games, movies, so forth?
+
+Speaker 0:
+
+Yeah. So so there's I mean, there's two questions. One's the cost. And, I mean, I think I don't think the cost of actually rendering a movie is is the most significant cost. You know?
+
+It's it's mostly the cost of all the people, you know, and the time it takes to make the movie. And so, you know, so, I mean, that you know, when I was at Pixar, the cost was a huge issue. But, you know, I don't think it's as big of an issue nowadays. So I so I don't think the cost of rendering it's mostly about the cost of of the of the artists and the storytellers. You know?
+
+And but, you know, the tools as the as every you know, every as everything gets cheaper, then you can do things in new ways. So, I mean, I think the biggest issue is just trying to drive down the cost. And that's why I think generative AI, you know, is a really powerful tool for for this kind of thing. Anything you can do to drive down the cost of designing and and executing on the movie will be a really big thing.
+
+Speaker 2:
+
+Yeah. Awesome. Question from Connor Fitzmaurice asking, hey, Pat. Do you believe the overuse of CGI in modern film is contributing to lower rendering quality, or is it just being used less smartly?
+
+Speaker 0:
+
+Well, well, I agree with the overuse of CGI. You know, I I actually think it looks pretty realistic. I mean, you know, there are movies made where they are you know, there isn't the care that maybe you would see in, you know, DreamWorks or a Pixar production. But but, you know, overall, the quality is is pretty amazing. I mean, you know, I mean, you know and there's so many different styles that you can choose.
+
+You know, I I the hype the hyperrealist I mean, you know, the the main the main driving force on a lot of real at least at Pixar and Lucasfilm was being able to, you know, combine with live action. I mean, it wasn't so much that the goal was to be realistic you know, just to be realistic. I mean, you know, I mean, that is an interesting goal. I mean, it's a challenge. But, you know, when when Lucas you know, when when they were it's it all started with special effects, like, for movies like Star Wars.
+
+And so they would have all this live action, and, you know, they would wanna combine it with computer generated images. And and, know, that forced the development of a lot of techniques like motion blur and depth of field and all sorts of things like that so that you could, you know, make it seem like it was generated by a real camera with the so they actually good a good movie to check out. There's a scene in this movie called young Sherlock Holmes where this stained glass this this knight jumps out of stained glass inside of a church, and it's live action with this knight. And that was one of their, you know, that was the challenge. That was one of their first real, you know, special effects that they generate.
+
+So so a lot of it I mean, the goal was not just realism in itself. You know, I've never been as much as I've worked on that, you know, I've I've always liked other styles more than just a purely realistic style. We can I I I should I was a horse on what is realism, you know, in computer graphics? I mean, you know, you can read arts art history books about realism, And many, many people have thought about what is realistic and what's not realistic and, you know, whether realism should be a goal and and so on. I mean so, like, I one reason I was interested in visualization was that there was a different goal there.
+
+The goal was to do something useful to help people do their work. You know? Like, you you want you know, can they diagnose an X-ray better, or can they, you know, analyze data better? I mean, there was some there was some specific goal that your the image was supposed to help you achieve your goal. And so, you know, realism often is is not helpful at all in achieving your goal.
+
+So so I think there are lots of different goals in computer graphics, and, you know, I tend to like abstract art myself more than realistic art. You know? So not that I don't like some for for realistic art, but, you know, I think there's just so many different ways of making images that, you know, it's it's it's a little sad if the only reason people wanna go into computer graphics is to make realistic images because I think that's only a small part of the whole story.
+
+Speaker 2:
+
+Yeah. Alright. So we have one more question from, and it says, do you think the lower cost of computer graphics introduction in the or sorry, CGI introduction in the filming industry caused the taste fatigue for the general audience or that the CGI realism is plateauing?
+
+Speaker 0:
+
+Well, yeah, I you know, the well, to me, it's more about the kinds of movies. You know? Again, I I don't work in the film industry right now, but they seem to like to make certain kinds of movies these days. You know? And, you know, you know, fantasy you know, you know, Marvel comic movies or, you know, they seem to lug certain kinds of action movies or violent movie.
+
+I mean, there's a certain style that seems to be selling. I think that's why they mostly use it. I mean, if they've made more traditional movies, they might use it, you know, less. So I don't really feel like I know exactly why they make the kind of movies they do. But, you know, they and it's easier and easier to make those with the CGI.
+
+So there's sort of a self reinforcing cycle there. But I, you know, I again, I I don't know all the the factors that, you know, influence their decisions on whether to use CGI or what kind of movies to make.
+
+Speaker 2:
+
+Thank you. And, Zach, looks like you have a question jump in. Are you unmuted? Oh, one sec. I don't think we hear you even though you're unmuted for some reason.
+
+So I'm I'm still not able to hear you, unfortunately. Try rejoining, and maybe that'll work. While you do that, I'm gonna try sorry. Continue with, I guess, a follow-up. So Simon Norris dropped a comment in the chat saying that he's saying, I really appreciated the question slash response about LLM reviewing stuff as a senior in the computer science program.
+
+Certainly the question of the day. Thank you. The idea of focusing on learning to review is a really great perspective for those learning and miss these new coding tools. So for other, I guess, that's the whole question. But my question to you, Pat, is, like, is there any other wisdom you would wanna share with, people who are currently in the computer science programs or adjacent ones that kind of applies to this new age of doing things?
+
+Speaker 0:
+
+Well, I mean yeah. Well, that that was my answer about coding. I and I'm still new to it. I mean, I've I've only been using it for, you know, well, Claude for only, you know, six months or so. So I'm still learning.
+
+But, you know, I I spent I've been spending a lot of time thinking about how I use it and how I learn to program. You know, I I will just say about computer science. So one comment I'll say I've made slightly tangential, but, you know, science is very interdisciplinary these days. You know? I mean, you know, like so when I the way I teach computer programming is programming lets you accomplish things that you care about.
+
+Like, for me, it was how to make images or how to model a nervous system or how to visualize data. I mean, there were things I wanted to do, and, you know, programming and algorithms was the skills I needed to implement those. But, you know, I still knew about that. In fact, you know, why why was why there was isolation data analysis? Well, you know, my first job was actually working in a physics lab analyzing data, you know, and plotting it.
+
+And, you know, and so, you know, I just knew that, you know, people needed you know, a lot of people spend a lot of time analyzing data, and and, you know, they wanted to use plots and graphs and so on. So, I mean, you know, I I was I've always been driven by, like, you know, what I wanna accomplish. So if you in in pure computer science, I mean, I guess you could just say I wanna build an operating system to build an operating system or a compiler to build a compiler. But I've worked a lot in programming languages, and I like to build domain specific languages that let me do certain tasks really easily. And so I when I build language technology or compiler technology, it's always been to, you know, enable something.
+
+Or GPUs. I worked on this language called Brook, which was the forerunner of of CUDA. And it was really just because I wanted to harness the power of the GPU. You know what I mean? You know, I wanted to figure out how to bring all those cycles to bear on problems that I wanted to solve.
+
+I was wasn't just trying to learn about compilers for their own sake. Now other people have different perspectives on that, but I think that's just something to think about in computer science. Like, why are you interested in it? What do you wanna accomplish? And and depending on your interest, you know, you'll wanna combine computing with other fields, you know, computing and x kind of thing.
+
+And I think that's a really healthy thing for the field because it just brings in a lot of new ideas.
+
+Speaker 2:
+
+Zachary, do you wanna
+
+Speaker 1:
+
+Or so does my, sound work now?
+
+Speaker 3:
+
+Or It
+
+Speaker 2:
+
+works now. Yep. You're good.
+
+Speaker 1:
+
+So I had a question because we've had a lot of Turing Award winners. Do you have any stories of any, like, I don't know, funny interactions with any of the Turing Award winners that we've hosted? Like, maybe, like, Don Knuth or anyone? Any, like, stories that
+
+Speaker 0:
+
+Short, funniest stories. Well, Don Knuth, he we were born in the same city, Milwaukee, Wisconsin. And, you know, I mean, I have so much admiration for him. You know, one one I'll just tell you one great thing he does every year pretty much is he he gives this, he calls it the Christmas tree lecture. And it's it's almost always about trees, like, in computer science terms.
+
+And, you know, it's just one of the most popular events on campus. Like, I you know, I've been walking on the campus, and there are literally people who have just flown in from New York to attend this this lecture. But, you know, he just gives these really awesome lectures about all sorts of topics. And he's he tends to study things that, you know, aren't in you know, not trendy, so they're always really, really similar. But he's been a great guy.
+
+And I count him as a computer graphics person because, you know, he he, you know, designed tech, obviously. He's a huge fan of typography. You know, he designed this program called Metafont, and and he just he's into the art of it, you know, the design of of of fonts. He's into the design of mathematical typesetting, you know, the layout. He's just meticulously into it.
+
+So I always considered him the founding member of the computer graphics program at Stanford.
+
+Speaker 2:
+
+Awesome. I think there's one more question now in the chat. And then I think after that, we'll wrap things up. So Christopher asked a follow-up question saying, do you think the current war will propel the next phase of AI and computer vision? Decided historical reference to Vietnam will help propel radio and cryptography advancements.
+
+Speaker 0:
+
+Well, I do think, you know, AI weapons are one of the scariest things that I can imagine. So I don't I mean, I I just hope we don't devote you know, build all these yeah. I mean, you you know, I'm old enough to have read a lot of science fiction in my life and drone where drones and, you know, star I mean, just armies of drones are not a great future for humanity. So I I hope that's not what comes of all this AI. I hope some we can think of something better to do with it.
+
+Speaker 2:
+
+Yeah. Okay.
+
+Speaker 1:
+
+Pretty far, sir. I think we're should wrap things up?
+
+Speaker 2:
+
+Yeah. I think it's a good time to wrap things up. If and, Pat, if people have follow-up questions, where can they find you if they wanna reach out? If you're comfortable sharing, of course. You don't have
+
+Speaker 0:
+
+to mean, if if they I I usually answer my email. I mean, depending on how many questions I get. Okay. You can just send me an email. I think my email is pretty easy to find.
+
+It's on your website, I think. Yep.
+
+Speaker 2:
+
+Yep. Thank you so much. So a round of applause.
+
+Speaker 1:
+
+For coming out. If we can get a big, virtual applause for Pat, it'd be awesome.
+
+Speaker 0:
+
+Thank you, everyone.
+
+Speaker 1:
+
+We always love to give our speakers good dive of chocolates as a token of appreciation. Parsa will follow-up with you to see where you can send those over. And, yeah, thanks everyone for coming out. It was awesome.
+
+Speaker 0:
+
+Okay. Thank you everyone for attending. Yeah.
+
+Speaker 2:
+
+Great question. You. Have a great day, everybody. Thank you, Pat. Take care.
+
+Bye bye.
+
+Speaker 1:
+
+Bye, everyone.
+
+Speaker 3:
+
+Bye. Thanks.

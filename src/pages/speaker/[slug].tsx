@@ -177,7 +177,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 							<Image src={speaker.speakerPhoto} layout='fill' objectFit='cover' alt={`Portrait of ${speaker.name}`} className='rounded-full' />
 						</div>
 						<p className='mb-3 md:mb-4 text-lg md:text-xl font-semibold text-gray-700 text-center'>{speaker.dateTime}</p>
-						<p className='mb-4 md:mb-6 ibm-plex-mono text-sm md:text-base text-gray-800 text-center'>{speaker.description}</p>
+						<p className='mb-4 md:mb-6 text-sm md:text-base text-gray-800 text-center'>{speaker.description}</p>
 						{speaker.turingAwardWinner && (
 							<p className='mb-4 text-center'>
 								<a
@@ -241,6 +241,19 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 							</div>
 						)}
 
+						{/* Question of the Day */}
+						{speaker.questionOfTheDay && (
+							<section className='mt-8 md:mt-12 p-6 rounded-lg bg-gradient-to-br from-[#013057]/5 to-[#a4925a]/10 border border-[#a4925a]/20'>
+								<h2 className='text-xl md:text-2xl font-semibold mb-3 text-[#a4925a] text-center'>Question of the Day</h2>
+								<p className='text-base md:text-lg text-gray-800 text-center font-medium italic'>&ldquo;{speaker.questionOfTheDay}&rdquo;</p>
+								{speaker.questionAnswer && (
+									<div className='mt-4 pt-4 border-t border-[#a4925a]/20'>
+										<p className='text-sm md:text-base text-gray-700'><span className='font-semibold text-[#013057]'>Insight:</span> {speaker.questionAnswer}</p>
+									</div>
+								)}
+							</section>
+						)}
+
 						{/* Talk Highlights */}
 						{speaker.talkSummary && (
 							<section className='mt-8 md:mt-12'>
@@ -259,7 +272,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 									</div>
 								)}
 
-								<p className='ibm-plex-mono text-sm md:text-base text-gray-800 mb-6'>{speaker.talkSummary}</p>
+								<p className='font-sora text-sm md:text-base text-gray-800 mb-6'>{speaker.talkSummary}</p>
 
 								{/* Key Takeaways */}
 								{speaker.talkTakeaways && speaker.talkTakeaways.length > 0 && (
@@ -267,7 +280,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Key Takeaways</h3>
 										<ul className='space-y-2'>
 											{speaker.talkTakeaways.map((takeaway: string, i: number) => (
-												<li key={i} className='ibm-plex-mono text-sm md:text-base text-gray-800 pl-4 border-l-2 border-[#a4925a]'>
+												<li key={i} className='font-sora text-sm md:text-base text-gray-800 pl-4 border-l-2 border-[#a4925a]'>
 													{takeaway}
 												</li>
 											))}
@@ -281,9 +294,9 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Notable Quotes</h3>
 										<div className='space-y-4'>
 											{speaker.talkQuotes.map((quote: string, i: number) => (
-												<blockquote key={i} className='ibm-plex-mono text-sm md:text-base text-gray-700 italic pl-4 border-l-4 border-[#a4925a] bg-gray-50 py-3 pr-4 rounded-r'>
+												<blockquote key={i} className='font-sora text-sm md:text-base text-gray-700 italic pl-4 border-l-4 border-[#a4925a] bg-gray-50 py-3 pr-4 rounded-r'>
 													&ldquo;{quote}&rdquo;
-													<footer className='text-xs mt-1 text-gray-500 not-italic'>— {speaker.name}, Turing Minds Speaker Series</footer>
+													<footer className='text-xs mt-1 text-gray-500 not-italic'>-- {speaker.name}, Turing Minds Speaker Series</footer>
 												</blockquote>
 											))}
 										</div>
@@ -298,7 +311,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
 									Biography <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
-								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
 									{speaker.markdownBiography}
 								</ReactMarkdown>
 							</details>
@@ -310,7 +323,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
 									Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
-								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
 									{speaker.markdownTimeline}
 								</ReactMarkdown>
 							</details>
