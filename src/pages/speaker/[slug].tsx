@@ -166,7 +166,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								<Link href='/' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 mr-4'>
 									<FaChevronLeft size={24} />
 								</Link>
-								<h1 className='text-3xl md:text-4xl font-bold text-[#a4925a]'>{speaker.name}</h1>
+								<h1 className='text-3xl md:text-4xl font-bold text-[#013057]'>{speaker.name}</h1>
 							</div>
 							<Link href='/share' className='text-[#013057] hover:text-[#a4925a] transition-colors duration-300 flex flex-col items-center'>
 								<FaShare size={24} />
@@ -176,10 +176,10 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						<div className='mb-6 md:mb-8 relative w-32 h-32 md:w-48 md:h-48 mx-auto'>
 							<Image src={speaker.speakerPhoto} layout='fill' objectFit='cover' alt={`Portrait of ${speaker.name}`} className='rounded-full' />
 						</div>
-						<p className='mb-3 md:mb-4 text-lg md:text-xl font-semibold text-gray-700 text-center'>{speaker.dateTime}</p>
-						<p className='mb-4 md:mb-6 text-sm md:text-base text-gray-800 text-center'>{speaker.description}</p>
+						<p className='mb-3 md:mb-4 text-lg md:text-xl font-semibold text-gray-700'>{speaker.dateTime}</p>
+						<p className='mb-4 md:mb-6 text-sm md:text-base text-gray-800'>{speaker.description}</p>
 						{speaker.turingAwardWinner && (
-							<p className='mb-4 text-center'>
+							<p className='mb-4'>
 								<a
 									href={speaker.turingLink}
 									className='text-[#013057] underline hover:text-[#a4925a] transition-colors duration-300 text-sm md:text-base'
@@ -244,8 +244,8 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						{/* Question of the Day */}
 						{speaker.questionOfTheDay && (
 							<section className='mt-8 md:mt-12 p-6 rounded-lg bg-gradient-to-br from-[#013057]/5 to-[#a4925a]/10 border border-[#a4925a]/20'>
-								<h2 className='text-xl md:text-2xl font-semibold mb-3 text-[#a4925a] text-center'>Question of the Day</h2>
-								<p className='text-base md:text-lg text-gray-800 text-center font-medium italic'>&ldquo;{speaker.questionOfTheDay}&rdquo;</p>
+								<h2 className='text-xl md:text-2xl font-bold mb-3 text-[#013057]'>Question of the Day</h2>
+								<p className='text-base md:text-lg text-gray-800 font-medium italic'>&ldquo;{speaker.questionOfTheDay}&rdquo;</p>
 								{speaker.questionAnswer && (
 									<div className='mt-4 pt-4 border-t border-[#a4925a]/20'>
 										<p className='text-sm md:text-base text-gray-700'><span className='font-semibold text-[#013057]'>Insight:</span> {speaker.questionAnswer}</p>
@@ -257,7 +257,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						{/* Talk Highlights */}
 						{speaker.talkSummary && (
 							<section className='mt-8 md:mt-12'>
-								<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Talk Highlights{speaker.talkTitle ? `: ${speaker.talkTitle}` : ''}</h2>
+								<h2 className='text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#013057]'>Talk Highlights{speaker.talkTitle ? `: ${speaker.talkTitle}` : ''}</h2>
 
 								{/* YouTube Embed */}
 								{speaker.recordingLink && speaker.recordingLink.includes('youtu') && (
@@ -277,7 +277,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								{/* Key Takeaways */}
 								{speaker.talkTakeaways && speaker.talkTakeaways.length > 0 && (
 									<div className='mb-6'>
-										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Key Takeaways</h3>
+										<h3 className='text-xl font-bold mb-3 text-gray-700'>Key Takeaways</h3>
 										<ul className='space-y-2'>
 											{speaker.talkTakeaways.map((takeaway: string, i: number) => (
 												<li key={i} className='font-sora text-sm md:text-base text-gray-800 pl-4 border-l-2 border-[#a4925a]'>
@@ -291,7 +291,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 								{/* Notable Quotes */}
 								{speaker.talkQuotes && speaker.talkQuotes.length > 0 && (
 									<div>
-										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Notable Quotes</h3>
+										<h3 className='text-xl font-bold mb-3 text-gray-700'>Notable Quotes</h3>
 										<div className='space-y-4'>
 											{speaker.talkQuotes.map((quote: string, i: number) => (
 												<blockquote key={i} className='font-sora text-sm md:text-base text-gray-700 italic pl-4 border-l-4 border-[#a4925a] bg-gray-50 py-3 pr-4 rounded-r'>
@@ -308,7 +308,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						{/* Render markdown biography - progressive disclosure, still crawlable */}
 						{speaker.markdownBiography && (
 							<details className='mt-8 md:mt-12 group' open>
-								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
+								<summary className='text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#013057] cursor-pointer list-none'>
 									Biography <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
 								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
@@ -320,7 +320,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						{/* Render markdown timeline - progressive disclosure, still crawlable */}
 						{speaker.markdownTimeline && (
 							<details className='mt-8 md:mt-12 group' open>
-								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
+								<summary className='text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-[#013057] cursor-pointer list-none'>
 									Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
 								</summary>
 								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none text-gray-800'>
@@ -331,7 +331,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 
 						{/* Other Speakers - Internal Linking */}
 						<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>
-							<h2 className='text-2xl md:text-3xl font-semibold mb-6 text-[#a4925a] text-center'>Other Turing Minds Speakers</h2>
+							<h2 className='text-2xl md:text-3xl font-bold mb-6 text-[#013057]'>Other Turing Minds Speakers</h2>
 							<div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
 								{otherSpeakers.map((s) => (
 									<Link key={s.slug} href={`/speaker/${s.slug}`} className='flex flex-col items-center p-3 rounded-lg hover:bg-gray-50 transition-colors'>
