@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://turing.rsvp
+Host: https://www.turing.rsvp
 
 # Sitemaps
-Sitemap: https://turing.rsvp/sitemap.xml
+Sitemap: https://www.turing.rsvp/sitemap.xml

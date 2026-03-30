@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Image from 'next/legacy/image';
+import speakersData2023 from '../../data/speakersData.json';
 import speakersData2024 from '../../data/speakersData2024.json';
 import speakersData2025 from '../../data/speakersData2025.json';
 import speakersData2026 from '../../data/speakersData2026.json';
@@ -17,7 +18,7 @@ import advisorsData2024 from '../../data/advisorsData2024.json';
 import Script from 'next/script';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const paths = [...speakersData2026, ...speakersData2025, ...speakersData2024].map((speaker) => ({
+	const paths = [...speakersData2026, ...speakersData2025, ...speakersData2024, ...speakersData2023].map((speaker) => ({
 		params: { slug: speaker.slug },
 	}));
 
@@ -25,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024];
+	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024, ...speakersData2023];
 	const speaker = allSpeakers.find((s) => s.slug === params?.slug);
 	return { props: { speaker } };
 };
@@ -73,13 +74,16 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 		return () => clearInterval(intervalId);
 	}, [speaker.isoDate]);
 
+	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024, ...speakersData2023];
+	const otherSpeakers = allSpeakers.filter((s) => s.slug !== speaker.slug);
+
 	const personStructuredData: WithContext<Person> = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
 		name: speaker.name,
 		description: speaker.description,
 		image: speaker.speakerPhoto,
-		url: `https://turing.rsvp/speaker/${speaker.slug}`,
+		url: `https://www.turing.rsvp/speaker/${speaker.slug}`,
 	};
 
 	const eventStructuredData: WithContext<Event> = {
@@ -104,21 +108,21 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 		organizer: {
 			'@type': 'Organization',
 			name: 'Turing',
-			url: 'https://turing.rsvp',
+			url: 'https://www.turing.rsvp',
 		},
 	};
 
 	return (
 		<div className='flex justify-center'>
 			<NextSeo
-				title={`${speaker.name} - Turing Speaker Series`}
+				title={`${speaker.name} | Biography, Career & Awards - Turing Minds`}
 				description={speaker.description}
 				openGraph={{
-					title: `${speaker.name} - Turing Speaker Series`,
+					title: `${speaker.name} | Biography, Career & Awards - Turing Minds`,
 					description: speaker.description,
 					images: [{ url: speaker.speakerPhoto, alt: speaker.name }],
 					type: 'website',
-					url: `https://turing.rsvp/speaker/${speaker.slug}`,
+					url: `https://www.turing.rsvp/speaker/${speaker.slug}`,
 				}}
 				twitter={{
 					cardType: 'summary_large_image',
@@ -129,24 +133,19 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 					{
 						position: 1,
 						name: 'Home',
-						item: 'https://turing.rsvp',
+						item: 'https://www.turing.rsvp',
 					},
 					{
 						position: 2,
-						name: 'Speakers',
-						item: 'https://turing.rsvp/speakers',
-					},
-					{
-						position: 3,
 						name: speaker.name,
-						item: `https://turing.rsvp/speaker/${speaker.slug}`,
+						item: `https://www.turing.rsvp/speaker/${speaker.slug}`,
 					},
 				]}
 			/>
 			<JsonLd<WithContext<Person>> item={personStructuredData} />
 			<JsonLd<WithContext<Event>> item={eventStructuredData} />
 			<Head>
-				<link rel='canonical' href={`https://turing.rsvp/speaker/${speaker.slug}`} />
+				<link rel='canonical' href={`https://www.turing.rsvp/speaker/${speaker.slug}`} />
 			</Head>
 			{/* Google Analytics 4 */}
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ" strategy="afterInteractive" />
@@ -242,20 +241,92 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 							</div>
 						)}
 
-						{/* Render markdown biography */}
-						<section className='mt-8 md:mt-12'>
-							<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Biography</h2>
+						{/* Talk Highlights */}
+						{speaker.talkSummary && (
+							<section className='mt-8 md:mt-12'>
+								<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Talk Highlights{speaker.talkTitle ? `: ${speaker.talkTitle}` : ''}</h2>
+
+								{/* YouTube Embed */}
+								{speaker.recordingLink && speaker.recordingLink.includes('youtu') && (
+									<div className='relative w-full mb-6' style={{ paddingBottom: '56.25%' }}>
+										<iframe
+											className='absolute top-0 left-0 w-full h-full rounded-lg'
+											src={`https://www.youtube.com/embed/${speaker.recordingLink.match(/(?:youtu\.be\/|v=)([^&?#]+)/)?.[1] || ''}`}
+											title={`${speaker.name} - ${speaker.talkTitle || 'Turing Minds Talk'}`}
+											allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+											allowFullScreen
+										/>
+									</div>
+								)}
+
+								<p className='ibm-plex-mono text-sm md:text-base text-gray-800 mb-6'>{speaker.talkSummary}</p>
+
+								{/* Key Takeaways */}
+								{speaker.talkTakeaways && speaker.talkTakeaways.length > 0 && (
+									<div className='mb-6'>
+										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Key Takeaways</h3>
+										<ul className='space-y-2'>
+											{speaker.talkTakeaways.map((takeaway: string, i: number) => (
+												<li key={i} className='ibm-plex-mono text-sm md:text-base text-gray-800 pl-4 border-l-2 border-[#a4925a]'>
+													{takeaway}
+												</li>
+											))}
+										</ul>
+									</div>
+								)}
+
+								{/* Notable Quotes */}
+								{speaker.talkQuotes && speaker.talkQuotes.length > 0 && (
+									<div>
+										<h3 className='text-xl font-semibold mb-3 text-gray-700'>Notable Quotes</h3>
+										<div className='space-y-4'>
+											{speaker.talkQuotes.map((quote: string, i: number) => (
+												<blockquote key={i} className='ibm-plex-mono text-sm md:text-base text-gray-700 italic pl-4 border-l-4 border-[#a4925a] bg-gray-50 py-3 pr-4 rounded-r'>
+													&ldquo;{quote}&rdquo;
+													<footer className='text-xs mt-1 text-gray-500 not-italic'>— {speaker.name}, Turing Minds Speaker Series</footer>
+												</blockquote>
+											))}
+										</div>
+									</div>
+								)}
+							</section>
+						)}
+
+						{/* Render markdown biography - progressive disclosure, still crawlable */}
+						<details className='mt-8 md:mt-12 group' open>
+							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
+								Biography
+								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
+							</summary>
 							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
 								{speaker.markdownBiography}
 							</ReactMarkdown>
-						</section>
+						</details>
 
-						{/* Render markdown timeline */}
-						<section className='mt-8 md:mt-12'>
-							<h2 className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center'>Career Timeline</h2>
+						{/* Render markdown timeline - progressive disclosure, still crawlable */}
+						<details className='mt-8 md:mt-12 group'>
+							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
+								Career Timeline
+								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
+							</summary>
 							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
 								{speaker.markdownTimeline}
 							</ReactMarkdown>
+						</details>
+
+						{/* Other Speakers - Internal Linking */}
+						<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>
+							<h2 className='text-2xl md:text-3xl font-semibold mb-6 text-[#a4925a] text-center'>Other Turing Minds Speakers</h2>
+							<div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+								{otherSpeakers.map((s) => (
+									<Link key={s.slug} href={`/speaker/${s.slug}`} className='flex flex-col items-center p-3 rounded-lg hover:bg-gray-50 transition-colors'>
+										<div className='relative w-16 h-16 md:w-20 md:h-20 mb-2'>
+											<Image src={s.speakerPhoto} layout='fill' objectFit='cover' alt={s.name} className='rounded-full' />
+										</div>
+										<span className='text-sm font-medium text-gray-800 text-center'>{s.name}</span>
+									</Link>
+								))}
+							</div>
 						</section>
 					</div>
 				</article>

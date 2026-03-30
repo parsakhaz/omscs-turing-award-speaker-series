@@ -9,6 +9,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
+import { NextSeo } from 'next-seo';
 
 export default function Home() {
 	const rawSpeakersData = speakersData;
@@ -74,8 +75,8 @@ export default function Home() {
 					/>
 					{/* End Google Tag Manager */}
 
-					<title>Turing Award Speaker Series</title>
-					<meta name='description' content='Turing Award Speaker Series' />
+					<title>2023 Turing Award Speaker Series Archive | Turing Minds</title>
+					<meta name='description' content='Watch recordings from the 2023 Turing Award Speaker Series featuring 5 Turing Laureates and 1 Nobel Laureate, including Dr. Leslie Lamport, Dr. Barbara Liskov, and Dr. Edward Feigenbaum.' />
 					<link rel='icon' href='/favicon.ico' />
 
 					{/* Open Graph */}
@@ -105,6 +106,16 @@ export default function Home() {
 					<meta property='linkedin:url' content='https://www.turing.rsvp/' />
 					<meta property='linkedin:title' content='Turing Award Speaker Series' />
 				</Head>
+
+				<NextSeo
+					canonical='https://www.turing.rsvp/2023'
+					openGraph={{
+						url: 'https://www.turing.rsvp/2023',
+						title: '2023 Turing Award Speaker Series Archive | Turing Minds',
+						description: 'Watch recordings from the 2023 Turing Award Speaker Series featuring 5 Turing Laureates and 1 Nobel Laureate.',
+						site_name: 'Turing Minds',
+					}}
+				/>
 
 				{/* Google Analytics 4 */}
 				<Script async src='https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ'></Script>

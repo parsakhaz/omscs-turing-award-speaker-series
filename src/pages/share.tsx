@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JSConfetti from 'js-confetti';
 import Script from 'next/script';
+import Head from 'next/head';
 
 export default function SharePage() {
 	const [confetti, setConfetti] = useState<JSConfetti | null>(null);
@@ -34,6 +35,9 @@ export default function SharePage() {
 
 	return (
 		<>
+			<Head>
+				<meta name='robots' content='noindex, nofollow' />
+			</Head>
 			{shareSuccessful && <p className='text-white top-10 left-10 absolute text-xl mt-4 ibm-plex-mono py-2 px-2 bg-black'>Thank you for sharing!</p>}
 			<div className='flex flex-col justify-center items-center h-screen bg-gradient-to-r bg-slate-800 via-slate-500 to-slate-700'>
 				<div className='text-center py-4 px-4'>
