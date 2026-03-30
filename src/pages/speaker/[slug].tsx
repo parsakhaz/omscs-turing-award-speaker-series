@@ -293,26 +293,28 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 						)}
 
 						{/* Render markdown biography - progressive disclosure, still crawlable */}
-						<details className='mt-8 md:mt-12 group' open>
-							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
-								Biography
-								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
-							</summary>
-							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
-								{speaker.markdownBiography}
-							</ReactMarkdown>
-						</details>
+						{speaker.markdownBiography && (
+							<details className='mt-8 md:mt-12 group' open>
+								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
+									Biography <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
+								</summary>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
+									{speaker.markdownBiography}
+								</ReactMarkdown>
+							</details>
+						)}
 
 						{/* Render markdown timeline - progressive disclosure, still crawlable */}
-						<details className='mt-8 md:mt-12 group'>
-							<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none flex items-center justify-center gap-2'>
-								Career Timeline
-								<svg className='w-5 h-5 transition-transform group-open:rotate-180' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /></svg>
-							</summary>
-							<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
-								{speaker.markdownTimeline}
-							</ReactMarkdown>
-						</details>
+						{speaker.markdownTimeline && (
+							<details className='mt-8 md:mt-12 group'>
+								<summary className='text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-[#a4925a] text-center cursor-pointer list-none'>
+									Career Timeline <span className='text-base text-gray-400 group-open:hidden'>+</span><span className='text-base text-gray-400 hidden group-open:inline'>&minus;</span>
+								</summary>
+								<ReactMarkdown remarkPlugins={[remarkGfm]} className='prose prose-sm md:prose-base prose-blue max-w-none ibm-plex-mono text-gray-800'>
+									{speaker.markdownTimeline}
+								</ReactMarkdown>
+							</details>
+						)}
 
 						{/* Other Speakers - Internal Linking */}
 						<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>

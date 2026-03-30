@@ -10,8 +10,8 @@
 		"turingLink": "https://amturing.acm.org/award_winners/metcalfe_1702174.cfm",
 		"talkTitle": "Question & Answer",
 		"recordingLink": "",
-		"markdownBiography": "",
-		"markdownTimeline": "",
+		"markdownBiography": "# Bob Metcalfe\n\n## Early Life and Education\n\nRobert Melancton Metcalfe, born April 7, 1946, in Brooklyn, New York, is the co-inventor of Ethernet and formulator of Metcalfe's Law. He earned dual bachelor's degrees in Electrical Engineering and Industrial Management from MIT in 1969, an M.A. in Applied Mathematics from Harvard in 1970, and his Ph.D. in Computer Science from Harvard in 1973.\n\n## Career and Contributions\n\n### Ethernet and Xerox PARC\n\nAt Xerox PARC, Metcalfe and David Boggs co-invented Ethernet in 1973, documented in his \"Alto Ethernet\" memo of May 22, 1973. This invention became the dominant local area networking standard worldwide.\n\n### 3Com and Beyond\n\nIn 1979, Metcalfe founded 3Com Corporation to commercialize Ethernet. He later became a columnist for InfoWorld, co-founded the Pop!Tech conference (1996), and joined Polaris Venture Partners (2001). In 2011 he became a professor at UT Austin, and in 2022 returned to MIT.\n\n## Awards and Honors\n\n- **1980**: ACM Grace Murray Hopper Award\n- **1988**: IEEE Alexander Graham Bell Medal\n- **1996**: IEEE Medal of Honor\n- **2003**: National Medal of Technology\n- **2007**: National Inventors Hall of Fame\n- **2022**: ACM A.M. Turing Award for the invention, standardization, and commercialization of Ethernet",
+		"markdownTimeline": "## Career Timeline\n\n- **1946**: Born in Brooklyn, New York\n- **1969**: Dual B.S. from MIT\n- **1970**: M.A. from Harvard\n- **1973**: Ph.D. from Harvard; co-invented Ethernet at Xerox PARC\n- **1979**: Founded 3Com Corporation\n- **1980**: ACM Grace Murray Hopper Award\n- **1988**: IEEE Alexander Graham Bell Medal\n- **1996**: IEEE Medal of Honor; co-founded Pop!Tech\n- **2003**: National Medal of Technology\n- **2007**: National Inventors Hall of Fame\n- **2011**: Professor at UT Austin\n- **2022**: ACM A.M. Turing Award; returned to MIT",
 		"slug": "bob-metcalfe"
 	},
 	{
