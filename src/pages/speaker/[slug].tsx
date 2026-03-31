@@ -73,7 +73,7 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 		const intervalId = setInterval(updateCountdown, 1000);
 
 		return () => clearInterval(intervalId);
-	}, [speaker.isoDate]);
+	}, [speaker.isoDate, speaker.recordingLink]);
 
 	const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024, ...speakersData2023];
 	const otherSpeakers = allSpeakers.filter((s) => s.slug !== speaker.slug);

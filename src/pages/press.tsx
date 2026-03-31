@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 import { motion } from 'framer-motion';
@@ -23,20 +22,18 @@ export default function Press() {
 					{ position: 2, name: 'Press & Attribution', item: 'https://www.turing.rsvp/press' },
 				]}
 			/>
-			<Head>
-				<Script
-					src='https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ'
-					strategy='afterInteractive'
-				/>
-				<Script id='google-analytics' strategy='afterInteractive'>
-					{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', 'G-Y1G13WPJKZ');
-					`}
-				</Script>
-			</Head>
+			<Script
+				src='https://www.googletagmanager.com/gtag/js?id=G-Y1G13WPJKZ'
+				strategy='afterInteractive'
+			/>
+			<Script id='google-analytics' strategy='afterInteractive'>
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-Y1G13WPJKZ');
+				`}
+			</Script>
 
 			<div className='min-h-screen bg-gradient-to-b from-slate-50 to-white font-[Sora]'>
 				{/* Header */}
