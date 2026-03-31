@@ -218,7 +218,7 @@ export default function Home() {
 								<span className='text-amber-600'>●</span>
 								<span>Featured in Atlantic Jewish Times</span>
 							</a>
-							<a 
+							<a
 								href='https://www.cc.gatech.edu/news/online-series-offers-unique-opportunity-hear-turing-award-winners'
 								target='_blank'
 								rel='noopener noreferrer'
@@ -226,6 +226,15 @@ export default function Home() {
 							>
 								<span className='text-blue-600'>●</span>
 								<span>Georgia Tech Computing News</span>
+							</a>
+							<a
+								href='https://research.gatech.edu/groundbreaking-speaker-series-will-welcome-its-15th-turing-award-winner-its-last-guest'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='flex items-center space-x-1 hover:text-slate-900 transition-colors'
+							>
+								<span className='text-emerald-600'>●</span>
+								<span>Georgia Tech Research</span>
 							</a>
 						</div>
 						<div className='flex items-center space-x-2 text-slate-700'>
@@ -252,13 +261,22 @@ export default function Home() {
 								GT Computing
 							</a>
 							<span className='text-slate-400'>•</span>
-							<a 
+							<a
 								href='https://www.atlantajewishtimes.com/ga-tech-students-lead-speaker-series/'
 								target='_blank'
 								rel='noopener noreferrer'
 								className='hover:text-slate-900 transition-colors'
 							>
 								Atlantic Jewish Times
+							</a>
+							<span className='text-slate-400'>•</span>
+							<a
+								href='https://research.gatech.edu/groundbreaking-speaker-series-will-welcome-its-15th-turing-award-winner-its-last-guest'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='hover:text-slate-900 transition-colors'
+							>
+								GT Research
 							</a>
 							<span className='text-slate-400'>•</span>
 							<a
@@ -475,7 +493,8 @@ export default function Home() {
 					<div className='max-w-4xl mx-auto'>
 						<div className='h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-8'></div>
 						<p className='text-slate-600 font-light tracking-wide'>© 2026 Turing Minds. All rights reserved.</p>
-						<p className='text-slate-600 font-light tracking-wide text-sm'>Turing Minds™ is an independent company and is not affiliated with the Association for Computing Machinery (ACM) or the A.M. Turing Award.</p>
+						<p className='mt-2'><Link href='/press' className='text-slate-500 hover:text-slate-700 text-sm font-light underline transition-colors'>Press & Attribution</Link></p>
+						<p className='text-slate-600 font-light tracking-wide text-sm mt-2'>Turing Minds™ is an independent company and is not affiliated with the Association for Computing Machinery (ACM) or the A.M. Turing Award.</p>
 					</div>
 				</footer>
 			</div>
