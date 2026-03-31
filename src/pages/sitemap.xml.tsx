@@ -14,6 +14,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     { path: '', priority: '1.0', changefreq: 'weekly' },
     { path: '/2023', priority: '0.5', changefreq: 'yearly' },
     { path: '/sponsor', priority: '0.5', changefreq: 'monthly' },
+    { path: '/press', priority: '0.5', changefreq: 'monthly' },
   ];
 
   const allSpeakers = [...speakersData2026, ...speakersData2025, ...speakersData2024, ...speakersData2023];

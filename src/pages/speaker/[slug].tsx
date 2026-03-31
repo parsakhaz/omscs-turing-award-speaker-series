@@ -330,6 +330,10 @@ const SpeakerPage = ({ speaker }: { speaker: any }) => {
 							</details>
 						)}
 
+						<p className='text-xs text-gray-400 mt-6'>
+							Content produced by Turing Minds. <Link href='/press' className='underline hover:text-gray-600 transition-colors'>Usage guidelines</Link>.
+						</p>
+
 						{/* Other Speakers - Internal Linking */}
 						<section className='mt-12 md:mt-16 border-t border-gray-200 pt-8'>
 							<h2 className='text-2xl md:text-3xl font-bold mb-6 text-[#013057]'>Other Turing Minds Speakers</h2>
