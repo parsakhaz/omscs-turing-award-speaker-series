@@ -21,7 +21,6 @@ import React from 'react';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import speakersData from '../data/speakersData2024.json';
-import { useRouter } from 'next/router';
 
 interface SpeakerBioProps {
 	name: string;
@@ -42,7 +41,6 @@ interface SpeakerBioProps {
 const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, speakerPhoto, turingLink, talkTitle, isoDate, recordingLink, slug, year }: SpeakerBioProps) => {
 	const [isClient, setIsClient] = React.useState(false);
 	const [timeUntil, setTimeUntil] = React.useState<number | null>(null);
-	const router = useRouter();
 
 	React.useEffect(() => {
 		setIsClient(true);
@@ -77,9 +75,11 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 
 	return (
 		<div
-			className="group bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
-			onClick={() => router.push(`/speaker/${slug}`)}
+			className="group relative bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
 		>
+			<Link href={`/speaker/${slug}`} className="absolute inset-0 z-0">
+				<span className="sr-only">{name}</span>
+			</Link>
 			{/* Header with photo and basic info */}
 			<div className="relative p-6 pb-4">
 				<div className="flex items-start space-x-4">
@@ -111,12 +111,11 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 									Turing Award
 								</div>
 								{turingLink && (
-									<a 
-										target="_blank" 
-										rel="noreferrer" 
-										className="text-blue-600 hover:text-blue-800 text-xs font-medium" 
-										href={turingLink} 
-										onClick={(e) => e.stopPropagation()}
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="relative z-10 text-blue-600 hover:text-blue-800 text-xs font-medium"
+										href={turingLink}
 									>
 										View →
 									</a>
@@ -157,12 +156,11 @@ const SpeakerBio = ({ name, dateTime, description, rsvpLink, turingAwardWinner, 
 						href={isUpcoming ? rsvpLink : recordingLink}
 						target="_blank"
 						rel="noreferrer"
-						className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-all duration-200 text-sm ${
+						className={`relative z-10 block w-full text-center py-3 px-4 rounded-lg font-medium transition-all duration-200 text-sm ${
 							isUpcoming && timeUntil > 0
 								? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg'
 								: 'bg-slate-100 text-slate-700 hover:bg-slate-200'
 						}`}
-						onClick={(e) => e.stopPropagation()}
 					>
 						{isUpcoming && timeUntil > 0 ? 'RSVP Now' : 'Watch Recording'}
 					</a>
